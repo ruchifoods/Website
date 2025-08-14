@@ -1,0 +1,274 @@
+﻿@model List<FoodDeliveryApp.Models.MenuItem>
+@{
+    ViewData["Title"] = "Food Items";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    int counter = 3;
+}
+
+<style>
+    .container {
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+    .veg-badge-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green;
+    height: 20px;
+    width: 20px;
+    }
+
+    .non-veg-badge-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e43b4f;
+    height: 20px;
+    width: 20px;
+    }
+
+    .circle {
+    position: absolute;
+    background-color: green;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    }
+
+    .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 2px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 10px solid #e43b4f;
+    }
+</style>
+<div>
+    <div class="row">
+        <h2 class="mb-4 text-center">@Model.First().MenuCategory.CategoryName</h2>
+    </div>
+
+    <div class="container mt-4">
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+
+        @for (int i = 0; i < Model.Count();)
+        {
+            var quantities = ViewBag.QuantityList as List<Quantity>;
+           @*  List<SelectListItem> selectedQuantity = from obj in Model[i].MenuItemQuantities
+                         join detail in quantities
+                         on obj.Id equals detail.Id
+                         select new SelectListItem
+                         {
+                            
+                            Value  =  (string)obj.Id ,
+                             //obj.MenuItemId,
+                             Text = detail.Size
+                         }; *@
+
+
+            @* var selectList = Model[i].MenuItemQuantities
+            .Join(quantities,
+            obj => obj.QuantityId,
+            detail => detail.Id,
+            (obj, detail) => new SelectListItem
+                {
+                    Value = obj.QuantityId.ToString(),  // ✅ convert int to string
+                    Text = detail.Size
+                })
+            .ToList();
+ *@
+
+            @* // Optional output
+            var size = selectedQuantity?.Size;
+
+            List<SelectListItem> quantityList = Model[i].MenuItemQuantities
+            .Select(q => new SelectListItem
+                {
+                    Value = q.Id.ToString(),
+                    Text = q.
+                }).ToList(); *@
+
+            <div class="row">
+                @while ((counter != 0) && (i < Model.Count()))
+                {
+                    counter = counter - 1;
+                    <form asp-action="AddToCart" method="post" novalidate>
+                        <div class="card mb-4 shadow-sm">
+                            <img src="@Model[i].ImageUrl" class="card-img-top" style="height: 200px; object-fit: cover;" alt="@Model[i].ItemName" />
+                            <div class="card-body">
+                                @if (Model[i].IsVeg)
+                                {
+                                    <p>
+                                        <div class="veg-badge-container">
+                                            <span class="circle" />
+                                        </div>
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p>
+                                        <div class="non-veg-badge-container">
+                                            <span class="triangle" />
+                                        </div>
+                                    </p>
+                                }
+                                <h5 class="card-title">@Model[i].ItemName</h5>
+                                <p class="card-text">@Model[i].Description </p>
+                                <p class="card-text">@Model[i].Price </p>
+                                @* <div class="form-group">
+                                <label for="Id">Select Quantity</label>
+                                <select name="Id" class="form-control" asp-items="ViewBag.MenuItemQuantityList">
+                                    <option value="">-- Select --</option>
+                                </select>
+                            </div> *@
+                                <div class="form-group">
+                                    <label class="control-label">Quantity: </label>
+                                   @*  <select asp-for="@Model[i].SelectedQuantity" asp-items="selectList" class="form-control"> *@
+                                        @* <option value="">-- Select Quantity --</option> *@
+                                        @* <option value="selectList.Value">@selectList.Text</option> *@
+                                    <select class="item-dropdown" id="dropdown@i">
+                                        <option value="">-- Select Quantity --</option>
+                                        @foreach (var menuItemQuantity in Model[i].MenuItemQuantities)
+                                        {
+                                            var quantities = ViewBag.QuantityList as List<Quantity>;
+                                            var selectedQuantity = quantities.FirstOrDefault(q => q.Id == menuItemQuantity.QuantityId);
+
+                                            // Optional output
+                                            var size = selectedQuantity?.Size;
+                                            <option value="@menuItemQuantity.QuantityId">@size</option>
+                                        }
+                                    </select>
+                                    <span id="dropDownError@i" style="display:none;">Please select an quantity.</span>
+                                    <span asp-validation-for="@Model[i].SelectedQuantity" class="text-danger"></span>
+                                </div>
+                                @* <div style="display: flex; align-items: center;">
+                                <button type="button" class="btn-decrease" onclick="changeQuantity(this, -1)">−</button>
+                                <input type="number" name="quantity" value="1" min="1" style="width: 50px; text-align: center;" />
+                                <button type="button" class="btn-increase" onclick="changeQuantity(this, 1)">+</button>
+                            </div> *@
+
+                                <!-- Hidden fields for coordinates -->
+                                <input type="hidden" value="@Model[i].MenuItemId" id="menuItemId" name="menuItemId" />
+
+                                <button type="submit" style="margin-top: 5px;" id="AddToCart@i" class="add-button">Add to Cart</button>
+                                @* <button onclick="addToCart(@Model[i].MenuItemId)">Add to Cart</button> *@
+                                @* <div>
+                                <label for="Quantity">Quantity:</label>
+                                <div style="display: flex; align-items: center; padding-bottom: 0.5rem;">
+                                    <button type="button" onclick="changeQuantity(-1, 'Quantity @i')">-</button>
+                                    <input type="number" id="Quantity @i" name="Quantity @i" value="1" min="1" max="10" style="width: 50px; text-align: center;" />
+                                    <button type="button" onclick="changeQuantity(1, 'Quantity @i')">+</button>
+                                </div>
+                            </div>
+                            <a href="@Url.Action("AddToCart","CustomerAccount", new { id = Model[i].MenuItemId}, Model[i], )" class="btn btn-primary btn-sm">Add to Cart</a> *@
+                            </div>
+                        </div>
+                    </form>
+                    i++;
+                }
+            </div>
+            counter = 3;
+        }
+    </div>
+    <div class="row">
+        <a href="@Url.Action("FoodSearch", "CustomerAccount")" class="btn btn-primary btn-sm">
+            <i class="bi bi-x-circle-fill mr-1"></i> Back
+        </a>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // function changeQuantity(amount, id) {
+        //     var quantityInput = document.getElementById(id);
+        //     var current = parseInt(quantityInput.value);
+        //     if (!isNaN(current)) {
+        //         var newValue = current + amount;
+        //         if (newValue >= 1) {
+        //             quantityInput.value = newValue;
+        //         }
+        //         if(newValue > 10)
+        //         {
+        //             quantityInput.value = 10;
+        //         }
+        //     }
+        // }
+
+        function changeQuantity(button, delta) {
+            const input = button.parentElement.querySelector('input[name="quantity"]');
+            let current = parseInt(input.value) || 1;
+            current = Math.max(1, current + delta);
+            if(current > 10) {
+                current = 10;
+            }
+            input.value = current;
+        }
+
+        function addToCart(productId) {
+            var quantity = $('#qty-' + productId).val();
+
+            $.ajax({
+                url: '@Url.Action("AddToCart", "CustomerAccount")',
+                method: 'POST',
+                data: {
+                    id: productId,
+                    quantity: quantity
+                },
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message); // show toast or update cart count here
+                    } else {
+                        alert("Failed to add item.");
+                    }
+                },
+                error: function () {
+                    alert("Error while adding item.");
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const addButtons = document.querySelectorAll('.add-button');
+
+            addButtons.forEach(function (button) {
+                button.addEventListener('click', function (e) {
+                    var buttonId = button.id;
+                    var menuId = buttonId.replace('AddToCart', '');
+                    var selectedValue = document.getElementById('dropdown' + menuId).value;
+
+
+                    //const itemDiv = e.target.closest('.item');
+                    //const dropdown = itemDiv.querySelector('.item-dropdown');
+                    //const selectedValue = dropdown.value;
+
+                    if (!selectedValue) {
+                        var errorSpan = document.getElementById('dropDownError' + menuId);
+                        errorSpan.style.display = 'inline'; // Show error message
+                        //alert("Please select a value before adding.");
+                        e.preventDefault(); // Stop form submission or AJAX call
+                        return;
+                    }
+
+                    // Proceed with add action (e.g., form submit, AJAX call)
+                    console.log("Adding item with selected value:", selectedValue);
+                    // You can also send this data to your controller here
+                });
+            });
+        });
+
+    </script>
+}

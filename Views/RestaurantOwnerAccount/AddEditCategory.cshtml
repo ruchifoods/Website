@@ -1,0 +1,238 @@
+﻿@model FoodDeliveryApp.ViewModels.RestaurantOwners.MenuCategoryViewModel
+@{
+    ﻿var isEdit = false;
+    var flag = false;
+    var foodType = "";
+    if((Model != null) && (Model.MenuCategoryDetails != null) && (Model.MenuCategoryDetails.MenuCategoryId > 0))
+    {
+        isEdit = true;
+    }
+    ViewBag.Title = isEdit ? "Edit Schedule": "Add Schedule"; 
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container mt-2">
+    <!-- Page Header Card -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-info text-white d-flex align-items-center">
+            <h3 class="mb-0">@ViewBag.Title</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-0 text-muted">
+                @if (isEdit)
+                {
+                    @:Update your schedule details below.
+                }
+                else
+                {
+                    @:Add your schedule details below to create new schedule.
+                }
+            </p> 
+        </div>
+    </div>
+    <form id="itemForm" asp-action="AddEditCategory" method="post">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert"> 
+                        @ViewBag.ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+
+                <input type="hidden" asp-for="@Model.MenuCategoryDetails.MenuCategoryId" />                
+                <div class="form-group">
+                    <label asp-for="@Model.MenuCategoryDetails.CategoryName">
+                        <i class="bi bi-house-door-fill mr-1 text-primary"></i> Schedule Name
+                    </label>
+                    <input asp-for="@Model.MenuCategoryDetails.CategoryName" class="form-control" placeholder="Enter schedule name" />
+                    <span asp-validation-for="@Model.MenuCategoryDetails.CategoryName" class="text-danger"></span> 
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.MenuCategoryDetails.Description">
+                        <i class="bi bi-building mr-1 text-success"></i> Description
+                    </label>
+                    <input asp-for="@Model.MenuCategoryDetails.Description" class="form-control" placeholder="Enter description (Optional)" />
+                    <span asp-validation-for="@Model.MenuCategoryDetails.Description" class="text-danger"></span> 
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label asp-for="@Model.MenuCategoryDetails.StartDate">
+                            <i class="bi bi-building mr-1 text-danger"></i> Start Date
+                        </label>
+                        @* <input asp-for="@Model.MenuCategoryDetails.StartDate" class="form-control" placeholder="StartDate" /> *@
+                        @* <input type="date" asp-for="@Model.MenuCategoryDetails.StartDate" value="@(Model.MenuCategoryDetails.StartDate.HasValue ? Model.MenuCategoryDetails.StartDate.Value.ToString("yyyy-MM-dd") : "")" class="form-control" /> *@
+                        <input id="startDate" type="date" asp-for="@Model.MenuCategoryDetails.StartDate" value="@(Model.MenuCategoryDetails.StartDate.ToString("yyyy-MM-dd"))" class="form-control" />
+                        <span asp-validation-for="@Model.MenuCategoryDetails.StartDate" class="text-danger"></span> 
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="@Model.MenuCategoryDetails.EndDate">
+                            <i class="bi bi-building mr-1 text-danger"></i> End Date
+                        </label>
+                        @* <input asp-for="@Model.MenuCategoryDetails.EndDate" class="form-control" placeholder="EndDate" />  *@
+                        @* <input type="datetime-local" asp-for="@Model.MenuCategoryDetails.EndDate" value="@(Model.MenuCategoryDetails.EndDate.HasValue ? Model.MenuCategoryDetails.EndDate.Value.ToString("yyyy-MM-ddTHH:mm") : "")" class="form-control" /> *@
+                        <input id="endDate" type="datetime-local" asp-for="@Model.MenuCategoryDetails.EndDate" value="@(Model.MenuCategoryDetails.EndDate.ToString("yyyy-MM-ddTHH:mm"))" class="form-control" />
+                        <span asp-validation-for="@Model.MenuCategoryDetails.EndDate" class="text-danger"></span> 
+                    </div>
+                    <div class="form-group col-md-4">
+                        <div class="form-check me-3" style="padding-top: 2rem;">
+                            @Html.CheckBoxFor(model => Model.MenuCategoryDetails.IsActive, new { @class = "form-check-input" })
+                            @Html.LabelFor(model => Model.MenuCategoryDetails.IsActive, new { @class = "form-check-label" })
+                            @* <input type="checkbox" name="@Model.MenuCategoryDetails.IsActive" checked="@Model.MenuCategoryDetails.IsActive" value="@Model.MenuCategoryDetails.IsActive" class="item-checkbox" />
+                            <label class="form-check-label">Hide Schedule</label> *@
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    @* <div class="form-group col-md-4">
+                        <label asp-for="@Model.MenuCategoryDetails.DisplayOrder">
+                            <i class="bi bi-building mr-1 text-danger"></i> Display Order
+                        </label>
+                        <input asp-for="@Model.MenuCategoryDetails.DisplayOrder" class="form-control" placeholder="DisplayOrder" /> 
+                        <span asp-validation-for="@Model.MenuCategoryDetails.DisplayOrder" class="text-danger"></span> 
+                    </div> *@
+                    @* <div class="form-group col-md-4">
+                        <label asp-for="@Model.MenuCategoryDetails.IsActive">
+                            <i class="bi bi-mailbox2 mr-1 text-info"></i> Available  
+                        </label>
+                        <div style="margin-left: 3rem;">
+                            <label class="form-check-label">
+                                <input asp-for="@Model.MenuCategoryDetails.IsActive" type="radio" class="form-check-input" value="true" /> Available
+                            </label>
+                        </div>
+                        <div style="margin-left: 3rem;">
+                            <label class="form-check-label">
+                                <input asp-for="@Model.MenuCategoryDetails.IsActive" type="radio" class="form-check-input" value="false" /> Not Available
+                            </label>
+                        </div>
+                        <span asp-validation-for="@Model.MenuCategoryDetails.IsActive" class="text-danger"></span>
+                    </div> *@
+                    <div class="form-group col-md-4">
+                        <h4 asp-for="@Model.MenuItems" class="control-label">Menu Items</h4>
+                        @if(isEdit)
+                        {
+                            <div class="flex-wrap">
+                                @if(Model.MenuItems.Count > 0)
+                                {
+                                    foodType = Model.MenuItems[0].FoodType.Name;
+                                    <div><b>@foodType:</b> <br /></div>
+                                }
+                                @for (int j = 0; j < Model.MenuItems.Count; j++)
+                                {                                    
+                                    @if(Model.MenuItems[j].FoodType.Name != foodType)
+                                    {
+                                        foodType = Model.MenuItems[j].FoodType.Name;
+                                        <div><br /> <b>@foodType: </b><br /></div>
+                                    }  
+                                    <div class="form-check me-3" style="padding-right: 1rem;">
+                                        @{
+                                            flag = false;
+                                        }
+                                        @for(int k=0; k < Model.MenuItems[j].MenuCategories.Count; k++)
+                                        {
+                                            if(Model.MenuItems[j].MenuCategories[k].MenuCategoryId == Model.MenuCategoryDetails.MenuCategoryId)
+                                            {
+                                                flag = true;
+                                                <input checked="checked" type="checkbox" name="@Model.MenuItems[j].MenuItemId" value="@Model.MenuItems[j].MenuItemId" class="item-checkbox" />
+                                                <label class="form-check-label">@Model.MenuItems[j].ItemName</label>
+                                            }
+                                        }
+                                        @if(!flag)
+                                        {
+                                            <input type="checkbox" name="@Model.MenuItems[j].MenuItemId" value="@Model.MenuItems[j].MenuItemId" class="item-checkbox" />
+                                            <label class="form-check-label">@Model.MenuItems[j].ItemName</label>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="flex-wrap">
+                                @if(Model.MenuItems.Count > 0)
+                                {
+                                    foodType = Model.MenuItems[0].FoodType.Name;
+                                    <div><b>@foodType: </b><br /></div>
+                                }
+                                @for (int j = 0; j < Model.MenuItems.Count; j++)
+                                {
+                                    @if(Model.MenuItems[j].FoodType.Name != foodType)
+                                    {
+                                        foodType = Model.MenuItems[j].FoodType.Name;
+                                        <div><br /> <b>@foodType: </b><br /></div>
+                                    }
+                                    <div class="form-check me-3" style="padding-right: 1rem;">
+                                        <input type="checkbox" name="@Model.MenuItems[j].MenuItemId" value="@Model.MenuItems[j].MenuItemId" class="item-checkbox" />
+                                        <label class="form-check-label">@Model.MenuItems[j].ItemName</label>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        <div>
+                            <span id="menuItemError" style="display:none;" class="text-danger">Please select a menu item.</span>
+                        </div>
+                        <input type="hidden" id="selectedCategoryIds" name="selectedCategoryIds" value="" />
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="card-footer text-right">
+                        @if(isEdit)
+                        {
+                            <input type="hidden" name="actionType" value="Update" />
+                            <button type="submit" class="btn btn-primary mr-2">
+                                <i class="bi bi-check-circle-fill mr-1"></i> Update Schedule
+                            </button>
+                        }
+                        else
+                        {
+                            <input type="hidden" name="actionType" value="Add" />
+                            <button type="submit" class="btn btn-primary mr-2">
+                                <i class="bi bi-check-circle-fill mr-1"></i> Add Schedule
+                            </button>
+                        }
+                        <a href="@Url.Action("ManageCategories", "RestaurantOwnerAccount")" class="btn btn-secondary">
+                            <i class="bi bi-x-circle-fill mr-1"></i> Cancel
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('startDate').value = today;
+
+        const now = new Date();
+        const formatted = now.toISOString().slice(0,16); // Removes seconds and milliseconds
+        document.getElementById('endDate').value = formatted;
+
+        $('#itemForm').submit(function (e) {
+            if ($('.item-checkbox:checked').length === 0) {
+                $('#menuItemError').show();
+                e.preventDefault();
+            }
+            else{
+                $('#menuItemError').hide();
+                var selectedIds="";
+                $('.item-checkbox:checked').each(function () {
+                    if(selectedIds == "")
+                    {
+                        selectedIds = $(this).val();
+                    }
+                    else
+                    {
+                        selectedIds += "," + $(this).val();
+                    }
+                });
+                $("#selectedCategoryIds").val(selectedIds);
+            }
+        });
+    </script>
+}

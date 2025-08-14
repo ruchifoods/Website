@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container vh-100 overflow-hidden mt-2">
+    <!-- Beautiful Welcome Section -->
+    <div class="jumbotron p-2 bg-info text-white">
+        <div class="container">
+            <h1 class="display-4 text-warning">Welcome, Restaurant Owner!</h1>
+            <p class="lead">Your dashboard provides real-time insights to boost your business.</p>
+            <hr class="my-2 bg-light">
+            <p>Monitor orders and items at a glance.</p>
+        </div>
+    </div>
+
+    <!-- Quick Navigation cards -->
+    <div class="row">
+        <!-- Manage Orders -->
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card text-white bg-success shadow-sm w-100 h-100 d-flex flex-column">
+                <div class="card-body d-flex align-items-center">
+                    <i class="bi bi-card-checklist display-4 mr-2"></i>
+                    <div>
+                        <h6 class="card-title">Manage Orders</h6>
+                        <p class="card-text small">Review new orders</p>
+                    </div>
+                </div>
+                <div class="card-footer text-right mt-auto">
+                    <a href="@Url.Action("ManageOrders","RestaurantOwnerAccount")" class="btn btn-light btn-sm">Manage Orders</a>
+                </div>
+            </div>
+        </div>
+        <!-- Manage Menus -->
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card text-white bg-info shadow-sm w-100 h-100 d-flex flex-column">
+                <div class="card-body d-flex align-items-center">
+                    <i class="bi bi-tags-fill display-4 mr-2"></i>
+                    <div>
+                        <h6 class="card-title">Manage Items</h6>
+                        <p class="card-text small">Add or Edit item(s)</p>
+                    </div>
+                </div>
+                <div class="card-footer text-right mt-auto">
+                    <a href="@Url.Action("ManageMenus","RestaurantOwnerAccount")" class="btn btn-light btn-sm">Manage Items</a>
+                </div>
+            </div>
+        </div>
+        <!-- Manage Categories -->
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card text-white bg-success shadow-sm w-100 h-100 d-flex flex-column">
+                <div class="card-body d-flex align-items-center">
+                    <i class="bi bi-clipboard-data display-4 mr-2"></i>
+                    <div>
+                        <h6 class="card-title">Manage Schedule</h6>
+                        <p class="card-text small">Add or Edit Date(s)</p>
+                    </div>
+                </div>
+                <div class="card-footer text-right mt-auto">
+                    <a href="@Url.Action("ManageCategories","RestaurantOwnerAccount")" class="btn btn-light btn-sm">Manage Schedules</a>
+                </div>
+            </div>
+        </div>
+        <!-- Manage Pickup Time -->
+        <div class="col-md-3 mb-4 d-flex">
+            <div class="card text-white bg-info shadow-sm w-100 h-100 d-flex flex-column">
+                <div class="card-body d-flex align-items-center">
+                    <i class="bi bi-clipboard-data display-4 mr-2"></i>
+                    <div>
+                        <h6 class="card-title">Manage Pickup Time</h6>
+                        <p class="card-text small">Add or Edit Pickup Time(s)</p>
+                    </div>
+                </div>
+                <div class="card-footer text-right mt-auto">
+                    <a href="@Url.Action("ManagePickupTime","RestaurantOwnerAccount")" class="btn btn-light btn-sm">Manage Pickup Time</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

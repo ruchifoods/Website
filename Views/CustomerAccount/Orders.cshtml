@@ -1,0 +1,152 @@
+﻿@model FoodDeliveryApp.ViewModels.Orders
+@using FoodDeliveryApp.ViewModels.Common
+
+@{
+    ViewData["Title"] = "Manage Orders";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    decimal total = 0;
+}
+
+<div class="container my-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0">Orders</h3>
+            <small>View your orders.</small>
+        </div>
+        <div class="card-body">
+            @if (!Model.OrderList.Any())
+            {
+                <div class="alert alert-info" role="alert">
+                    You have not order yet.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="thead-light">
+                            <tr>
+                                <th style="white-space: nowrap;">Food Name</th>
+                                <th style="white-space: nowrap;">Quantity</th>
+                                <th style="white-space: nowrap;">Unit Price</th>
+                                <th style="white-space: nowrap;">Total Price</th>
+                                <th style="white-space: nowrap;" class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.OrderList.Count; i++)
+                            {
+                                <form asp-action="ManageOrders" method="post" novalidate>
+                                    <tr class="bg-success">
+                                        <td colspan="5" style="font-weight: bold;">Order Number: @Model.OrderList[i].OrderId</td>
+                                    </tr>
+                                    @for (int j = 0; j < Model.OrderList[i].OrderItems.Count; j++)
+                                    {
+                                    <tr>
+                                        <td>@Model.OrderList[i].OrderItems.ToList()[j].MenuItem.ItemName</td>
+                                        <td>@Model.OrderList[i].OrderItems.ToList()[j].Quantity</td>
+                                        <td>@Model.OrderList[i].OrderItems.ToList()[j].UnitPrice</td>
+                                        <td>@Model.OrderList[i].OrderItems.ToList()[j].TotalPrice</td>
+                                        <td></td>
+
+                                            @{
+                                                total += Model.OrderList[i].OrderItems.ToList()[j].TotalPrice;
+                                            }
+                                    </tr>
+                                    }
+                                    <tr>
+                                        <td colspan="5" style="padding-top: 1rem;"><h3>Other Details:</h3></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div><span style="font-weight: bold;">Comments:</span> @Model.OrderList[i].Comments</div>
+                                        </td>
+                                    </tr>
+                                    @* <tr>
+                                        <td colspan="1"><div><span style="font-weight: bold;">First Name: </span> @Model.OrderList[i].FirstName</div> </td>
+                                        <td colspan="1"><div><span style="font-weight: bold;">Last Name: </span> @Model.OrderList[i].LastName</div> </td>
+                                        <td colspan="1"><div><span style="font-weight: bold;">Phone Number: </span> @Model.OrderList[i].PhoneNumber</div> </td>
+                                        <td colspan="2"><div><span style="font-weight: bold;">Email Address: </span> @Model.OrderList[i].EmailAddress</div> </td>
+                                    </tr> *@
+                                    <tr>
+                                        <td colspan="1"><div><span style="font-weight: bold;">Total Amount:</span> @(total * 1.06m)</div> </td>
+                                        <td colspan="1"><div><span style="font-weight: bold;">Pickup Date:</span> @Model.OrderList[i].CategoryName</div> </td>
+                                        <td colspan="1"><div><span style="font-weight: bold;">Pickup Time:</span> @Model.OrderList[i].PickUpTime</div> </td>
+                                        <td colspan="1"><div><span style="font-weight: bold;">Order code:</span> @Model.OrderList[i].OrderCode</div> </td>
+                                        <td colspan="1">
+                                            <div><span style="font-weight: bold;">Order Status:</span> 
+                                                @* @{
+                                                    Enum.GetName(typeof(OrderStatusMaster), @Model.OrderList[i].OrderStatusMasterId); 
+                                                } *@
+                                                    @Enum.GetName(typeof(OrderStatusModel), Model.OrderList[i].OrderStatusMasterId)
+                                            </div> 
+                                        </td>
+                                    </tr>
+                                    @* <tr>
+                                        <td colspan="3">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label class="control-label">Order Status: </label>
+                                                    <select class="item-dropdown" id="dropdown-@i">
+                                                        <option value="">-- Select Order Status --</option>
+                                                            @foreach (var orderStatus in Model.OrderStatusList)
+                                                            {
+                                                                <option value="@orderStatus.OrderStatusMasterId">@orderStatus.StatusName</option>
+                                                            }
+                                                    </select>
+                                                    <div>
+                                                        <span id="dropDownError-@i" style="display:none;" class="text-danger">Please select order status.</span>
+                                                    </div>
+                                                </div>
+                                            <input type="hidden" value="" id="orderStatus-@i" name="orderStatus" />
+                                            </div>
+                                        </td>
+                                        <td colspan="2" style="white-space: nowrap; text-align: right;">
+                                            <input type="hidden" value="@Model.OrderList[i].OrderId" id="orderId" name="orderId" />
+                                            <button class="btn btn-danger text-center submitOrder" id="updateOrder-@i" type="submit" style="margin-top: 5px;">Update Order</button>
+                                        </td>
+                                    </tr> *@
+                                </form>
+                                total = 0;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const addButtons = document.querySelectorAll('.submitOrder');
+
+            addButtons.forEach(function (button) {
+                button.addEventListener('click', function (e) {
+                    var buttonId = button.id;
+                    var orderIndex = buttonId.replace('updateOrder-', '');
+                    var selectedValue = document.getElementById('dropdown-' + orderIndex).value;
+
+                    if (!selectedValue) {
+                        var errorSpan = document.getElementById('dropDownError-' + orderIndex);
+                        errorSpan.style.display = 'inline'; // Show error message
+                        e.preventDefault(); // Stop form submission or AJAX call
+                        return;
+                    }
+                    else
+                    {
+                        const input = button.parentElement.querySelector('input[name="orderStatus"]');
+                        var quantity = document.getElementById('orderStatus-' + orderIndex);
+                        quantity.value = selectedValue;
+                    }
+
+                    // Proceed with add action (e.g., form submit, AJAX call)
+                    console.log("Adding item with selected value:", selectedValue);
+                    // You can also send this data to your controller here
+                });
+            });
+        });
+    </script>
+}

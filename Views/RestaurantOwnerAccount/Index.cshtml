@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Restaurant Owner Portal";
+    Layout = "~/Views/Shared/_RestaurantOwnerUnverifiedLayout.cshtml";
+}
+<!-- Hero Section -->
+<div class="hero-section text-white text-center d-flex align-items-center justify-content-center"
+     style="background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; height:400px; position:relative;">
+    <div class="overlay" style="background: rgba(0, 0, 0, 0.6); width: 100%; height: 100%; position:absolute;"></div>
+    <div class="content position-relative">
+        <h1 class="display-4 fw-bold">Take Your Restaurant to the Next Level</h1>
+        <p class="lead">Increase orders, maximize revenue, and streamline operations with our advanced food delivery platform.</p>
+        <div class="mt-4">
+            <a href="@Url.Action("Register", "RestaurantOwnerAccount")" class="btn btn-success btn-lg px-4">Get Started</a>
+            <a href=" @Url.Action("Login", "RestaurantOwnerAccount")" class="btn btn-outline-light btn-lg px-4 ml-2">Sign In</a>
+        </div>
+    </div>
+</div>
+<!-- About Our Platform Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-lg-6">
+                <h2 class="mb-4">About Our Platform</h2>
+                <p>Our innovative Food Delivery App platform is designed to empower restaurant owners by providing a comprehensive suite of tools to manage your business more efficiently. Enjoy real-time analytics, robust order tracking, and a user-friendly dashboard that puts everything at your fingertips.</p>
+                <p>Experience seamless integration, secure transactions, and unmatched support-all engineered to boost your operational efficiency and increase profitability.</p>
+            </div>
+            <!-- Image Content -->
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                     alt="Modern Restaurant Dashboard" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Services Section -->
+<section class="bg-light py-3">
+    <div class="container">
+        <h2 class="text-center mb-3">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <i class="fa fa-chart-line fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Advanced Analytics</h5>
+                        <p class="card-text">
+                            Monitor performance and customer trends with data-driven
+                            insights to optimize your operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <i class="fa fa-mobile-alt fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Mobile Management</h5>
+                        <p class="card-text">Manage orders and operations on the go with our fully responsive, mobile-friendly dashboard.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body">
+                        <i class="fas fa-lock fa-3x text-danger mb-3"></i>
+                        <h5 class="card-title">Robust Security</h5>
+                        <p class="card-text">Protect your business with state-of-the-art security protocols and secure data management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-2" style="background: #f8f9fa;">
+    <div class="container">
+        <h2 class="text-center mb-2">Why Choose Us</h2>
+        <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-user-check fa-3x text-info mb-3"></i>
+                <h5>Enhanced Efficiency</h5>
+                <p>Automate daily tasks nd focus on growing your business.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-handshake fa-3x text-warning mb-3"></i>
+                <h5>Customer Engagement</h5>
+                <p>Boast customer satisfaction with personalized services and seamless communication.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-dollar-sign fa-3x text-success mb-3"></i>
+                <h5>Increase Profitability</h5>
+                <p>Optimize costs and drive revenue growth with actionable insights.</p>
+            </div>
+            <div class="col-md-3 text-center mb-4">
+                <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+                <h5>24/7 Support</h5>
+                <p>Recieve round-the-clock assistance from our dedicated support team.</p>
+            </div>
+        </div>
+    </div>
+</section>

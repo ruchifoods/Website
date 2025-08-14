@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Welcome to Food Delivery App";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Hero Section-->
+<div class="bg-dark text-white text-center py-5" style="background: url('/images/food-bg.jpg') center/cover no-repeat; position: relative;">
+    <div class="container position-relative">
+        <h1 class="display-3 fw-bold">Welcome to Food Delivery App</h1>
+        <p class="lead">Seamless Food Ordering for Customers, Restaurant Owners, Admins & Delivery Partners</p>
+    </div>
+</div>
+
+<!--Portal Selection-->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <!-- Customer Portal-->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <i class="bi bi-cart3 fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Customer</h5>
+                    <p class="card-text">Before restaurants, order food, and track deleveries.</p>
+                    <a href="@Url.Action("FoodSearch", "CustomerAccount")" class="btn btn-primary w-100">Enter Customer Portal</a>
+                </div>
+            </div>
+        </div>
+        <!-- Restaurant Owner Portal-->
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card shadow-sm border-0 text-center">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <i class="bi bi-shop fs-1 text-primary"></i>
+                    </div>
+                    <h5 class="card-title fw-bold">Restaurant Owner</h5>
+                    <p class="card-text">Manage your restaurant, orders, and menus.</p>
+                    <a href="@Url.Action("Index", "RestaurantOwnerAccount")" class="btn btn-success w-100">Enter Restaurant Portal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />

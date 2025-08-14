@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Access Denied";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml"; // Use your Customer layout to keep styling consistent.
+}
+
+<div class="container mt-5 text-center">
+    <h1 class="display-4 text-danger">Access Denied</h1>
+    <p class="lead">You do not have permission to access this resource.</p>
+    <p>If you believe this is an error, please contact your administrator.</p>
+    <a href="@Url.Action("Index", "CustomerAccount")" class="btn btn-primary">Return to Home</a>
+</div>

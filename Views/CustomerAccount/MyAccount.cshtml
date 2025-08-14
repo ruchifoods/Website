@@ -1,0 +1,47 @@
+﻿@model FoodDeliveryApp.Models.User
+@{
+    ViewData["Title"] = "My Account";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-8">
+            <!-- My Account Card -->
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">Welcome, @Model.FirstName!</h3>
+                    <p class="small mb-0">Manage your account details and settings below.</p>
+                </div>
+                <div class="card-body">
+                    <p class="lead text-center mb-4">Your Account Information</p>
+                    <!-- Success message alert -->
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["SuccessMessage"]
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    }
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4 font-weight-bold">First Name:</dt>
+                        <dd class="col-sm-8">@Model.FirstName</dd>
+                        <dt class="col-sm-4 font-weight-bold">Last Name:</dt>
+                        <dd class="col-sm-8">@Model.LastName</dd>
+                        <dt class="col-sm-4 font-weight-bold">Email:</dt>
+                        <dd class="col-sm-8">@Model.Email</dd>
+                        <dt class="col-sm-4 font-weight-bold">Phone:</dt>
+                        <dd class="col-sm-8">@Model.PhoneNumber</dd>
+                    </dl>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <a href="@Url.Action("ChangePassword", "CustomerAccount")" class="btn btn-primary">Change Password</a>
+                        <a href="@Url.Action("EditAccount", "CustomerAccount")" class="btn btn-success">Edit Information</a>
+                        <a href="@Url.Action("ManageAddresses", "CustomerAccount")" class="btn btn-warning">Manage Addresses</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

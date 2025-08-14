@@ -1,0 +1,84 @@
+﻿@model FoodDeliveryApp.ViewModels.Customers.CustomerRegisterViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    ViewBag.Title = "Customer Registration";
+}
+
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <!-- Left Column: Background Image & Professional Message -->
+        <div class="col-md-5 d-none d-md-flex" style="background: url('https://images.unsplash.com/photo-154606">
+            <div class="d-flex h-100 align-items-center justify-content-center w-100" style="background: rgba">
+                <div class="text-center text-white p-4">
+                    <h1 class="display-4">Welcome to Food Delivery App</h1>
+                    <p class="lead">Discover a curated selection of top-rated restaurants and exquisite meals d
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Right Column: Registration Form -->
+    <div class="col-md-7 d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+        <div class="card shadow-lg w-100" style="max-width: 600px;">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="mb-0">Create Your Account</h3>
+                <small class="d-block">Sign up now to start your gourmet journey!</small>
+            </div>
+            <div class="card-body">
+                @* Display error message from ViewBag if available *@
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @ViewBag. ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+                <form asp-action="Register" method="post" novalidate>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label asp-for="FirstName"></label>
+                            <input asp-for="FirstName" class="form-control" placeholder="First Name" />
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="LastName"></label>
+                            <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber"></label>
+                        <input asp-for="PhoneNumber" class="form-control" placeholder="Phone Number" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control" placeholder="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" class="form-control" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword"></label>
+                        <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                <small>Already have an account? <a href="@Url.Action("Login", "CustomerAccount")">Login Here</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

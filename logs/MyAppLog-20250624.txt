@@ -1,0 +1,810 @@
+2025-06-24 08:42:45 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 08:44:31 [ERR] [Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (121ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[MenuItemId], [s].[ItemName], [s].[Description], [s].[Price], [s].[IsVeg], [s].[IsAvailable], [s].[ImageUrl], [s].[FoodTypeId], [s].[IsDeleted], [s].[MenuCategoryId], [s0].[MenuCategoryId], [s0].[CategoryName], [s0].[Description], [s0].[DisplayOrder], [s0].[IsActive], [s0].[StartDate], [s0].[EndDate], [s1].[Id], [s1].[Name], [s1].[Description], [s1].[c]
+FROM (
+    SELECT [m].[MenuItemId], [m].[ItemName], [m].[Description], [m].[Price], [m].[IsVeg], [m].[IsAvailable], [m].[ImageUrl], [m].[FoodTypeId], [m].[IsDeleted], [m].[MenuCategoryId]
+    FROM [MenuItems] AS [m]
+    INNER JOIN [MenuItemCategories] AS [m0] ON [m].[MenuItemId] = [m0].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m1] ON [m0].[MenuCategoryId] = [m1].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m2] ON [m].[MenuItemId] = [m2].[MenuItemId]
+    INNER JOIN [FoodType] AS [f] ON [m2].[FoodTypeId] = [f].[Id]
+    WHERE [m].[IsDeleted] = CAST(0 AS bit)
+    GROUP BY [m].[MenuItemId], [m].[Description], [m].[FoodTypeId], [m].[ImageUrl], [m].[IsAvailable], [m].[IsDeleted], [m].[IsVeg], [m].[ItemName], [m].[MenuCategoryId], [m].[Price]
+) AS [s]
+OUTER APPLY (
+    SELECT [m5].[MenuCategoryId], (
+        SELECT TOP(1) [m9].[CategoryName]
+        FROM [MenuItems] AS [m7]
+        INNER JOIN [MenuItemCategories] AS [m8] ON [m7].[MenuItemId] = [m8].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m9] ON [m8].[MenuCategoryId] = [m9].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m10] ON [m7].[MenuItemId] = [m10].[MenuItemId]
+        INNER JOIN [FoodType] AS [f1] ON [m10].[FoodTypeId] = [f1].[Id]
+        WHERE [m7].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m7].[MenuItemId] AND ([s].[Description] = [m7].[Description] OR ([s].[Description] IS NULL AND [m7].[Description] IS NULL)) AND [s].[FoodTypeId] = [m7].[FoodTypeId] AND ([s].[ImageUrl] = [m7].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m7].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m7].[IsAvailable] AND [s].[IsDeleted] = [m7].[IsDeleted] AND [s].[IsVeg] = [m7].[IsVeg] AND [s].[ItemName] = [m7].[ItemName] AND [s].[MenuCategoryId] = [m7].[MenuCategoryId] AND [s].[Price] = [m7].[Price] AND [m5].[MenuCategoryId] = [m9].[MenuCategoryId]) AS [CategoryName], (
+        SELECT TOP(1) [m13].[Description]
+        FROM [MenuItems] AS [m11]
+        INNER JOIN [MenuItemCategories] AS [m12] ON [m11].[MenuItemId] = [m12].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m13] ON [m12].[MenuCategoryId] = [m13].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m14] ON [m11].[MenuItemId] = [m14].[MenuItemId]
+        INNER JOIN [FoodType] AS [f2] ON [m14].[FoodTypeId] = [f2].[Id]
+        WHERE [m11].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m11].[MenuItemId] AND ([s].[Description] = [m11].[Description] OR ([s].[Description] IS NULL AND [m11].[Description] IS NULL)) AND [s].[FoodTypeId] = [m11].[FoodTypeId] AND ([s].[ImageUrl] = [m11].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m11].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m11].[IsAvailable] AND [s].[IsDeleted] = [m11].[IsDeleted] AND [s].[IsVeg] = [m11].[IsVeg] AND [s].[ItemName] = [m11].[ItemName] AND [s].[MenuCategoryId] = [m11].[MenuCategoryId] AND [s].[Price] = [m11].[Price] AND [m5].[MenuCategoryId] = [m13].[MenuCategoryId]) AS [Description], (
+        SELECT TOP(1) [m17].[DisplayOrder]
+        FROM [MenuItems] AS [m15]
+        INNER JOIN [MenuItemCategories] AS [m16] ON [m15].[MenuItemId] = [m16].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m17] ON [m16].[MenuCategoryId] = [m17].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m18] ON [m15].[MenuItemId] = [m18].[MenuItemId]
+        INNER JOIN [FoodType] AS [f3] ON [m18].[FoodTypeId] = [f3].[Id]
+        WHERE [m15].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m15].[MenuItemId] AND ([s].[Description] = [m15].[Description] OR ([s].[Description] IS NULL AND [m15].[Description] IS NULL)) AND [s].[FoodTypeId] = [m15].[FoodTypeId] AND ([s].[ImageUrl] = [m15].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m15].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m15].[IsAvailable] AND [s].[IsDeleted] = [m15].[IsDeleted] AND [s].[IsVeg] = [m15].[IsVeg] AND [s].[ItemName] = [m15].[ItemName] AND [s].[MenuCategoryId] = [m15].[MenuCategoryId] AND [s].[Price] = [m15].[Price] AND [m5].[MenuCategoryId] = [m17].[MenuCategoryId]) AS [DisplayOrder], (
+        SELECT TOP(1) [m21].[IsActive]
+        FROM [MenuItems] AS [m19]
+        INNER JOIN [MenuItemCategories] AS [m20] ON [m19].[MenuItemId] = [m20].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m21] ON [m20].[MenuCategoryId] = [m21].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m22] ON [m19].[MenuItemId] = [m22].[MenuItemId]
+        INNER JOIN [FoodType] AS [f4] ON [m22].[FoodTypeId] = [f4].[Id]
+        WHERE [m19].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m19].[MenuItemId] AND ([s].[Description] = [m19].[Description] OR ([s].[Description] IS NULL AND [m19].[Description] IS NULL)) AND [s].[FoodTypeId] = [m19].[FoodTypeId] AND ([s].[ImageUrl] = [m19].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m19].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m19].[IsAvailable] AND [s].[IsDeleted] = [m19].[IsDeleted] AND [s].[IsVeg] = [m19].[IsVeg] AND [s].[ItemName] = [m19].[ItemName] AND [s].[MenuCategoryId] = [m19].[MenuCategoryId] AND [s].[Price] = [m19].[Price] AND [m5].[MenuCategoryId] = [m21].[MenuCategoryId]) AS [IsActive], (
+        SELECT TOP(1) [m25].[StartDate]
+        FROM [MenuItems] AS [m23]
+        INNER JOIN [MenuItemCategories] AS [m24] ON [m23].[MenuItemId] = [m24].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m25] ON [m24].[MenuCategoryId] = [m25].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m26] ON [m23].[MenuItemId] = [m26].[MenuItemId]
+        INNER JOIN [FoodType] AS [f5] ON [m26].[FoodTypeId] = [f5].[Id]
+        WHERE [m23].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m23].[MenuItemId] AND ([s].[Description] = [m23].[Description] OR ([s].[Description] IS NULL AND [m23].[Description] IS NULL)) AND [s].[FoodTypeId] = [m23].[FoodTypeId] AND ([s].[ImageUrl] = [m23].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m23].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m23].[IsAvailable] AND [s].[IsDeleted] = [m23].[IsDeleted] AND [s].[IsVeg] = [m23].[IsVeg] AND [s].[ItemName] = [m23].[ItemName] AND [s].[MenuCategoryId] = [m23].[MenuCategoryId] AND [s].[Price] = [m23].[Price] AND [m5].[MenuCategoryId] = [m25].[MenuCategoryId]) AS [StartDate], (
+        SELECT TOP(1) [m29].[EndDate]
+        FROM [MenuItems] AS [m27]
+        INNER JOIN [MenuItemCategories] AS [m28] ON [m27].[MenuItemId] = [m28].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m29] ON [m28].[MenuCategoryId] = [m29].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m30] ON [m27].[MenuItemId] = [m30].[MenuItemId]
+        INNER JOIN [FoodType] AS [f6] ON [m30].[FoodTypeId] = [f6].[Id]
+        WHERE [m27].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m27].[MenuItemId] AND ([s].[Description] = [m27].[Description] OR ([s].[Description] IS NULL AND [m27].[Description] IS NULL)) AND [s].[FoodTypeId] = [m27].[FoodTypeId] AND ([s].[ImageUrl] = [m27].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m27].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m27].[IsAvailable] AND [s].[IsDeleted] = [m27].[IsDeleted] AND [s].[IsVeg] = [m27].[IsVeg] AND [s].[ItemName] = [m27].[ItemName] AND [s].[MenuCategoryId] = [m27].[MenuCategoryId] AND [s].[Price] = [m27].[Price] AND [m5].[MenuCategoryId] = [m29].[MenuCategoryId]) AS [EndDate]
+    FROM [MenuItems] AS [m3]
+    INNER JOIN [MenuItemCategories] AS [m4] ON [m3].[MenuItemId] = [m4].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m5] ON [m4].[MenuCategoryId] = [m5].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m6] ON [m3].[MenuItemId] = [m6].[MenuItemId]
+    INNER JOIN [FoodType] AS [f0] ON [m6].[FoodTypeId] = [f0].[Id]
+    WHERE [m3].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m3].[MenuItemId] AND ([s].[Description] = [m3].[Description] OR ([s].[Description] IS NULL AND [m3].[Description] IS NULL)) AND [s].[FoodTypeId] = [m3].[FoodTypeId] AND ([s].[ImageUrl] = [m3].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m3].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m3].[IsAvailable] AND [s].[IsDeleted] = [m3].[IsDeleted] AND [s].[IsVeg] = [m3].[IsVeg] AND [s].[ItemName] = [m3].[ItemName] AND [s].[MenuCategoryId] = [m3].[MenuCategoryId] AND [s].[Price] = [m3].[Price]
+    GROUP BY [m5].[MenuCategoryId]
+) AS [s0]
+OUTER APPLY (
+    SELECT TOP(1) (
+        SELECT TOP(1) [f8].[Id]
+        FROM [MenuItems] AS [m35]
+        INNER JOIN [MenuItemCategories] AS [m36] ON [m35].[MenuItemId] = [m36].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m37] ON [m36].[MenuCategoryId] = [m37].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m38] ON [m35].[MenuItemId] = [m38].[MenuItemId]
+        INNER JOIN [FoodType] AS [f8] ON [m38].[FoodTypeId] = [f8].[Id]
+        WHERE [m35].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m35].[MenuItemId] AND ([s].[Description] = [m35].[Description] OR ([s].[Description] IS NULL AND [m35].[Description] IS NULL)) AND [s].[FoodTypeId] = [m35].[FoodTypeId] AND ([s].[ImageUrl] = [m35].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m35].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m35].[IsAvailable] AND [s].[IsDeleted] = [m35].[IsDeleted] AND [s].[IsVeg] = [m35].[IsVeg] AND [s].[ItemName] = [m35].[ItemName] AND [s].[MenuCategoryId] = [m35].[MenuCategoryId] AND [s].[Price] = [m35].[Price] AND [f7].[Id] = [f8].[Id]) AS [Id], (
+        SELECT TOP(1) [f9].[Name]
+        FROM [MenuItems] AS [m39]
+        INNER JOIN [MenuItemCategories] AS [m40] ON [m39].[MenuItemId] = [m40].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m41] ON [m40].[MenuCategoryId] = [m41].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m42] ON [m39].[MenuItemId] = [m42].[MenuItemId]
+        INNER JOIN [FoodType] AS [f9] ON [m42].[FoodTypeId] = [f9].[Id]
+        WHERE [m39].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m39].[MenuItemId] AND ([s].[Description] = [m39].[Description] OR ([s].[Description] IS NULL AND [m39].[Description] IS NULL)) AND [s].[FoodTypeId] = [m39].[FoodTypeId] AND ([s].[ImageUrl] = [m39].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m39].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m39].[IsAvailable] AND [s].[IsDeleted] = [m39].[IsDeleted] AND [s].[IsVeg] = [m39].[IsVeg] AND [s].[ItemName] = [m39].[ItemName] AND [s].[MenuCategoryId] = [m39].[MenuCategoryId] AND [s].[Price] = [m39].[Price] AND [f7].[Id] = [f9].[Id]) AS [Name], (
+        SELECT TOP(1) [f10].[Description]
+        FROM [MenuItems] AS [m43]
+        INNER JOIN [MenuItemCategories] AS [m44] ON [m43].[MenuItemId] = [m44].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m45] ON [m44].[MenuCategoryId] = [m45].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m46] ON [m43].[MenuItemId] = [m46].[MenuItemId]
+        INNER JOIN [FoodType] AS [f10] ON [m46].[FoodTypeId] = [f10].[Id]
+        WHERE [m43].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m43].[MenuItemId] AND ([s].[Description] = [m43].[Description] OR ([s].[Description] IS NULL AND [m43].[Description] IS NULL)) AND [s].[FoodTypeId] = [m43].[FoodTypeId] AND ([s].[ImageUrl] = [m43].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m43].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m43].[IsAvailable] AND [s].[IsDeleted] = [m43].[IsDeleted] AND [s].[IsVeg] = [m43].[IsVeg] AND [s].[ItemName] = [m43].[ItemName] AND [s].[MenuCategoryId] = [m43].[MenuCategoryId] AND [s].[Price] = [m43].[Price] AND [f7].[Id] = [f10].[Id]) AS [Description], 1 AS [c]
+    FROM [MenuItems] AS [m31]
+    INNER JOIN [MenuItemCategories] AS [m32] ON [m31].[MenuItemId] = [m32].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m33] ON [m32].[MenuCategoryId] = [m33].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m34] ON [m31].[MenuItemId] = [m34].[MenuItemId]
+    INNER JOIN [FoodType] AS [f7] ON [m34].[FoodTypeId] = [f7].[Id]
+    WHERE [m31].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m31].[MenuItemId] AND ([s].[Description] = [m31].[Description] OR ([s].[Description] IS NULL AND [m31].[Description] IS NULL)) AND [s].[FoodTypeId] = [m31].[FoodTypeId] AND ([s].[ImageUrl] = [m31].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m31].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m31].[IsAvailable] AND [s].[IsDeleted] = [m31].[IsDeleted] AND [s].[IsVeg] = [m31].[IsVeg] AND [s].[ItemName] = [m31].[ItemName] AND [s].[MenuCategoryId] = [m31].[MenuCategoryId] AND [s].[Price] = [m31].[Price]
+    GROUP BY [f7].[Id]
+) AS [s1]
+ORDER BY [s].[MenuItemId], [s].[Description], [s].[FoodTypeId], [s].[ImageUrl], [s].[IsAvailable], [s].[IsDeleted], [s].[IsVeg], [s].[ItemName], [s].[MenuCategoryId], [s].[Price]
+2025-06-24 08:44:31 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:fdfa939d-659f-4f3e-b298-5e52f8d5d3b0
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:fdfa939d-659f-4f3e-b298-5e52f8d5d3b0
+Error Number:207,State:1,Class:16
+2025-06-24 08:48:24 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 08:48:33 [ERR] [Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[MenuItemId], [s].[ItemName], [s].[Description], [s].[Price], [s].[IsVeg], [s].[IsAvailable], [s].[ImageUrl], [s].[FoodTypeId], [s].[IsDeleted], [s].[MenuCategoryId], [s0].[MenuCategoryId], [s0].[CategoryName], [s0].[Description], [s0].[DisplayOrder], [s0].[IsActive], [s0].[StartDate], [s0].[EndDate], [s1].[Id], [s1].[Name], [s1].[Description], [s1].[c]
+FROM (
+    SELECT [m].[MenuItemId], [m].[ItemName], [m].[Description], [m].[Price], [m].[IsVeg], [m].[IsAvailable], [m].[ImageUrl], [m].[FoodTypeId], [m].[IsDeleted], [m].[MenuCategoryId]
+    FROM [MenuItems] AS [m]
+    INNER JOIN [MenuItemCategories] AS [m0] ON [m].[MenuItemId] = [m0].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m1] ON [m0].[MenuCategoryId] = [m1].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m2] ON [m].[MenuItemId] = [m2].[MenuItemId]
+    INNER JOIN [FoodType] AS [f] ON [m2].[FoodTypeId] = [f].[Id]
+    WHERE [m].[IsDeleted] = CAST(0 AS bit)
+    GROUP BY [m].[MenuItemId], [m].[Description], [m].[FoodTypeId], [m].[ImageUrl], [m].[IsAvailable], [m].[IsDeleted], [m].[IsVeg], [m].[ItemName], [m].[MenuCategoryId], [m].[Price]
+) AS [s]
+OUTER APPLY (
+    SELECT [m5].[MenuCategoryId], (
+        SELECT TOP(1) [m9].[CategoryName]
+        FROM [MenuItems] AS [m7]
+        INNER JOIN [MenuItemCategories] AS [m8] ON [m7].[MenuItemId] = [m8].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m9] ON [m8].[MenuCategoryId] = [m9].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m10] ON [m7].[MenuItemId] = [m10].[MenuItemId]
+        INNER JOIN [FoodType] AS [f1] ON [m10].[FoodTypeId] = [f1].[Id]
+        WHERE [m7].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m7].[MenuItemId] AND ([s].[Description] = [m7].[Description] OR ([s].[Description] IS NULL AND [m7].[Description] IS NULL)) AND [s].[FoodTypeId] = [m7].[FoodTypeId] AND ([s].[ImageUrl] = [m7].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m7].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m7].[IsAvailable] AND [s].[IsDeleted] = [m7].[IsDeleted] AND [s].[IsVeg] = [m7].[IsVeg] AND [s].[ItemName] = [m7].[ItemName] AND [s].[MenuCategoryId] = [m7].[MenuCategoryId] AND [s].[Price] = [m7].[Price] AND [m5].[MenuCategoryId] = [m9].[MenuCategoryId]) AS [CategoryName], (
+        SELECT TOP(1) [m13].[Description]
+        FROM [MenuItems] AS [m11]
+        INNER JOIN [MenuItemCategories] AS [m12] ON [m11].[MenuItemId] = [m12].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m13] ON [m12].[MenuCategoryId] = [m13].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m14] ON [m11].[MenuItemId] = [m14].[MenuItemId]
+        INNER JOIN [FoodType] AS [f2] ON [m14].[FoodTypeId] = [f2].[Id]
+        WHERE [m11].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m11].[MenuItemId] AND ([s].[Description] = [m11].[Description] OR ([s].[Description] IS NULL AND [m11].[Description] IS NULL)) AND [s].[FoodTypeId] = [m11].[FoodTypeId] AND ([s].[ImageUrl] = [m11].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m11].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m11].[IsAvailable] AND [s].[IsDeleted] = [m11].[IsDeleted] AND [s].[IsVeg] = [m11].[IsVeg] AND [s].[ItemName] = [m11].[ItemName] AND [s].[MenuCategoryId] = [m11].[MenuCategoryId] AND [s].[Price] = [m11].[Price] AND [m5].[MenuCategoryId] = [m13].[MenuCategoryId]) AS [Description], (
+        SELECT TOP(1) [m17].[DisplayOrder]
+        FROM [MenuItems] AS [m15]
+        INNER JOIN [MenuItemCategories] AS [m16] ON [m15].[MenuItemId] = [m16].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m17] ON [m16].[MenuCategoryId] = [m17].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m18] ON [m15].[MenuItemId] = [m18].[MenuItemId]
+        INNER JOIN [FoodType] AS [f3] ON [m18].[FoodTypeId] = [f3].[Id]
+        WHERE [m15].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m15].[MenuItemId] AND ([s].[Description] = [m15].[Description] OR ([s].[Description] IS NULL AND [m15].[Description] IS NULL)) AND [s].[FoodTypeId] = [m15].[FoodTypeId] AND ([s].[ImageUrl] = [m15].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m15].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m15].[IsAvailable] AND [s].[IsDeleted] = [m15].[IsDeleted] AND [s].[IsVeg] = [m15].[IsVeg] AND [s].[ItemName] = [m15].[ItemName] AND [s].[MenuCategoryId] = [m15].[MenuCategoryId] AND [s].[Price] = [m15].[Price] AND [m5].[MenuCategoryId] = [m17].[MenuCategoryId]) AS [DisplayOrder], (
+        SELECT TOP(1) [m21].[IsActive]
+        FROM [MenuItems] AS [m19]
+        INNER JOIN [MenuItemCategories] AS [m20] ON [m19].[MenuItemId] = [m20].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m21] ON [m20].[MenuCategoryId] = [m21].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m22] ON [m19].[MenuItemId] = [m22].[MenuItemId]
+        INNER JOIN [FoodType] AS [f4] ON [m22].[FoodTypeId] = [f4].[Id]
+        WHERE [m19].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m19].[MenuItemId] AND ([s].[Description] = [m19].[Description] OR ([s].[Description] IS NULL AND [m19].[Description] IS NULL)) AND [s].[FoodTypeId] = [m19].[FoodTypeId] AND ([s].[ImageUrl] = [m19].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m19].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m19].[IsAvailable] AND [s].[IsDeleted] = [m19].[IsDeleted] AND [s].[IsVeg] = [m19].[IsVeg] AND [s].[ItemName] = [m19].[ItemName] AND [s].[MenuCategoryId] = [m19].[MenuCategoryId] AND [s].[Price] = [m19].[Price] AND [m5].[MenuCategoryId] = [m21].[MenuCategoryId]) AS [IsActive], (
+        SELECT TOP(1) [m25].[StartDate]
+        FROM [MenuItems] AS [m23]
+        INNER JOIN [MenuItemCategories] AS [m24] ON [m23].[MenuItemId] = [m24].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m25] ON [m24].[MenuCategoryId] = [m25].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m26] ON [m23].[MenuItemId] = [m26].[MenuItemId]
+        INNER JOIN [FoodType] AS [f5] ON [m26].[FoodTypeId] = [f5].[Id]
+        WHERE [m23].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m23].[MenuItemId] AND ([s].[Description] = [m23].[Description] OR ([s].[Description] IS NULL AND [m23].[Description] IS NULL)) AND [s].[FoodTypeId] = [m23].[FoodTypeId] AND ([s].[ImageUrl] = [m23].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m23].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m23].[IsAvailable] AND [s].[IsDeleted] = [m23].[IsDeleted] AND [s].[IsVeg] = [m23].[IsVeg] AND [s].[ItemName] = [m23].[ItemName] AND [s].[MenuCategoryId] = [m23].[MenuCategoryId] AND [s].[Price] = [m23].[Price] AND [m5].[MenuCategoryId] = [m25].[MenuCategoryId]) AS [StartDate], (
+        SELECT TOP(1) [m29].[EndDate]
+        FROM [MenuItems] AS [m27]
+        INNER JOIN [MenuItemCategories] AS [m28] ON [m27].[MenuItemId] = [m28].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m29] ON [m28].[MenuCategoryId] = [m29].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m30] ON [m27].[MenuItemId] = [m30].[MenuItemId]
+        INNER JOIN [FoodType] AS [f6] ON [m30].[FoodTypeId] = [f6].[Id]
+        WHERE [m27].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m27].[MenuItemId] AND ([s].[Description] = [m27].[Description] OR ([s].[Description] IS NULL AND [m27].[Description] IS NULL)) AND [s].[FoodTypeId] = [m27].[FoodTypeId] AND ([s].[ImageUrl] = [m27].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m27].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m27].[IsAvailable] AND [s].[IsDeleted] = [m27].[IsDeleted] AND [s].[IsVeg] = [m27].[IsVeg] AND [s].[ItemName] = [m27].[ItemName] AND [s].[MenuCategoryId] = [m27].[MenuCategoryId] AND [s].[Price] = [m27].[Price] AND [m5].[MenuCategoryId] = [m29].[MenuCategoryId]) AS [EndDate]
+    FROM [MenuItems] AS [m3]
+    INNER JOIN [MenuItemCategories] AS [m4] ON [m3].[MenuItemId] = [m4].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m5] ON [m4].[MenuCategoryId] = [m5].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m6] ON [m3].[MenuItemId] = [m6].[MenuItemId]
+    INNER JOIN [FoodType] AS [f0] ON [m6].[FoodTypeId] = [f0].[Id]
+    WHERE [m3].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m3].[MenuItemId] AND ([s].[Description] = [m3].[Description] OR ([s].[Description] IS NULL AND [m3].[Description] IS NULL)) AND [s].[FoodTypeId] = [m3].[FoodTypeId] AND ([s].[ImageUrl] = [m3].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m3].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m3].[IsAvailable] AND [s].[IsDeleted] = [m3].[IsDeleted] AND [s].[IsVeg] = [m3].[IsVeg] AND [s].[ItemName] = [m3].[ItemName] AND [s].[MenuCategoryId] = [m3].[MenuCategoryId] AND [s].[Price] = [m3].[Price]
+    GROUP BY [m5].[MenuCategoryId]
+) AS [s0]
+OUTER APPLY (
+    SELECT TOP(1) (
+        SELECT TOP(1) [f8].[Id]
+        FROM [MenuItems] AS [m35]
+        INNER JOIN [MenuItemCategories] AS [m36] ON [m35].[MenuItemId] = [m36].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m37] ON [m36].[MenuCategoryId] = [m37].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m38] ON [m35].[MenuItemId] = [m38].[MenuItemId]
+        INNER JOIN [FoodType] AS [f8] ON [m38].[FoodTypeId] = [f8].[Id]
+        WHERE [m35].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m35].[MenuItemId] AND ([s].[Description] = [m35].[Description] OR ([s].[Description] IS NULL AND [m35].[Description] IS NULL)) AND [s].[FoodTypeId] = [m35].[FoodTypeId] AND ([s].[ImageUrl] = [m35].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m35].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m35].[IsAvailable] AND [s].[IsDeleted] = [m35].[IsDeleted] AND [s].[IsVeg] = [m35].[IsVeg] AND [s].[ItemName] = [m35].[ItemName] AND [s].[MenuCategoryId] = [m35].[MenuCategoryId] AND [s].[Price] = [m35].[Price] AND [f7].[Id] = [f8].[Id]) AS [Id], (
+        SELECT TOP(1) [f9].[Name]
+        FROM [MenuItems] AS [m39]
+        INNER JOIN [MenuItemCategories] AS [m40] ON [m39].[MenuItemId] = [m40].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m41] ON [m40].[MenuCategoryId] = [m41].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m42] ON [m39].[MenuItemId] = [m42].[MenuItemId]
+        INNER JOIN [FoodType] AS [f9] ON [m42].[FoodTypeId] = [f9].[Id]
+        WHERE [m39].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m39].[MenuItemId] AND ([s].[Description] = [m39].[Description] OR ([s].[Description] IS NULL AND [m39].[Description] IS NULL)) AND [s].[FoodTypeId] = [m39].[FoodTypeId] AND ([s].[ImageUrl] = [m39].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m39].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m39].[IsAvailable] AND [s].[IsDeleted] = [m39].[IsDeleted] AND [s].[IsVeg] = [m39].[IsVeg] AND [s].[ItemName] = [m39].[ItemName] AND [s].[MenuCategoryId] = [m39].[MenuCategoryId] AND [s].[Price] = [m39].[Price] AND [f7].[Id] = [f9].[Id]) AS [Name], (
+        SELECT TOP(1) [f10].[Description]
+        FROM [MenuItems] AS [m43]
+        INNER JOIN [MenuItemCategories] AS [m44] ON [m43].[MenuItemId] = [m44].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m45] ON [m44].[MenuCategoryId] = [m45].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m46] ON [m43].[MenuItemId] = [m46].[MenuItemId]
+        INNER JOIN [FoodType] AS [f10] ON [m46].[FoodTypeId] = [f10].[Id]
+        WHERE [m43].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m43].[MenuItemId] AND ([s].[Description] = [m43].[Description] OR ([s].[Description] IS NULL AND [m43].[Description] IS NULL)) AND [s].[FoodTypeId] = [m43].[FoodTypeId] AND ([s].[ImageUrl] = [m43].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m43].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m43].[IsAvailable] AND [s].[IsDeleted] = [m43].[IsDeleted] AND [s].[IsVeg] = [m43].[IsVeg] AND [s].[ItemName] = [m43].[ItemName] AND [s].[MenuCategoryId] = [m43].[MenuCategoryId] AND [s].[Price] = [m43].[Price] AND [f7].[Id] = [f10].[Id]) AS [Description], 1 AS [c]
+    FROM [MenuItems] AS [m31]
+    INNER JOIN [MenuItemCategories] AS [m32] ON [m31].[MenuItemId] = [m32].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m33] ON [m32].[MenuCategoryId] = [m33].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m34] ON [m31].[MenuItemId] = [m34].[MenuItemId]
+    INNER JOIN [FoodType] AS [f7] ON [m34].[FoodTypeId] = [f7].[Id]
+    WHERE [m31].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m31].[MenuItemId] AND ([s].[Description] = [m31].[Description] OR ([s].[Description] IS NULL AND [m31].[Description] IS NULL)) AND [s].[FoodTypeId] = [m31].[FoodTypeId] AND ([s].[ImageUrl] = [m31].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m31].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m31].[IsAvailable] AND [s].[IsDeleted] = [m31].[IsDeleted] AND [s].[IsVeg] = [m31].[IsVeg] AND [s].[ItemName] = [m31].[ItemName] AND [s].[MenuCategoryId] = [m31].[MenuCategoryId] AND [s].[Price] = [m31].[Price]
+    GROUP BY [f7].[Id]
+) AS [s1]
+ORDER BY [s].[MenuItemId], [s].[Description], [s].[FoodTypeId], [s].[ImageUrl], [s].[IsAvailable], [s].[IsDeleted], [s].[IsVeg], [s].[ItemName], [s].[MenuCategoryId], [s].[Price]
+2025-06-24 08:48:33 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:8e7fecf7-4743-434d-aa5f-e961a9b321f4
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:8e7fecf7-4743-434d-aa5f-e961a9b321f4
+Error Number:207,State:1,Class:16
+2025-06-24 08:51:20 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 08:51:40 [ERR] [Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[MenuItemId], [s].[ItemName], [s].[Description], [s].[Price], [s].[IsVeg], [s].[IsAvailable], [s].[ImageUrl], [s].[FoodTypeId], [s].[IsDeleted], [s].[MenuCategoryId], [s0].[MenuCategoryId], [s0].[CategoryName], [s0].[Description], [s0].[DisplayOrder], [s0].[IsActive], [s0].[StartDate], [s0].[EndDate], [s1].[Id], [s1].[Name], [s1].[Description], [s1].[c]
+FROM (
+    SELECT [m].[MenuItemId], [m].[ItemName], [m].[Description], [m].[Price], [m].[IsVeg], [m].[IsAvailable], [m].[ImageUrl], [m].[FoodTypeId], [m].[IsDeleted], [m].[MenuCategoryId]
+    FROM [MenuItems] AS [m]
+    INNER JOIN [MenuItemCategories] AS [m0] ON [m].[MenuItemId] = [m0].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m1] ON [m0].[MenuCategoryId] = [m1].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m2] ON [m].[MenuItemId] = [m2].[MenuItemId]
+    INNER JOIN [FoodType] AS [f] ON [m2].[FoodTypeId] = [f].[Id]
+    WHERE [m].[IsDeleted] = CAST(0 AS bit)
+    GROUP BY [m].[MenuItemId], [m].[Description], [m].[FoodTypeId], [m].[ImageUrl], [m].[IsAvailable], [m].[IsDeleted], [m].[IsVeg], [m].[ItemName], [m].[MenuCategoryId], [m].[Price]
+) AS [s]
+OUTER APPLY (
+    SELECT [m5].[MenuCategoryId], (
+        SELECT TOP(1) [m9].[CategoryName]
+        FROM [MenuItems] AS [m7]
+        INNER JOIN [MenuItemCategories] AS [m8] ON [m7].[MenuItemId] = [m8].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m9] ON [m8].[MenuCategoryId] = [m9].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m10] ON [m7].[MenuItemId] = [m10].[MenuItemId]
+        INNER JOIN [FoodType] AS [f1] ON [m10].[FoodTypeId] = [f1].[Id]
+        WHERE [m7].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m7].[MenuItemId] AND ([s].[Description] = [m7].[Description] OR ([s].[Description] IS NULL AND [m7].[Description] IS NULL)) AND [s].[FoodTypeId] = [m7].[FoodTypeId] AND ([s].[ImageUrl] = [m7].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m7].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m7].[IsAvailable] AND [s].[IsDeleted] = [m7].[IsDeleted] AND [s].[IsVeg] = [m7].[IsVeg] AND [s].[ItemName] = [m7].[ItemName] AND [s].[MenuCategoryId] = [m7].[MenuCategoryId] AND [s].[Price] = [m7].[Price] AND [m5].[MenuCategoryId] = [m9].[MenuCategoryId]) AS [CategoryName], (
+        SELECT TOP(1) [m13].[Description]
+        FROM [MenuItems] AS [m11]
+        INNER JOIN [MenuItemCategories] AS [m12] ON [m11].[MenuItemId] = [m12].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m13] ON [m12].[MenuCategoryId] = [m13].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m14] ON [m11].[MenuItemId] = [m14].[MenuItemId]
+        INNER JOIN [FoodType] AS [f2] ON [m14].[FoodTypeId] = [f2].[Id]
+        WHERE [m11].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m11].[MenuItemId] AND ([s].[Description] = [m11].[Description] OR ([s].[Description] IS NULL AND [m11].[Description] IS NULL)) AND [s].[FoodTypeId] = [m11].[FoodTypeId] AND ([s].[ImageUrl] = [m11].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m11].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m11].[IsAvailable] AND [s].[IsDeleted] = [m11].[IsDeleted] AND [s].[IsVeg] = [m11].[IsVeg] AND [s].[ItemName] = [m11].[ItemName] AND [s].[MenuCategoryId] = [m11].[MenuCategoryId] AND [s].[Price] = [m11].[Price] AND [m5].[MenuCategoryId] = [m13].[MenuCategoryId]) AS [Description], (
+        SELECT TOP(1) [m17].[DisplayOrder]
+        FROM [MenuItems] AS [m15]
+        INNER JOIN [MenuItemCategories] AS [m16] ON [m15].[MenuItemId] = [m16].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m17] ON [m16].[MenuCategoryId] = [m17].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m18] ON [m15].[MenuItemId] = [m18].[MenuItemId]
+        INNER JOIN [FoodType] AS [f3] ON [m18].[FoodTypeId] = [f3].[Id]
+        WHERE [m15].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m15].[MenuItemId] AND ([s].[Description] = [m15].[Description] OR ([s].[Description] IS NULL AND [m15].[Description] IS NULL)) AND [s].[FoodTypeId] = [m15].[FoodTypeId] AND ([s].[ImageUrl] = [m15].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m15].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m15].[IsAvailable] AND [s].[IsDeleted] = [m15].[IsDeleted] AND [s].[IsVeg] = [m15].[IsVeg] AND [s].[ItemName] = [m15].[ItemName] AND [s].[MenuCategoryId] = [m15].[MenuCategoryId] AND [s].[Price] = [m15].[Price] AND [m5].[MenuCategoryId] = [m17].[MenuCategoryId]) AS [DisplayOrder], (
+        SELECT TOP(1) [m21].[IsActive]
+        FROM [MenuItems] AS [m19]
+        INNER JOIN [MenuItemCategories] AS [m20] ON [m19].[MenuItemId] = [m20].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m21] ON [m20].[MenuCategoryId] = [m21].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m22] ON [m19].[MenuItemId] = [m22].[MenuItemId]
+        INNER JOIN [FoodType] AS [f4] ON [m22].[FoodTypeId] = [f4].[Id]
+        WHERE [m19].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m19].[MenuItemId] AND ([s].[Description] = [m19].[Description] OR ([s].[Description] IS NULL AND [m19].[Description] IS NULL)) AND [s].[FoodTypeId] = [m19].[FoodTypeId] AND ([s].[ImageUrl] = [m19].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m19].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m19].[IsAvailable] AND [s].[IsDeleted] = [m19].[IsDeleted] AND [s].[IsVeg] = [m19].[IsVeg] AND [s].[ItemName] = [m19].[ItemName] AND [s].[MenuCategoryId] = [m19].[MenuCategoryId] AND [s].[Price] = [m19].[Price] AND [m5].[MenuCategoryId] = [m21].[MenuCategoryId]) AS [IsActive], (
+        SELECT TOP(1) [m25].[StartDate]
+        FROM [MenuItems] AS [m23]
+        INNER JOIN [MenuItemCategories] AS [m24] ON [m23].[MenuItemId] = [m24].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m25] ON [m24].[MenuCategoryId] = [m25].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m26] ON [m23].[MenuItemId] = [m26].[MenuItemId]
+        INNER JOIN [FoodType] AS [f5] ON [m26].[FoodTypeId] = [f5].[Id]
+        WHERE [m23].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m23].[MenuItemId] AND ([s].[Description] = [m23].[Description] OR ([s].[Description] IS NULL AND [m23].[Description] IS NULL)) AND [s].[FoodTypeId] = [m23].[FoodTypeId] AND ([s].[ImageUrl] = [m23].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m23].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m23].[IsAvailable] AND [s].[IsDeleted] = [m23].[IsDeleted] AND [s].[IsVeg] = [m23].[IsVeg] AND [s].[ItemName] = [m23].[ItemName] AND [s].[MenuCategoryId] = [m23].[MenuCategoryId] AND [s].[Price] = [m23].[Price] AND [m5].[MenuCategoryId] = [m25].[MenuCategoryId]) AS [StartDate], (
+        SELECT TOP(1) [m29].[EndDate]
+        FROM [MenuItems] AS [m27]
+        INNER JOIN [MenuItemCategories] AS [m28] ON [m27].[MenuItemId] = [m28].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m29] ON [m28].[MenuCategoryId] = [m29].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m30] ON [m27].[MenuItemId] = [m30].[MenuItemId]
+        INNER JOIN [FoodType] AS [f6] ON [m30].[FoodTypeId] = [f6].[Id]
+        WHERE [m27].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m27].[MenuItemId] AND ([s].[Description] = [m27].[Description] OR ([s].[Description] IS NULL AND [m27].[Description] IS NULL)) AND [s].[FoodTypeId] = [m27].[FoodTypeId] AND ([s].[ImageUrl] = [m27].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m27].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m27].[IsAvailable] AND [s].[IsDeleted] = [m27].[IsDeleted] AND [s].[IsVeg] = [m27].[IsVeg] AND [s].[ItemName] = [m27].[ItemName] AND [s].[MenuCategoryId] = [m27].[MenuCategoryId] AND [s].[Price] = [m27].[Price] AND [m5].[MenuCategoryId] = [m29].[MenuCategoryId]) AS [EndDate]
+    FROM [MenuItems] AS [m3]
+    INNER JOIN [MenuItemCategories] AS [m4] ON [m3].[MenuItemId] = [m4].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m5] ON [m4].[MenuCategoryId] = [m5].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m6] ON [m3].[MenuItemId] = [m6].[MenuItemId]
+    INNER JOIN [FoodType] AS [f0] ON [m6].[FoodTypeId] = [f0].[Id]
+    WHERE [m3].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m3].[MenuItemId] AND ([s].[Description] = [m3].[Description] OR ([s].[Description] IS NULL AND [m3].[Description] IS NULL)) AND [s].[FoodTypeId] = [m3].[FoodTypeId] AND ([s].[ImageUrl] = [m3].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m3].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m3].[IsAvailable] AND [s].[IsDeleted] = [m3].[IsDeleted] AND [s].[IsVeg] = [m3].[IsVeg] AND [s].[ItemName] = [m3].[ItemName] AND [s].[MenuCategoryId] = [m3].[MenuCategoryId] AND [s].[Price] = [m3].[Price]
+    GROUP BY [m5].[MenuCategoryId]
+) AS [s0]
+OUTER APPLY (
+    SELECT TOP(1) (
+        SELECT TOP(1) [f8].[Id]
+        FROM [MenuItems] AS [m35]
+        INNER JOIN [MenuItemCategories] AS [m36] ON [m35].[MenuItemId] = [m36].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m37] ON [m36].[MenuCategoryId] = [m37].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m38] ON [m35].[MenuItemId] = [m38].[MenuItemId]
+        INNER JOIN [FoodType] AS [f8] ON [m38].[FoodTypeId] = [f8].[Id]
+        WHERE [m35].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m35].[MenuItemId] AND ([s].[Description] = [m35].[Description] OR ([s].[Description] IS NULL AND [m35].[Description] IS NULL)) AND [s].[FoodTypeId] = [m35].[FoodTypeId] AND ([s].[ImageUrl] = [m35].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m35].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m35].[IsAvailable] AND [s].[IsDeleted] = [m35].[IsDeleted] AND [s].[IsVeg] = [m35].[IsVeg] AND [s].[ItemName] = [m35].[ItemName] AND [s].[MenuCategoryId] = [m35].[MenuCategoryId] AND [s].[Price] = [m35].[Price] AND [f7].[Id] = [f8].[Id]) AS [Id], (
+        SELECT TOP(1) [f9].[Name]
+        FROM [MenuItems] AS [m39]
+        INNER JOIN [MenuItemCategories] AS [m40] ON [m39].[MenuItemId] = [m40].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m41] ON [m40].[MenuCategoryId] = [m41].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m42] ON [m39].[MenuItemId] = [m42].[MenuItemId]
+        INNER JOIN [FoodType] AS [f9] ON [m42].[FoodTypeId] = [f9].[Id]
+        WHERE [m39].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m39].[MenuItemId] AND ([s].[Description] = [m39].[Description] OR ([s].[Description] IS NULL AND [m39].[Description] IS NULL)) AND [s].[FoodTypeId] = [m39].[FoodTypeId] AND ([s].[ImageUrl] = [m39].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m39].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m39].[IsAvailable] AND [s].[IsDeleted] = [m39].[IsDeleted] AND [s].[IsVeg] = [m39].[IsVeg] AND [s].[ItemName] = [m39].[ItemName] AND [s].[MenuCategoryId] = [m39].[MenuCategoryId] AND [s].[Price] = [m39].[Price] AND [f7].[Id] = [f9].[Id]) AS [Name], (
+        SELECT TOP(1) [f10].[Description]
+        FROM [MenuItems] AS [m43]
+        INNER JOIN [MenuItemCategories] AS [m44] ON [m43].[MenuItemId] = [m44].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m45] ON [m44].[MenuCategoryId] = [m45].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m46] ON [m43].[MenuItemId] = [m46].[MenuItemId]
+        INNER JOIN [FoodType] AS [f10] ON [m46].[FoodTypeId] = [f10].[Id]
+        WHERE [m43].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m43].[MenuItemId] AND ([s].[Description] = [m43].[Description] OR ([s].[Description] IS NULL AND [m43].[Description] IS NULL)) AND [s].[FoodTypeId] = [m43].[FoodTypeId] AND ([s].[ImageUrl] = [m43].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m43].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m43].[IsAvailable] AND [s].[IsDeleted] = [m43].[IsDeleted] AND [s].[IsVeg] = [m43].[IsVeg] AND [s].[ItemName] = [m43].[ItemName] AND [s].[MenuCategoryId] = [m43].[MenuCategoryId] AND [s].[Price] = [m43].[Price] AND [f7].[Id] = [f10].[Id]) AS [Description], 1 AS [c]
+    FROM [MenuItems] AS [m31]
+    INNER JOIN [MenuItemCategories] AS [m32] ON [m31].[MenuItemId] = [m32].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m33] ON [m32].[MenuCategoryId] = [m33].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m34] ON [m31].[MenuItemId] = [m34].[MenuItemId]
+    INNER JOIN [FoodType] AS [f7] ON [m34].[FoodTypeId] = [f7].[Id]
+    WHERE [m31].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m31].[MenuItemId] AND ([s].[Description] = [m31].[Description] OR ([s].[Description] IS NULL AND [m31].[Description] IS NULL)) AND [s].[FoodTypeId] = [m31].[FoodTypeId] AND ([s].[ImageUrl] = [m31].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m31].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m31].[IsAvailable] AND [s].[IsDeleted] = [m31].[IsDeleted] AND [s].[IsVeg] = [m31].[IsVeg] AND [s].[ItemName] = [m31].[ItemName] AND [s].[MenuCategoryId] = [m31].[MenuCategoryId] AND [s].[Price] = [m31].[Price]
+    GROUP BY [f7].[Id]
+) AS [s1]
+ORDER BY [s].[MenuItemId], [s].[Description], [s].[FoodTypeId], [s].[ImageUrl], [s].[IsAvailable], [s].[IsDeleted], [s].[IsVeg], [s].[ItemName], [s].[MenuCategoryId], [s].[Price]
+2025-06-24 08:51:40 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:8db8d2ee-786e-4dae-aa0a-c1409f9e2385
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:8db8d2ee-786e-4dae-aa0a-c1409f9e2385
+Error Number:207,State:1,Class:16
+2025-06-24 08:54:46 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 08:54:53 [ERR] [Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (291ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[MenuItemId], [s].[ItemName], [s].[Description], [s].[Price], [s].[IsVeg], [s].[IsAvailable], [s].[ImageUrl], [s].[FoodTypeId], [s].[IsDeleted], [s].[MenuCategoryId], [s0].[MenuCategoryId], [s0].[CategoryName], [s0].[Description], [s0].[DisplayOrder], [s0].[IsActive], [s0].[StartDate], [s0].[EndDate]
+FROM (
+    SELECT [m].[MenuItemId], [m].[ItemName], [m].[Description], [m].[Price], [m].[IsVeg], [m].[IsAvailable], [m].[ImageUrl], [m].[FoodTypeId], [m].[IsDeleted], [m].[MenuCategoryId]
+    FROM [MenuItems] AS [m]
+    INNER JOIN [MenuItemCategories] AS [m0] ON [m].[MenuItemId] = [m0].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m1] ON [m0].[MenuCategoryId] = [m1].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m2] ON [m].[MenuItemId] = [m2].[MenuItemId]
+    INNER JOIN [FoodType] AS [f] ON [m2].[FoodTypeId] = [f].[Id]
+    WHERE [m].[IsDeleted] = CAST(0 AS bit)
+    GROUP BY [m].[MenuItemId], [m].[Description], [m].[FoodTypeId], [m].[ImageUrl], [m].[IsAvailable], [m].[IsDeleted], [m].[IsVeg], [m].[ItemName], [m].[MenuCategoryId], [m].[Price]
+) AS [s]
+OUTER APPLY (
+    SELECT [m5].[MenuCategoryId], (
+        SELECT TOP(1) [m9].[CategoryName]
+        FROM [MenuItems] AS [m7]
+        INNER JOIN [MenuItemCategories] AS [m8] ON [m7].[MenuItemId] = [m8].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m9] ON [m8].[MenuCategoryId] = [m9].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m10] ON [m7].[MenuItemId] = [m10].[MenuItemId]
+        INNER JOIN [FoodType] AS [f1] ON [m10].[FoodTypeId] = [f1].[Id]
+        WHERE [m7].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m7].[MenuItemId] AND ([s].[Description] = [m7].[Description] OR ([s].[Description] IS NULL AND [m7].[Description] IS NULL)) AND [s].[FoodTypeId] = [m7].[FoodTypeId] AND ([s].[ImageUrl] = [m7].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m7].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m7].[IsAvailable] AND [s].[IsDeleted] = [m7].[IsDeleted] AND [s].[IsVeg] = [m7].[IsVeg] AND [s].[ItemName] = [m7].[ItemName] AND [s].[MenuCategoryId] = [m7].[MenuCategoryId] AND [s].[Price] = [m7].[Price] AND [m5].[MenuCategoryId] = [m9].[MenuCategoryId]) AS [CategoryName], (
+        SELECT TOP(1) [m13].[Description]
+        FROM [MenuItems] AS [m11]
+        INNER JOIN [MenuItemCategories] AS [m12] ON [m11].[MenuItemId] = [m12].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m13] ON [m12].[MenuCategoryId] = [m13].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m14] ON [m11].[MenuItemId] = [m14].[MenuItemId]
+        INNER JOIN [FoodType] AS [f2] ON [m14].[FoodTypeId] = [f2].[Id]
+        WHERE [m11].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m11].[MenuItemId] AND ([s].[Description] = [m11].[Description] OR ([s].[Description] IS NULL AND [m11].[Description] IS NULL)) AND [s].[FoodTypeId] = [m11].[FoodTypeId] AND ([s].[ImageUrl] = [m11].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m11].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m11].[IsAvailable] AND [s].[IsDeleted] = [m11].[IsDeleted] AND [s].[IsVeg] = [m11].[IsVeg] AND [s].[ItemName] = [m11].[ItemName] AND [s].[MenuCategoryId] = [m11].[MenuCategoryId] AND [s].[Price] = [m11].[Price] AND [m5].[MenuCategoryId] = [m13].[MenuCategoryId]) AS [Description], (
+        SELECT TOP(1) [m17].[DisplayOrder]
+        FROM [MenuItems] AS [m15]
+        INNER JOIN [MenuItemCategories] AS [m16] ON [m15].[MenuItemId] = [m16].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m17] ON [m16].[MenuCategoryId] = [m17].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m18] ON [m15].[MenuItemId] = [m18].[MenuItemId]
+        INNER JOIN [FoodType] AS [f3] ON [m18].[FoodTypeId] = [f3].[Id]
+        WHERE [m15].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m15].[MenuItemId] AND ([s].[Description] = [m15].[Description] OR ([s].[Description] IS NULL AND [m15].[Description] IS NULL)) AND [s].[FoodTypeId] = [m15].[FoodTypeId] AND ([s].[ImageUrl] = [m15].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m15].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m15].[IsAvailable] AND [s].[IsDeleted] = [m15].[IsDeleted] AND [s].[IsVeg] = [m15].[IsVeg] AND [s].[ItemName] = [m15].[ItemName] AND [s].[MenuCategoryId] = [m15].[MenuCategoryId] AND [s].[Price] = [m15].[Price] AND [m5].[MenuCategoryId] = [m17].[MenuCategoryId]) AS [DisplayOrder], (
+        SELECT TOP(1) [m21].[IsActive]
+        FROM [MenuItems] AS [m19]
+        INNER JOIN [MenuItemCategories] AS [m20] ON [m19].[MenuItemId] = [m20].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m21] ON [m20].[MenuCategoryId] = [m21].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m22] ON [m19].[MenuItemId] = [m22].[MenuItemId]
+        INNER JOIN [FoodType] AS [f4] ON [m22].[FoodTypeId] = [f4].[Id]
+        WHERE [m19].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m19].[MenuItemId] AND ([s].[Description] = [m19].[Description] OR ([s].[Description] IS NULL AND [m19].[Description] IS NULL)) AND [s].[FoodTypeId] = [m19].[FoodTypeId] AND ([s].[ImageUrl] = [m19].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m19].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m19].[IsAvailable] AND [s].[IsDeleted] = [m19].[IsDeleted] AND [s].[IsVeg] = [m19].[IsVeg] AND [s].[ItemName] = [m19].[ItemName] AND [s].[MenuCategoryId] = [m19].[MenuCategoryId] AND [s].[Price] = [m19].[Price] AND [m5].[MenuCategoryId] = [m21].[MenuCategoryId]) AS [IsActive], (
+        SELECT TOP(1) [m25].[StartDate]
+        FROM [MenuItems] AS [m23]
+        INNER JOIN [MenuItemCategories] AS [m24] ON [m23].[MenuItemId] = [m24].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m25] ON [m24].[MenuCategoryId] = [m25].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m26] ON [m23].[MenuItemId] = [m26].[MenuItemId]
+        INNER JOIN [FoodType] AS [f5] ON [m26].[FoodTypeId] = [f5].[Id]
+        WHERE [m23].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m23].[MenuItemId] AND ([s].[Description] = [m23].[Description] OR ([s].[Description] IS NULL AND [m23].[Description] IS NULL)) AND [s].[FoodTypeId] = [m23].[FoodTypeId] AND ([s].[ImageUrl] = [m23].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m23].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m23].[IsAvailable] AND [s].[IsDeleted] = [m23].[IsDeleted] AND [s].[IsVeg] = [m23].[IsVeg] AND [s].[ItemName] = [m23].[ItemName] AND [s].[MenuCategoryId] = [m23].[MenuCategoryId] AND [s].[Price] = [m23].[Price] AND [m5].[MenuCategoryId] = [m25].[MenuCategoryId]) AS [StartDate], (
+        SELECT TOP(1) [m29].[EndDate]
+        FROM [MenuItems] AS [m27]
+        INNER JOIN [MenuItemCategories] AS [m28] ON [m27].[MenuItemId] = [m28].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m29] ON [m28].[MenuCategoryId] = [m29].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m30] ON [m27].[MenuItemId] = [m30].[MenuItemId]
+        INNER JOIN [FoodType] AS [f6] ON [m30].[FoodTypeId] = [f6].[Id]
+        WHERE [m27].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m27].[MenuItemId] AND ([s].[Description] = [m27].[Description] OR ([s].[Description] IS NULL AND [m27].[Description] IS NULL)) AND [s].[FoodTypeId] = [m27].[FoodTypeId] AND ([s].[ImageUrl] = [m27].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m27].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m27].[IsAvailable] AND [s].[IsDeleted] = [m27].[IsDeleted] AND [s].[IsVeg] = [m27].[IsVeg] AND [s].[ItemName] = [m27].[ItemName] AND [s].[MenuCategoryId] = [m27].[MenuCategoryId] AND [s].[Price] = [m27].[Price] AND [m5].[MenuCategoryId] = [m29].[MenuCategoryId]) AS [EndDate]
+    FROM [MenuItems] AS [m3]
+    INNER JOIN [MenuItemCategories] AS [m4] ON [m3].[MenuItemId] = [m4].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m5] ON [m4].[MenuCategoryId] = [m5].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m6] ON [m3].[MenuItemId] = [m6].[MenuItemId]
+    INNER JOIN [FoodType] AS [f0] ON [m6].[FoodTypeId] = [f0].[Id]
+    WHERE [m3].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m3].[MenuItemId] AND ([s].[Description] = [m3].[Description] OR ([s].[Description] IS NULL AND [m3].[Description] IS NULL)) AND [s].[FoodTypeId] = [m3].[FoodTypeId] AND ([s].[ImageUrl] = [m3].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m3].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m3].[IsAvailable] AND [s].[IsDeleted] = [m3].[IsDeleted] AND [s].[IsVeg] = [m3].[IsVeg] AND [s].[ItemName] = [m3].[ItemName] AND [s].[MenuCategoryId] = [m3].[MenuCategoryId] AND [s].[Price] = [m3].[Price]
+    GROUP BY [m5].[MenuCategoryId]
+) AS [s0]
+ORDER BY [s].[MenuItemId], [s].[Description], [s].[FoodTypeId], [s].[ImageUrl], [s].[IsAvailable], [s].[IsDeleted], [s].[IsVeg], [s].[ItemName], [s].[MenuCategoryId], [s].[Price]
+2025-06-24 08:54:53 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d60f3679-d5aa-4de9-9376-4b682570e0be
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:d60f3679-d5aa-4de9-9376-4b682570e0be
+Error Number:207,State:1,Class:16
+2025-06-24 08:58:00 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 08:58:56 [ERR] [Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[MenuItemId], [s].[ItemName], [s].[Description], [s].[Price], [s].[IsVeg], [s].[IsAvailable], [s].[ImageUrl], [s].[FoodTypeId], [s].[IsDeleted], [s].[MenuCategoryId], [s0].[MenuCategoryId], [s0].[CategoryName], [s0].[Description], [s0].[DisplayOrder], [s0].[IsActive], [s0].[StartDate], [s0].[EndDate], [s1].[Id], [s1].[Name], [s1].[Description], [s1].[c]
+FROM (
+    SELECT [m].[MenuItemId], [m].[ItemName], [m].[Description], [m].[Price], [m].[IsVeg], [m].[IsAvailable], [m].[ImageUrl], [m].[FoodTypeId], [m].[IsDeleted], [m].[MenuCategoryId]
+    FROM [MenuItems] AS [m]
+    INNER JOIN [MenuItemCategories] AS [m0] ON [m].[MenuItemId] = [m0].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m1] ON [m0].[MenuCategoryId] = [m1].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m2] ON [m].[MenuItemId] = [m2].[MenuItemId]
+    INNER JOIN [FoodType] AS [f] ON [m2].[FoodTypeId] = [f].[Id]
+    WHERE [m].[IsDeleted] = CAST(0 AS bit)
+    GROUP BY [m].[MenuItemId], [m].[Description], [m].[FoodTypeId], [m].[ImageUrl], [m].[IsAvailable], [m].[IsDeleted], [m].[IsVeg], [m].[ItemName], [m].[MenuCategoryId], [m].[Price]
+) AS [s]
+OUTER APPLY (
+    SELECT [m5].[MenuCategoryId], (
+        SELECT TOP(1) [m9].[CategoryName]
+        FROM [MenuItems] AS [m7]
+        INNER JOIN [MenuItemCategories] AS [m8] ON [m7].[MenuItemId] = [m8].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m9] ON [m8].[MenuCategoryId] = [m9].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m10] ON [m7].[MenuItemId] = [m10].[MenuItemId]
+        INNER JOIN [FoodType] AS [f1] ON [m10].[FoodTypeId] = [f1].[Id]
+        WHERE [m7].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m7].[MenuItemId] AND ([s].[Description] = [m7].[Description] OR ([s].[Description] IS NULL AND [m7].[Description] IS NULL)) AND [s].[FoodTypeId] = [m7].[FoodTypeId] AND ([s].[ImageUrl] = [m7].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m7].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m7].[IsAvailable] AND [s].[IsDeleted] = [m7].[IsDeleted] AND [s].[IsVeg] = [m7].[IsVeg] AND [s].[ItemName] = [m7].[ItemName] AND [s].[MenuCategoryId] = [m7].[MenuCategoryId] AND [s].[Price] = [m7].[Price] AND [m5].[MenuCategoryId] = [m9].[MenuCategoryId]) AS [CategoryName], (
+        SELECT TOP(1) [m13].[Description]
+        FROM [MenuItems] AS [m11]
+        INNER JOIN [MenuItemCategories] AS [m12] ON [m11].[MenuItemId] = [m12].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m13] ON [m12].[MenuCategoryId] = [m13].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m14] ON [m11].[MenuItemId] = [m14].[MenuItemId]
+        INNER JOIN [FoodType] AS [f2] ON [m14].[FoodTypeId] = [f2].[Id]
+        WHERE [m11].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m11].[MenuItemId] AND ([s].[Description] = [m11].[Description] OR ([s].[Description] IS NULL AND [m11].[Description] IS NULL)) AND [s].[FoodTypeId] = [m11].[FoodTypeId] AND ([s].[ImageUrl] = [m11].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m11].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m11].[IsAvailable] AND [s].[IsDeleted] = [m11].[IsDeleted] AND [s].[IsVeg] = [m11].[IsVeg] AND [s].[ItemName] = [m11].[ItemName] AND [s].[MenuCategoryId] = [m11].[MenuCategoryId] AND [s].[Price] = [m11].[Price] AND [m5].[MenuCategoryId] = [m13].[MenuCategoryId]) AS [Description], (
+        SELECT TOP(1) [m17].[DisplayOrder]
+        FROM [MenuItems] AS [m15]
+        INNER JOIN [MenuItemCategories] AS [m16] ON [m15].[MenuItemId] = [m16].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m17] ON [m16].[MenuCategoryId] = [m17].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m18] ON [m15].[MenuItemId] = [m18].[MenuItemId]
+        INNER JOIN [FoodType] AS [f3] ON [m18].[FoodTypeId] = [f3].[Id]
+        WHERE [m15].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m15].[MenuItemId] AND ([s].[Description] = [m15].[Description] OR ([s].[Description] IS NULL AND [m15].[Description] IS NULL)) AND [s].[FoodTypeId] = [m15].[FoodTypeId] AND ([s].[ImageUrl] = [m15].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m15].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m15].[IsAvailable] AND [s].[IsDeleted] = [m15].[IsDeleted] AND [s].[IsVeg] = [m15].[IsVeg] AND [s].[ItemName] = [m15].[ItemName] AND [s].[MenuCategoryId] = [m15].[MenuCategoryId] AND [s].[Price] = [m15].[Price] AND [m5].[MenuCategoryId] = [m17].[MenuCategoryId]) AS [DisplayOrder], (
+        SELECT TOP(1) [m21].[IsActive]
+        FROM [MenuItems] AS [m19]
+        INNER JOIN [MenuItemCategories] AS [m20] ON [m19].[MenuItemId] = [m20].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m21] ON [m20].[MenuCategoryId] = [m21].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m22] ON [m19].[MenuItemId] = [m22].[MenuItemId]
+        INNER JOIN [FoodType] AS [f4] ON [m22].[FoodTypeId] = [f4].[Id]
+        WHERE [m19].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m19].[MenuItemId] AND ([s].[Description] = [m19].[Description] OR ([s].[Description] IS NULL AND [m19].[Description] IS NULL)) AND [s].[FoodTypeId] = [m19].[FoodTypeId] AND ([s].[ImageUrl] = [m19].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m19].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m19].[IsAvailable] AND [s].[IsDeleted] = [m19].[IsDeleted] AND [s].[IsVeg] = [m19].[IsVeg] AND [s].[ItemName] = [m19].[ItemName] AND [s].[MenuCategoryId] = [m19].[MenuCategoryId] AND [s].[Price] = [m19].[Price] AND [m5].[MenuCategoryId] = [m21].[MenuCategoryId]) AS [IsActive], (
+        SELECT TOP(1) [m25].[StartDate]
+        FROM [MenuItems] AS [m23]
+        INNER JOIN [MenuItemCategories] AS [m24] ON [m23].[MenuItemId] = [m24].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m25] ON [m24].[MenuCategoryId] = [m25].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m26] ON [m23].[MenuItemId] = [m26].[MenuItemId]
+        INNER JOIN [FoodType] AS [f5] ON [m26].[FoodTypeId] = [f5].[Id]
+        WHERE [m23].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m23].[MenuItemId] AND ([s].[Description] = [m23].[Description] OR ([s].[Description] IS NULL AND [m23].[Description] IS NULL)) AND [s].[FoodTypeId] = [m23].[FoodTypeId] AND ([s].[ImageUrl] = [m23].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m23].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m23].[IsAvailable] AND [s].[IsDeleted] = [m23].[IsDeleted] AND [s].[IsVeg] = [m23].[IsVeg] AND [s].[ItemName] = [m23].[ItemName] AND [s].[MenuCategoryId] = [m23].[MenuCategoryId] AND [s].[Price] = [m23].[Price] AND [m5].[MenuCategoryId] = [m25].[MenuCategoryId]) AS [StartDate], (
+        SELECT TOP(1) [m29].[EndDate]
+        FROM [MenuItems] AS [m27]
+        INNER JOIN [MenuItemCategories] AS [m28] ON [m27].[MenuItemId] = [m28].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m29] ON [m28].[MenuCategoryId] = [m29].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m30] ON [m27].[MenuItemId] = [m30].[MenuItemId]
+        INNER JOIN [FoodType] AS [f6] ON [m30].[FoodTypeId] = [f6].[Id]
+        WHERE [m27].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m27].[MenuItemId] AND ([s].[Description] = [m27].[Description] OR ([s].[Description] IS NULL AND [m27].[Description] IS NULL)) AND [s].[FoodTypeId] = [m27].[FoodTypeId] AND ([s].[ImageUrl] = [m27].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m27].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m27].[IsAvailable] AND [s].[IsDeleted] = [m27].[IsDeleted] AND [s].[IsVeg] = [m27].[IsVeg] AND [s].[ItemName] = [m27].[ItemName] AND [s].[MenuCategoryId] = [m27].[MenuCategoryId] AND [s].[Price] = [m27].[Price] AND [m5].[MenuCategoryId] = [m29].[MenuCategoryId]) AS [EndDate]
+    FROM [MenuItems] AS [m3]
+    INNER JOIN [MenuItemCategories] AS [m4] ON [m3].[MenuItemId] = [m4].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m5] ON [m4].[MenuCategoryId] = [m5].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m6] ON [m3].[MenuItemId] = [m6].[MenuItemId]
+    INNER JOIN [FoodType] AS [f0] ON [m6].[FoodTypeId] = [f0].[Id]
+    WHERE [m3].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m3].[MenuItemId] AND ([s].[Description] = [m3].[Description] OR ([s].[Description] IS NULL AND [m3].[Description] IS NULL)) AND [s].[FoodTypeId] = [m3].[FoodTypeId] AND ([s].[ImageUrl] = [m3].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m3].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m3].[IsAvailable] AND [s].[IsDeleted] = [m3].[IsDeleted] AND [s].[IsVeg] = [m3].[IsVeg] AND [s].[ItemName] = [m3].[ItemName] AND [s].[MenuCategoryId] = [m3].[MenuCategoryId] AND [s].[Price] = [m3].[Price]
+    GROUP BY [m5].[MenuCategoryId]
+) AS [s0]
+OUTER APPLY (
+    SELECT TOP(1) (
+        SELECT TOP(1) [f8].[Id]
+        FROM [MenuItems] AS [m35]
+        INNER JOIN [MenuItemCategories] AS [m36] ON [m35].[MenuItemId] = [m36].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m37] ON [m36].[MenuCategoryId] = [m37].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m38] ON [m35].[MenuItemId] = [m38].[MenuItemId]
+        INNER JOIN [FoodType] AS [f8] ON [m38].[FoodTypeId] = [f8].[Id]
+        WHERE [m35].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m35].[MenuItemId] AND ([s].[Description] = [m35].[Description] OR ([s].[Description] IS NULL AND [m35].[Description] IS NULL)) AND [s].[FoodTypeId] = [m35].[FoodTypeId] AND ([s].[ImageUrl] = [m35].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m35].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m35].[IsAvailable] AND [s].[IsDeleted] = [m35].[IsDeleted] AND [s].[IsVeg] = [m35].[IsVeg] AND [s].[ItemName] = [m35].[ItemName] AND [s].[MenuCategoryId] = [m35].[MenuCategoryId] AND [s].[Price] = [m35].[Price] AND [f7].[Id] = [f8].[Id]) AS [Id], (
+        SELECT TOP(1) [f9].[Name]
+        FROM [MenuItems] AS [m39]
+        INNER JOIN [MenuItemCategories] AS [m40] ON [m39].[MenuItemId] = [m40].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m41] ON [m40].[MenuCategoryId] = [m41].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m42] ON [m39].[MenuItemId] = [m42].[MenuItemId]
+        INNER JOIN [FoodType] AS [f9] ON [m42].[FoodTypeId] = [f9].[Id]
+        WHERE [m39].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m39].[MenuItemId] AND ([s].[Description] = [m39].[Description] OR ([s].[Description] IS NULL AND [m39].[Description] IS NULL)) AND [s].[FoodTypeId] = [m39].[FoodTypeId] AND ([s].[ImageUrl] = [m39].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m39].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m39].[IsAvailable] AND [s].[IsDeleted] = [m39].[IsDeleted] AND [s].[IsVeg] = [m39].[IsVeg] AND [s].[ItemName] = [m39].[ItemName] AND [s].[MenuCategoryId] = [m39].[MenuCategoryId] AND [s].[Price] = [m39].[Price] AND [f7].[Id] = [f9].[Id]) AS [Name], (
+        SELECT TOP(1) [f10].[Description]
+        FROM [MenuItems] AS [m43]
+        INNER JOIN [MenuItemCategories] AS [m44] ON [m43].[MenuItemId] = [m44].[MenuItemId]
+        INNER JOIN [MenuCategories] AS [m45] ON [m44].[MenuCategoryId] = [m45].[MenuCategoryId]
+        INNER JOIN [MenuItemFoodType] AS [m46] ON [m43].[MenuItemId] = [m46].[MenuItemId]
+        INNER JOIN [FoodType] AS [f10] ON [m46].[FoodTypeId] = [f10].[Id]
+        WHERE [m43].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m43].[MenuItemId] AND ([s].[Description] = [m43].[Description] OR ([s].[Description] IS NULL AND [m43].[Description] IS NULL)) AND [s].[FoodTypeId] = [m43].[FoodTypeId] AND ([s].[ImageUrl] = [m43].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m43].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m43].[IsAvailable] AND [s].[IsDeleted] = [m43].[IsDeleted] AND [s].[IsVeg] = [m43].[IsVeg] AND [s].[ItemName] = [m43].[ItemName] AND [s].[MenuCategoryId] = [m43].[MenuCategoryId] AND [s].[Price] = [m43].[Price] AND [f7].[Id] = [f10].[Id]) AS [Description], 1 AS [c]
+    FROM [MenuItems] AS [m31]
+    INNER JOIN [MenuItemCategories] AS [m32] ON [m31].[MenuItemId] = [m32].[MenuItemId]
+    INNER JOIN [MenuCategories] AS [m33] ON [m32].[MenuCategoryId] = [m33].[MenuCategoryId]
+    INNER JOIN [MenuItemFoodType] AS [m34] ON [m31].[MenuItemId] = [m34].[MenuItemId]
+    INNER JOIN [FoodType] AS [f7] ON [m34].[FoodTypeId] = [f7].[Id]
+    WHERE [m31].[IsDeleted] = CAST(0 AS bit) AND [s].[MenuItemId] = [m31].[MenuItemId] AND ([s].[Description] = [m31].[Description] OR ([s].[Description] IS NULL AND [m31].[Description] IS NULL)) AND [s].[FoodTypeId] = [m31].[FoodTypeId] AND ([s].[ImageUrl] = [m31].[ImageUrl] OR ([s].[ImageUrl] IS NULL AND [m31].[ImageUrl] IS NULL)) AND [s].[IsAvailable] = [m31].[IsAvailable] AND [s].[IsDeleted] = [m31].[IsDeleted] AND [s].[IsVeg] = [m31].[IsVeg] AND [s].[ItemName] = [m31].[ItemName] AND [s].[MenuCategoryId] = [m31].[MenuCategoryId] AND [s].[Price] = [m31].[Price]
+    GROUP BY [f7].[Id]
+) AS [s1]
+ORDER BY [s].[MenuItemId], [s].[Description], [s].[FoodTypeId], [s].[ImageUrl], [s].[IsAvailable], [s].[IsDeleted], [s].[IsVeg], [s].[ItemName], [s].[MenuCategoryId], [s].[Price]
+2025-06-24 08:58:56 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:bc7fad7c-3344-4e7a-ad7f-88e41c252566
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+Invalid column name 'FoodTypeId'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:bc7fad7c-3344-4e7a-ad7f-88e41c252566
+Error Number:207,State:1,Class:16
+2025-06-24 09:07:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 09:08:27 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-24 09:09:02 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-24 09:09:02 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-24 09:09:02 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-24 09:11:37 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 09:13:13 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-24 09:13:16 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-24 09:13:16 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-24 09:13:16 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-24 09:13:17 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: 'value' must not be null for <input> if 'type' is 'radio'.
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.GenerateRadio(ModelExplorer modelExplorer, IDictionary`2 htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.TagHelpers.TagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_RestaurantOwnerAccount_AddEditMenu.<>c__DisplayClass27_0.<<ExecuteAsync>b__0>d.MoveNext() in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Views\RestaurantOwnerAccount\AddEditMenu.cshtml:line 192
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_RestaurantOwnerAccount_AddEditMenu.ExecuteAsync() in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Views\RestaurantOwnerAccount\AddEditMenu.cshtml:line 27
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-24 09:14:24 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-24 09:14:32 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-24 09:14:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-24 09:14:35 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-24 09:14:35 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-24 09:15:32 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Ice-Cream
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 849
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 794
+2025-06-24 09:15:32 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 7 menus.
+2025-06-24 09:15:47 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 7 menus.
+2025-06-24 09:16:45 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-24 09:18:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-24 09:18:21 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-24 09:18:21 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-24 09:20:13 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-24 09:20:14 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-24 09:20:32 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-24 09:20:32 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-24 09:20:32 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-24 09:20:32 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-24 09:20:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9876543210
+2025-06-24 09:20:42 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-24 09:21:43 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 16 orders for user 9
+2025-06-24 09:21:43 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-24 09:25:04 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-24 09:25:08 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-24 09:25:08 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-24 09:25:08 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-24 09:26:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 category.
+2025-06-24 09:26:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.

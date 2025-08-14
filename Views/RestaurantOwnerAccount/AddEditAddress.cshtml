@@ -1,0 +1,104 @@
+﻿@model FoodDeliveryApp.ViewModels.Common.EditAddressViewModel
+@{
+    ﻿var isEdit = Model. UserAddressId > 0;
+    ViewBag.Title = isEdit ? "Edit Address": "Add Address"; 
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container mt-2">
+    <!-- Page Header Card -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-info text-white d-flex align-items-center">
+            <i class="bi bi-geo-alt-fill mr-2 text-warning" style="font-size: 1.5rem;"></i> 
+            <h3 class="mb-0">@ViewBag.Title</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-0 text-muted">
+                @if (isEdit)
+                {
+                    @:Update your address details below. Please verify your information carefully.
+                }
+                else
+                {
+                    @:Add your address details below to complete your profile.
+                }
+            </p> 
+        </div>
+    </div>
+
+    <!-- Address Form Card -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="AddEditAddress" method="post">
+                @*Display error message from ViewBag if available *@ 
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert"> 
+                        @ViewBag.ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+                <input type="hidden" asp-for="UserAddressId" />
+                <div class="form-group">
+                    <label asp-for="AddressLine1">
+                        <i class="bi bi-house-door-fill mr-1 text-primary"></i> Address Line 1 
+                    </label>
+                    <input asp-for="AddressLine1" class="form-control" placeholder="Enter address line 1" />
+                    <span asp-validation-for="AddressLine1" class="text-danger"></span> 
+                </div>
+                <div class="form-group">
+                    <label asp-for="AddressLine2">
+                        <i class="bi bi-building mr-1 text-success"></i> Address Line 2
+                    </label>
+                    <input asp-for="AddressLine2" class="form-control" placeholder="Enter address line 2 (optional)" />
+                    <span asp-validation-for="AddressLine2" class="text-danger"></span> 
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label asp-for="City">
+                            <i class="bi bi-building mr-1 text-danger"></i> City
+                        </label>
+                        <input asp-for="City" class="form-control" placeholder="City" /> 
+                        <span asp-validation-for="City" class="text-danger"></span> 
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="State">
+                            <i class="bi bi-flag-fill mr-1 text-warning"></i> State
+                        </label>
+                        <input asp-for="State" class="form-control" placeholder="State" /> 
+                        <span asp-validation-for="State" class="text-danger"></span> 
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="ZipCode">
+                            <i class="bi bi-mailbox2 mr-1 text-info"></i> Zip Code  
+                        </label>
+                        <input asp-for="ZipCode" class="form-control" placeholder="Zip Code" /> 
+                        <span asp-validation-for="ZipCode" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Landmark">
+                        <i class="bi bi-geo-alt mr-1 text-danger"></i> Landmark
+                    </label>
+                    <input asp-for="Landmark" class="form-control" placeholder="Landmark (optional)"/>
+                    <span asp-validation-for="Landmark" class="text-danger"></span> 
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary mr-2">
+                        <i class="bi bi-check-circle-fill mr-1"></i> @(isEdit ? "Update Address": "Add Address")
+                    </button>
+                    <a href="@Url.Action("ManageAddress", "RestaurantOwnerAccount")" class="btn btn-secondary">
+                        <i class="bi bi-x-circle-fill mr-1"></i> Cancel
+                    </a>
+                </div>
+            </form>
+         </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

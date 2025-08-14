@@ -1,0 +1,74 @@
+﻿@model FoodDeliveryApp.ViewModels.Common.AccountViewModel
+@{
+    ViewBag.Title = "Update Basic Details";
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container mt-2">
+    <!--Page Header -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white d-flex align-items-center">
+            <i class="bi bi-pencil-square mr-2 text-warning" style="font-size: 1.5rem;"></i>
+            <h3 class="mb-0">Update Basic Details</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-0 text-muted">
+                Update your personal information below. Please ensure that your details are accurate to maintain seamless communication.
+            </p>
+        </div>
+    </div>
+    <!-- Update Form Card -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="UpdateBasicDetails" method="post">
+                <input type="hidden" asp-for="Email" />
+                @* Display error message from ViewBag if available *@
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @ViewBag.ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+                <div class="form-group">
+                    <label asp-for="FirstName">
+                        <i class="bi bi-person-fill mr-1 text-primary"></i> First Name
+                    </label>
+                    <input asp-for="FirstName" class="form-control" placeholder="Enter your first  name" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName">
+                        <i class="bi bi-person-lines-fill mr-1 text-info"></i> Last Name
+                    </label>
+                    <input asp-for="LastName" class="form-control" placeholder="Enter your last  name" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber">
+                        <i class="bi bi-telephone-fill mr-1 text-success"></i> Phone Number
+                    </label>
+                    <input asp-for="PhoneNumber" class="form-control" placeholder="Enter your phone number" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        Update Basic Details
+                    </button>
+                    <a href="@Url.Action("MyAccount", "RestaurantOwnerAccount")" class="btn btn-secondary">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

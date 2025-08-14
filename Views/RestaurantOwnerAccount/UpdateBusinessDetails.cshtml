@@ -1,0 +1,79 @@
+﻿@model FoodDeliveryApp.ViewModels.RestaurantOwners.RestaurantOwnerBusinessDetailsViewModel
+@{
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+
+<div class="container mt-2">
+    <!--Page Header -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white d-flex align-items-center">
+            <!-- Use an icon that more clearly represents business or credentials -->
+            <i class="bi bi-building mr-2 text-warning" style="font-size:1.5rem;"></i>
+            <h3 class="mb-0">Update Business Details</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-0 text-muted">
+                Please update your business registration, license, and GSTIN information below to ensure regulatory
+                compliance and smooth transactions. Accurate data helps us maintain correct records
+                and provide reliable services for your restaurant.
+            </p>
+        </div>
+    </div>
+
+    <!-- Update Form Card -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="UpdateBusinessDetails" method="post">
+
+                @* Display error message from ViewBag if available *@ 
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @ViewBag.ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+                <!-- Business Registration Number -->
+                <div class="form-group">
+                    <label asp-for="BusinessRegistrationNumber">
+                        <i class="bi bi-clipboard-data mr-1 text-primary"></i> Business Registration
+                    </label>
+                    <input asp-for="BusinessRegistrationNumber" class="form-control" placeholder="Enter your Business Registration Number" />
+                    <span asp-validation-for="BusinessRegistrationNumber" class="text-danger"></span>
+                </div>                ﻿
+                <!-- Business License Number -->
+                <div class="form-group">
+                    <label asp-for="BusinessLicenseNumber">
+                        <i class="bi bi-patch-check-fill mr-1 text-info"></i> Business License Number
+                    </label>
+                    <input asp-for="BusinessLicenseNumber" class="form-control" placeholder="Enter your Business License Number" />
+                    <span asp-validation-for="BusinessLicenseNumber" class="text-danger"></span>
+                </div>
+                <!-- GSTIN -->
+                <div class="form-group">
+                    <label asp-for="GSTIN">
+                        <i class="bi bi-receipt-cutoff mr-1 text-success"></i> GSTIN
+                    </label>
+                    <input asp-for="GSTIN" class="form-control" placeholder="Enter your GSTIN" />
+                    <span asp-validation-for="GSTIN" class="text-danger"></span>
+                </div>
+                <!-- Action Buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="submit" class="btn btn-primary">
+                        Update Business Details
+                    </button>
+                    <a href="@Url.Action("ManageBusinessDetails", "RestaurantOwnerAccount")" class="btn btn-secondary">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

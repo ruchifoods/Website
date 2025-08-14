@@ -1,0 +1,91 @@
+﻿@model FoodDeliveryApp.Models.PickUpTime
+@{
+    ﻿var isEdit = false;
+    if((Model != null) && (Model.Id > 0))
+    {
+        isEdit = true;
+    }
+    ViewBag.Title = isEdit ? "Edit Pickup Time": "Add Pickup Time"; 
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container mt-2">
+    <!-- Page Header Card -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-info text-white d-flex align-items-center">
+            <h3 class="mb-0">@ViewBag.Title</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-0 text-muted">
+                @if (isEdit)
+                {
+                    @:Update your pickup time details below.
+                }
+                else
+                {
+                    @:Add your pickup time details below to create new pickup time.
+                }
+            </p> 
+        </div>
+    </div>
+    <form id="itemForm" asp-action="AddEditPickupTime" method="post">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert"> 
+                        @ViewBag.ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+
+                <input type="hidden" asp-for="@Model.Id" />                
+                <div class="form-group">
+                    <label asp-for="@Model.Time">
+                        <i class="bi bi-house-door-fill mr-1 text-primary"></i> Pickup Time
+                    </label>
+                    <input asp-for="@Model.Time" class="form-control" placeholder="Enter pickup time." />
+                    <span asp-validation-for="@Model.Time" class="text-danger"></span> 
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <div class="form-check me-3" style="padding-top: 2rem;">
+                            @Html.CheckBoxFor(model => Model.IsActive, new { @class = "form-check-input" })
+                            @Html.LabelFor(model => Model.IsActive, new { @class = "form-check-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="card-footer text-right">
+                        @if(isEdit)
+                        {
+                            <input type="hidden" name="actionType" value="Update" />
+                            <button type="submit" class="btn btn-primary mr-2">
+                                <i class="bi bi-check-circle-fill mr-1"></i> Update Pickup Time
+                            </button>
+                        }
+                        else
+                        {
+                            <input type="hidden" name="actionType" value="Add" />
+                            <button type="submit" class="btn btn-primary mr-2">
+                                <i class="bi bi-check-circle-fill mr-1"></i> Add Pickup Time
+                            </button>
+                        }
+                        <a href="@Url.Action("ManagePickupTime", "RestaurantOwnerAccount")" class="btn btn-secondary">
+                            <i class="bi bi-x-circle-fill mr-1"></i> Cancel
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        
+    </script>
+}

@@ -1,0 +1,71 @@
+﻿@model FoodDeliveryApp.ViewModels.Common.LoginViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    ViewBag.Title = "Customer Login";
+}
+
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <!-- Left Column: Background Image &amp; Welcoming Message -->
+        <div class="col-md-6 d-none d-md-flex" style="background: url('https://images.unsplash.com/photo-155121')">
+            <div class="d-flex h-100 align-items-center justify-content-center w-100" style="background: rgba">
+                <div class="text-center text-white p-4">
+                    <h1 class="display-4">Welcome Back!</h1>
+                    <p class="lead">Log in to enjoy fast, reliable food delivery from the best local restaurant"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Login Form -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+            <div class="card shadow-lg w-100" style="max-width: 500px;">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">Customer Login</h3>
+                </div>
+
+                <div class="card-body">
+                    @* Display error message from ViewBag if available *@
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @ViewBag. ErrorMessage
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&amp;times;</span>
+                            </button>
+                        </div>
+                    }
+                    <form asp-action="Login" method="post" novalidate>
+                        <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl" />
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" class="form-control" placeholder="Email Address" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" class="form-control" type="password" placeholder="Password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group form-check">
+                            <input asp-for="RememberMe" class="form-check-input" type="checkbox" />
+                            <label asp-for="RememberMe" class="form-check-label">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        <div class="text-center mt-3">
+                            <a class="btn btn-link" href="@Url.Action("ForgotPassword", "CustomerAccount")">Forgot Password</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <small>Don't have an account? <a href="@Url.Action("Register", "CustomerAccount")">Register</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

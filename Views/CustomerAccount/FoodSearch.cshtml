@@ -1,0 +1,59 @@
+﻿@model List<FoodDeliveryApp.Models.MenuCategory>
+@{
+    ViewData["Title"] = "Food Search";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    int counter = 3;
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">Discover Delicious Food</h2>
+    @* Display succes message from TempData if available *@
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    @* Display error message from TempData if available *@
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+
+    @for (int i = 0; i < Model.Count();)
+    {
+        if (Model[i].MenuCategoryId != 2)
+        {
+            <div class="row d-flex align-items-stretch" style="margin-bottom: 1rem;">
+                @while ((counter != 0) && (i < Model.Count()))
+                {
+                    counter = counter - 1;
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">@Model[i].CategoryName</h5>
+                                <p class="card-text">@Model[i].Description </p>
+                                <a href="@Url.Action("FoodItems","CustomerAccount", new { id = Model[i].MenuCategoryId })" class="btn btn-primary btn-sm">View Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                    i++;
+                }
+            </div>
+        }
+        else
+        {
+            i++;
+        }
+        counter = 3;
+    }
+</div>

@@ -1,0 +1,239 @@
+2025-06-20 08:55:39 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 08:55:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 08:55:41 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 08:55:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 17
+2025-06-20 08:55:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 08:56:17 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 08:56:17 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 08:56:17 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 08:56:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 08:56:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = test last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 08:56:42 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 10:26:36 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 10:26:38 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 10:26:38 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 10:26:46 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 20
+2025-06-20 10:26:46 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 10:30:27 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 10:30:33 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 10:30:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 10:30:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 20
+2025-06-20 10:30:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 10:31:03 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 10:31:03 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 10:31:03 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 10:31:03 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 10:36:56 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 10:36:59 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 10:36:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 10:37:06 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 17
+2025-06-20 10:37:06 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 10:37:35 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 10:37:35 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 10:37:35 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 10:37:35 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 12:28:30 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 12:28:36 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 12:28:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 12:28:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 17
+2025-06-20 12:28:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 12:28:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 12:28:45 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 12:28:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 27
+2025-06-20 12:28:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 12:29:41 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 12:29:41 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 12:29:41 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 12:29:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 13:53:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 13:53:48 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 13:53:48 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 13:53:52 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 18
+2025-06-20 13:53:52 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 13:59:29 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 13:59:29 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 13:59:29 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 13:59:29 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:07:34 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:07:36 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:07:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:07:44 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 18
+2025-06-20 14:07:44 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:08:37 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 14:08:37 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 14:08:37 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 14:08:37 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:11:08 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:17:57 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:17:59 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:18:01 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:18:01 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:18:04 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 17
+2025-06-20 14:18:04 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:18:08 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:18:08 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:18:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:26:56 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:26:58 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:26:58 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:27:01 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-20 14:27:01 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:27:38 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 14:27:38 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 14:27:38 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 14:27:38 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:28:15 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:33:00 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:33:02 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:33:02 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:33:06 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 27
+2025-06-20 14:33:07 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:33:24 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 14:33:24 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 14:33:32 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 14:33:32 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:34:18 [WRN] [FoodDeliveryApp.Services.CustomerService] No orders found for the customer with first name = test last name = test email address = 9876543210 phone number = test@test.com
+2025-06-20 14:34:18 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[FoodDeliveryApp.Models.Order]', but this ViewDataDictionary instance requires a model item of type 'FoodDeliveryApp.ViewModels.Orders'.
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary.EnsureCompatible(Object value)
+   at lambda_method922(Closure, ViewDataDictionary)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorPagePropertyActivator.Activate(Object page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-20 14:35:19 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:35:35 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:35:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:37:20 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:39:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:39:11 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:40:38 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:40:40 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:40:40 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:40:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-20 14:40:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:41:06 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 14:41:06 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 14:41:09 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 14:41:09 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:41:32 [WRN] [FoodDeliveryApp.Services.CustomerService] No orders found for the customer with first name = Cust last name = test email address = 9876543210 phone number = test@test.com
+2025-06-20 14:41:32 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:41:32 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The layout view '~/Views/Shared/_LayoutCustomers.cshtml' could not be located. The following locations were searched:
+~/Views/Shared/_LayoutCustomers.cshtml
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.GetLayoutPage(ViewContext context, String executingFilePath, String layoutPath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-20 14:42:30 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:42:32 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:42:32 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:42:46 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:42:46 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:42:52 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 17
+2025-06-20 14:42:52 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:43:11 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 14:43:11 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 14:43:12 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 14:43:12 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:43:26 [WRN] [FoodDeliveryApp.Services.CustomerService] No orders found for the customer with first name = Cust last name = test email address = 9123456780 phone number = test@test.com
+2025-06-20 14:43:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:46:36 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:46:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-20 14:46:42 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 14:46:47 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 20
+2025-06-20 14:46:47 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 14:47:07 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 14:47:07 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 14:47:07 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 14:47:07 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:47:56 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9123456780
+2025-06-20 14:47:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:48:05 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu categories
+2025-06-20 14:49:55 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-20 14:50:13 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9123456780
+2025-06-20 14:50:13 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:50:43 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-20 14:50:45 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 15 orders for user 9
+2025-06-20 14:50:45 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:51:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Update order delivered for OrderId 2037
+2025-06-20 14:51:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 14 orders for user 9
+2025-06-20 14:51:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:51:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9123456780
+2025-06-20 14:51:41 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:54:09 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-20 14:54:20 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = test last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 14:54:20 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:55:55 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-20 14:56:26 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = test last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 14:56:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 14:57:03 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-20 14:57:05 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 14 orders for user 9
+2025-06-20 14:57:05 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 15:01:04 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-20 15:01:07 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-20 15:01:07 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-20 15:01:10 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-20 15:01:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-20 15:01:41 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-20 15:01:41 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-20 15:01:41 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-20 15:01:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-20 15:01:44 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 15:01:44 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 15:02:09 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 15:02:09 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 15:02:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 15:02:11 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 15:02:28 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 15:02:28 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 15:06:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-20 15:06:36 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Cust last name = test email address = test@test.com phone number = 9876543210
+2025-06-20 15:06:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 15:07:05 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-20 15:07:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 15 orders for user 9
+2025-06-20 15:07:07 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-06-20 15:08:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-20 15:08:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 15 orders for user 9
+2025-06-20 15:08:34 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters

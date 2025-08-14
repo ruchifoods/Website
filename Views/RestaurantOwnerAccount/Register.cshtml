@@ -1,0 +1,131 @@
+﻿@model FoodDeliveryApp.ViewModels.RestaurantOwners.RestaurantOwnerRegisterViewModel
+@{
+    ViewBag.Title = "Restaurant Owner Registration";
+
+    Layout = "~/Views/Shared/_RestaurantOwnerUnverifiedLayout.cshtml";
+}
+
+<div class="container py-2">
+    <div class="row justify-content-center">
+        <div class="col-lg-11">
+            <!-- Increased Width for Better Space Utilization -->
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-dark text-white text-center py-4">
+                    <h3 class="mb-0">Register as a Restaurant Owner</h3>
+                    <p class="lead">Manage your restaurant, accept online orders, and grow your business.</p>
+                </div>
+                <div class="card-body p-4">
+                    @* Display error message from ViewBag if available *@
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @ViewBag.ErrorMessage
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    }
+
+                    <form asp-action="Register" method="post">
+                        <div class="row">
+                            <!-- Personal Details -->
+                            <div class="col-md-4">
+                                <h5 class="text-primary"><i class="bi bi-person-fill"></i> Personal Details</h5>
+                                <div class="mb-2">
+                                    <label asp-for="FirstName" class="form-label small"></label>
+                                    <input asp-for="FirstName" class="form-control form-control-sm" placeholder="First name">
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="LastName" class="form-label small"></label>
+                                    <input asp-for="LastName" class="form-control form-control-sm" placeholder="Last name">
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="PhoneNumber" class="form-label small"></label>
+                                    <input asp-for="PhoneNumber" class="form-control form-control-sm" placeholder="Phone number">
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="Email" class="form-label small"></label>
+                                    <input asp-for="Email" class="form-control form-control-sm" placeholder="Email">
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <!-- Password & Confirm Password Now Take Full Width -->
+                                <div class="mb-2">
+                                    <label asp-for="Password" class="form-label small"></label>
+                                    <input asp-for="Password" class="form-control form-control-sm" type="password" placeholder="Enter password">
+                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="ConfirmPassword" class="form-label small"></label>
+                                    <input asp-for="ConfirmPassword" class="form-control form-control-sm" type="password" placeholder="Confirm Password">
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Business Details -->
+                            <div class="col-md-4">
+                                <h5 class="text-success"><i class="bi bi-shop"></i> Business Details</h5>
+                                <div class="mb-2">
+                                    <label asp-for="BusinessLicenseNumber" class="form-label small"></label>
+                                    <input asp-for="BusinessLicenseNumber" class="form-control form-control-sm" placeholder="Business License Number">
+                                    <span asp-validation-for="BusinessLicenseNumber" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="GSTIN" class="form-label small"></label>
+                                    <input asp-for="GSTIN" class="form-control form-control-sm" placeholder="GSTIN">
+                                    <span asp-validation-for="GSTIN" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="BusinessRegistrationNumber" class="form-label small"></label>
+                                    <input asp-for="BusinessRegistrationNumber" class="form-control form-control-sm" placeholder="Business Registration Number">
+                                    <span asp-validation-for="BusinessRegistrationNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Bank Details -->
+                            <div class="col-md-4">
+                                <h5 class="text-success"><i class="bi bi-shop"></i> Bank Details</h5>
+                                <div class="mb-2">
+                                    <label asp-for="AccountHolderName" class="form-label small"></label>
+                                    <input asp-for="AccountHolderName" class="form-control form-control-sm" placeholder="Account holder name">
+                                    <span asp-validation-for="AccountHolderName" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="BankName" class="form-label small"></label>
+                                    <input asp-for="BankName" class="form-control form-control-sm" placeholder="Bank name">
+                                    <span asp-validation-for="BankName" class="text-danger"></span>
+                                </div>
+                                <!-- Account Number & IFSC Code Now Take Full Width -->
+                                <div class="mb-2">
+                                    <label asp-for="AccountNumber" class="form-label small"></label>
+                                    <input asp-for="AccountNumber" class="form-control form-control-sm" placeholder="Account number">
+                                    <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                                </div>
+                                <div class="mb-2">
+                                    <label asp-for="IFSCCode" class="form-label small"></label>
+                                    <input asp-for="IFSCCode" class="form-control form-control-sm" placeholder="IFSC code">
+                                    <span asp-validation-for="IFSCCode" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg px-5">Register Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <small>Already have an account? <a href="@Url.Action("Login", "RestaurantOwnerAccount")">Sign In</a></small>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

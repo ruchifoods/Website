@@ -1,0 +1,79 @@
+﻿@model FoodDeliveryApp.ViewModels.Common.BankDetailsViewModel
+@{
+    ViewBag.Title = "Update Bank Details";
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container mnt-2">
+    <!--Page Header -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white d-flex align-items-center">
+            <h3 class="mb-0">Update Bank Details</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-0 text-muted">
+                Please update your bank details below to ensure your transactions are processed securely and efficiently.
+            </p>
+        </div>
+    </div>
+
+    <!-- Update Form Card -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="UpdateBankDetails" method="post">
+
+                @* Display error message from ViewBag if available *@ 
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        @ViewBag.ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+                <div class="form-group">
+                    <label asp-for="AccountHolderName">
+                        <i class="bi bi-person-fill mr-1 text-primary"></i> Account Holder Name
+                    </label>
+                    <input asp-for="AccountHolderName" class="form-control" placeholder="Enter your accourts holder name" />
+                    <span asp-validation-for="AccountHolderName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BankName">
+                        <i class="bi bi-bank mr-1 text-info"></i> Bank Name
+                    </label>
+                    <input asp-for="BankName" class="form-control" placeholder="Enter your bank name" />
+                    <span asp-validation-for="BankName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AccountNumber">
+                        <i class="bi bi-credit-card-2-front-fill mr-1 text-success"></i> Account Number
+                    </label>
+                    <input asp-for="AccountNumber" class="form-control" placeholder="Enter your account number" />
+                    <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="IFSCCode">
+                        <i class="bi bi-key-fill mr-1 text-danger"></i> IFSC Code
+                    </label>
+                    <input asp-for="IFSCCode" class="form-control" placeholder="Enter your IFSC code" />
+                    <span asp-validation-for="IFSCCode" class="text-danger"></span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">
+                        Update Bank Details
+                    </button>
+                    <a href="@Url.Action("ManageBankDetails", "RestaurantOwnerAccount")" class="btn btn-primary">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

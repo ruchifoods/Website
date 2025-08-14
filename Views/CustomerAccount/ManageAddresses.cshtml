@@ -1,0 +1,87 @@
+﻿@model IEnumerable<FoodDeliveryApp.Models.UserAddress>
+@{
+    ViewData["Title"] = "Manage Addresses";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+<div class="container my-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0">Manage Your Addresses</h3>
+            <small>Review, update, or remove your saved addresses.</small>
+        </div>
+        @* Display succes message from TempData if available *@
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+
+        @* Display error message from TempData if available *@
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["ErrorMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        <div class="card-body">
+            @if (!Model.Any())
+            {
+                <div class="alert alert-info" role="alert">
+                    You have not added any addresses yet.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="thead-light">
+                            <tr>
+                                <th style="white-space: nowrap;">Address Type</th>
+                                <th style="white-space: nowrap;">Address</th>
+                                <th style="white-space: nowrap;">City</th>
+                                <th style="white-space: nowrap;">State</th>
+                                <th style="white-space: nowrap;">Zip Code</th>
+                                <th style="white-space: nowrap;" class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var address in Model)
+                            {
+                                <tr>
+                                    <td>@address.Label</td>
+                                    <td>
+                                        @address.AddressLine1
+                                        @if (!string.IsNullOrWhiteSpace(address.AddressLine2))
+                                        {
+                                            <br />
+                                            @address.AddressLine2
+                                        }
+                                    </td>
+                                    <td>@address.City</td>
+                                    <td>@address.State</td>
+                                    <td>@address.ZipCode</td>
+                                    <td style="white-space: nowrap;" class="text-center">
+                                        <a class="btn btn-warning" href="@Url.Action("EditAddress","CustomerAccount", new { id = address.UserAddressId})">
+                                            <i class="fas fa-edit"></i> Edit
+                                        </a>
+                                        <a class="btn btn-danger" href="@Url.Action("DeleteAddress","CustomerAccount", new { id = address.UserAddressId})">
+                                            <i class="fas fa-edit"></i> Delete
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>

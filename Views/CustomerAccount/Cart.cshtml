@@ -1,0 +1,240 @@
+﻿@model FoodDeliveryApp.Models.OrderItemList
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    decimal total = 0;
+    decimal orederValue = 0;
+    //int categoryId = -1;
+    int categoryId = Model.CategoryId;
+}
+
+<form asp-action="CreateOrder" method="post">
+    <div class="container my-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white text-center">
+                <h3 class="mb-0">Cart</h3>
+                <small>Review, update, or order the food items.</small>
+            </div>
+            <div class="card-body">
+                @if (!Model.Items.Any())
+                {
+                    <div class="alert alert-info" role="alert">
+                        You have not added food item yet.
+                    </div>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th style="white-space: nowrap;">Food Name</th>
+                                    <th style="white-space: nowrap;">Quantity</th>
+                                    <th style="white-space: nowrap;">Sub-Quantity</th>
+                                    <th style="white-space: nowrap;">Unit Price</th>
+                                    <th style="white-space: nowrap;">Total Price</th>
+                                    <th style="white-space: nowrap;" class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.Items.Count; i++)
+                                {
+                                    @* categoryId = @Model.Items[i].MenuItem.MenuCategories[0].MenuCategoryId; *@
+                                    <tr>
+                                        <td>
+                                            @Model.Items[@i].MenuItem.ItemName
+                                        </td>
+                                        @if ((Model.Items[@i].Quantity == "Full") || (Model.Items[@i].Quantity == "Half") || (Model.Items[@i].Quantity == "Quarter"))
+                                        {
+                                            <td>@Model.Items[@i].Quantity</td>
+                                            <td>@Model.Items[@i].SubQuantity</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@Model.Items[@i].Quantity</td>
+                                            <td></td>
+                                        }                                        
+                                        <td>@Model.Items[@i].UnitPrice</td>
+                                        <td>@Model.Items[@i].TotalPrice</td>
+                                        <td style="white-space: nowrap;" class="text-center">
+                                            <a class="btn btn-danger" href="@Url.Action("DeleteCart","CustomerAccount", new { menuItemId = Model.Items[@i].MenuItemId })">
+                                                <i class="fas fa-edit"></i> Delete
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <input type="hidden" asp-for="Items[@i].OrderItemId" />
+                                    <input type="hidden" asp-for="Items[@i].OrderId" />
+                                    <input type="hidden" asp-for="Items[@i].Order" />
+                                    <input type="hidden" asp-for="Items[@i].MenuItemId" />
+                                    <input type="hidden" asp-for="Items[@i].MenuItem" />
+                                    <input type="hidden" asp-for="Items[@i].Quantity" />
+                                    <input type="hidden" asp-for="Items[@i].SubQuantity" />
+                                    <input type="hidden" asp-for="Items[@i].UnitPrice" />
+                                    <input type="hidden" asp-for="Items[@i].TotalPrice" />
+                                    total += Model.Items[@i].TotalPrice;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    orederValue = total * 1.06m;
+                    <div>Total Amount: @orederValue.ToString("F2")</div>
+                    <div style="margin-top: 2rem;">
+                        <div class="form-group">
+                            <label class="control-label">PickUp Time: </label>
+                            <select class="item-dropdown" id="dropdown">
+                                <option value="">-- Select Time --</option>
+                                @foreach (var pickupTime in Model.PickUpTimes)
+                                {
+                                    <option value="@pickupTime.Time">@pickupTime.Time</option>
+                                }
+                            </select>
+                            <div>
+                                <span id="dropDownError" style="display:none;" class="text-danger">Please select a Time.</span>
+                            </div>
+                        </div>
+                        <input type="hidden" value="" id="pickupTime" name="pickupTime" />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="width: 100%;">
+                            <label asp-for="@Model.Comments">
+                                <i class="bi bi-building mr-1 text-danger"></i> Comments
+                            </label>
+                            @Html.TextAreaFor(model => @Model.Comments, new { @class = "form-control", rows = 4, style = "width:100%;" })
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label asp-for="@Model.FirstName">
+                                <i class="bi bi-building mr-1 text-danger"></i> First Name
+                            </label>
+                            <input type="text" id="firstName" asp-for="@Model.FirstName" value="@Model.FirstName" class="form-control" />
+                            <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+                            <div>
+                                <span id="firstNameError" style="display:none;" class="text-danger">Please provide your first name.</span>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label asp-for="@Model.LastName">
+                                <i class="bi bi-building mr-1 text-danger"></i> Last Name
+                            </label>
+                            <input type="text" id="lastName" asp-for="@Model.LastName" value="@Model.LastName" class="form-control" />
+                            <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+                            <div>
+                                <span id="lastNameError" style="display:none;" class="text-danger">Please provide your last name.</span>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label asp-for="@Model.PhoneNumber">
+                                <i class="bi bi-building mr-1 text-danger"></i> Phone Number
+                            </label>
+                            <input type="tel" id="phoneNumber" asp-for="@Model.PhoneNumber" value="@Model.PhoneNumber" class="form-control" />
+                            <span asp-validation-for="@Model.PhoneNumber" class="text-danger"></span>
+                            <div>
+                                <span id="phoneNumberError" style="display:none;" class="text-danger">Please provide your phone number.</span>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label asp-for="@Model.EmailAddesss">
+                                <i class="bi bi-building mr-1 text-danger"></i> Email Addesss
+                            </label>
+                            <input type="email" id="emailAddress" asp-for="@Model.EmailAddesss" value="@Model.EmailAddesss" class="form-control" />
+                            <span asp-validation-for="@Model.EmailAddesss" class="text-danger"></span>
+                            <div>
+                                <span id="emailAddressError" style="display:none;" class="text-danger">Please provide your email address.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <h4>Pickup Address:</h4>
+                        <div>Ruchi Kitchen</div>
+                        <div>1602 Village Market Blvd SE</div>
+                        <div>Leesburg, VA 20175</div>
+                        <div><b>For Map: </b><a href="https://maps.app.goo.gl/TMnZeDbP2hD9qofH9">Click here</a></div>
+                    </div>
+                    <input type="hidden" value="@Model.CategoryId" name="categoryId" />
+                }
+            </div>
+            @if (!Model.Items.Any())
+            {
+                <div class="card-footer text-end">
+                    <div class="btn btn-warning btn-lg">
+                        <a class="btn" style="font-size: 1.5rem" href="@Url.Action("FoodSearch","CustomerAccount")">
+                            <i class="fas fa-edit"></i> Add Food
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="card-footer text-end">
+                    <div class="btn btn-warning btn-lg">
+                        <a class="btn" style="font-size: 1.5rem; padding: 0;color: white;" href="@Url.Action("FoodItems","CustomerAccount", new { id = categoryId })">
+                            <i class="fas fa-edit"></i> Want to Add More
+                        </a>
+                    </div>
+                    <button class="btn btn-success btn-lg" style="font-size: 1.5rem" type="submit">Submit Order</button>
+                </div>
+            }
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const usPhonePattern = /^(\+1\s?)?(\()?(\d{3})(\))?[-.\s]?(\d{3})[-.\s]?(\d{4})$/;
+        $(document).ready(function () {
+            $('#dropdown').change(function () {
+                if ($(this).val() === "") {
+                    $('#dropDownError').show();
+                } else {
+                    $("#pickupTime").val($(this).val());
+                    $('#dropDownError').hide();
+                }
+            });
+            $('form').submit(function (e) {
+                if ($('#dropdown').val() === "") {
+                    e.preventDefault();
+                    $('#dropDownError').show();
+                }
+                else {
+                    $('#dropDownError').hide();
+                }
+                if ($('#firstName').val() === "") {
+                    e.preventDefault();
+                    $('#firstNameError').show();
+                }
+                else {
+                    $('#firstNameError').hide();
+                }
+                if ($('#lastName').val() === "") {
+                    e.preventDefault();
+                    $('#lastNameError').show();
+                }
+                else {
+                    $('#lastNameError').hide();
+                }
+                if ($('#phoneNumber').val() === "") {
+                    e.preventDefault();
+                    $('#phoneNumberError').text("Please provide your phone number.");
+                    $('#phoneNumberError').show();
+                }
+                else if (!usPhonePattern.test($('#phoneNumber').val()))
+                {
+                    e.preventDefault();
+                    $('#phoneNumberError').text("Please enter a valid US phone number.");
+                    $('#phoneNumberError').show();
+                }
+                else {
+                    $('#phoneNumberError').hide();
+                }
+                if ($('#emailAddress').val() === "") {
+                    e.preventDefault();
+                    $('#emailAddressError').show();
+                }
+                else {
+                    $('#emailAddressError').hide();
+                }
+            });
+        });
+    </script>
+}

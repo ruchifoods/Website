@@ -1,0 +1,290 @@
+﻿@model FoodDeliveryApp.Models.MenuCategoryItemsList
+@{
+    ﻿var isEdit = false;
+    var flag = false;
+    if((Model != null) && (Model.MenuItems != null) && (Model.MenuItems[0].MenuItemId > 0))
+    {
+        isEdit = true;
+    }
+    ViewBag.Title = isEdit ? "Edit Menu": "Add Menu"; 
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container mt-2">
+    <!-- Page Header Card -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-info text-white d-flex align-items-center">
+            <h3 class="mb-0">@ViewBag.Title</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-0 text-muted">
+                @if (isEdit)
+                {
+                    @:Update your menu details below.
+                }
+                else
+                {
+                    @:Add your menu details below to create new menu.
+                }
+            </p> 
+        </div>
+    </div>
+    <form id="itemForm" asp-action="AddEditMenu" method="post">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                @*Display error message from ViewBag if available *@ 
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert"> 
+                        @ViewBag.ErrorMessage
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+
+                <input type="hidden" asp-for="@Model.MenuItems[0].MenuItemId" />                
+                <div class="form-group">
+                    <label asp-for="@Model.MenuItems[0].ItemName">
+                        <i class="bi bi-house-door-fill mr-1 text-primary"></i> Menu Name
+                    </label>
+                    <input asp-for="@Model.MenuItems[0].ItemName" class="form-control" placeholder="Enter menu name" />
+                    <span asp-validation-for="@Model.MenuItems[0].ItemName" class="text-danger"></span> 
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.MenuItems[0].Description">
+                        <i class="bi bi-building mr-1 text-success"></i> Description
+                    </label>
+                    <input asp-for="@Model.MenuItems[0].Description" class="form-control" placeholder="Enter description (Optional)" />
+                    <span asp-validation-for="@Model.MenuItems[0].Description" class="text-danger"></span> 
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label asp-for="@Model.MenuItems[0].Price">
+                            <i class="bi bi-building mr-1 text-danger"></i> Price
+                        </label>
+                        <input asp-for="@Model.MenuItems[0].Price" class="form-control" placeholder="Price" /> 
+                        <span asp-validation-for="@Model.MenuItems[0].Price" class="text-danger"></span> 
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="@Model.MenuItems[0].IsVeg">
+                            <i class="bi bi-flag-fill mr-1 text-warning"></i> Veg
+                        </label>
+                        <div style="margin-left: 3rem;">
+                            <label class="form-check-label">
+                                <input asp-for="@Model.MenuItems[0].IsVeg" type="radio" class="form-check-input" value="true" /> Yes
+                            </label>
+                        </div>
+                        <div style="margin-left: 3rem;">
+                            <label class="form-check-label">
+                                <input asp-for="@Model.MenuItems[0].IsVeg" type="radio" class="form-check-input" value="false" /> No
+                            </label>
+                        </div> 
+                        <span asp-validation-for="@Model.MenuItems[0].IsVeg" class="text-danger"></span> 
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label asp-for="@Model.MenuItems[0].IsAvailable">
+                            <i class="bi bi-mailbox2 mr-1 text-info"></i> Available  
+                        </label>
+                        <div style="margin-left: 3rem;">
+                            <label class="form-check-label">
+                                <input asp-for="@Model.MenuItems[0].IsAvailable" type="radio" class="form-check-input" value="true" /> Available
+                            </label>
+                        </div>
+                        <div style="margin-left: 3rem;">
+                            <label class="form-check-label">
+                                <input asp-for="@Model.MenuItems[0].IsAvailable" type="radio" class="form-check-input" value="false" /> Not Available
+                            </label>
+                        </div>
+                        <span asp-validation-for="@Model.MenuItems[0].IsAvailable" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@Model.MenuItems[0].MenuCategoryId" class="control-label">Menu Category</label>
+                        @if(isEdit)
+                        {
+                            <div class="d-flex flex-wrap">
+                                @for (int j = 0; j < Model.MenuCategories.Count; j++)
+                                {
+                                    <div class="form-check me-3" style="padding-right: 1rem;">
+                                        @{
+                                            flag = false;
+                                        }
+                                        @for(int k=0; k < Model.MenuItems[0].MenuCategories.Count; k++)
+                                        {
+                                            if(Model.MenuItems[0].MenuCategories[k].CategoryName == Model.MenuCategories[j].CategoryName)
+                                            {
+                                                flag = true;
+                                                <input checked="checked" type="checkbox" name="@Model.MenuCategories[j].MenuCategoryId" value="@Model.MenuCategories[j].MenuCategoryId" class="item-checkbox" />
+                                                <label class="form-check-label">@Model.MenuCategories[j].CategoryName</label>
+                                            }
+                                        }
+                                        @if(!flag)
+                                        {
+                                            <input type="checkbox" name="@Model.MenuCategories[j].MenuCategoryId" value="@Model.MenuCategories[j].MenuCategoryId" class="item-checkbox" />
+                                            <label class="form-check-label">@Model.MenuCategories[j].CategoryName</label>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="d-flex flex-wrap">
+                                @for (int j = 0; j < Model.MenuCategories.Count; j++)
+                                {
+                                    <div class="form-check me-3" style="padding-right: 1rem;">
+                                        <input type="checkbox" name="@Model.MenuCategories[j].MenuCategoryId" value="@Model.MenuCategories[j].MenuCategoryId" class="item-checkbox" />
+                                        <label class="form-check-label">@Model.MenuCategories[j].CategoryName</label>
+                                    </div>
+                                }
+                            </div>
+                        }
+                        <div>
+                            <span id="categoryError" style="display:none;" class="text-danger">Please select a date.</span>
+                        </div>
+                        <input type="hidden" id="selectedCategoryIds" name="selectedCategoryIds" value="" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Menu Quantity</label>
+                    @if(isEdit)
+                    {
+                        <div class="d-flex flex-wrap">
+                            @for (int i = 0; i < Model.Quantities.Count; i++)
+                            {
+                                <div class="form-check me-3" style="padding-right: 1rem;">
+                                    <input type="checkbox" asp-for="Quantities[i].IsSelected" class="form-check-input" />
+                                    <input type="hidden" asp-for="Quantities[i].Id" />
+                                    <label class="form-check-label">@Model.Quantities[i].Size</label>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex flex-wrap">
+                            @for (int i = 0; i < Model.Quantities.Count; i++)
+                            {
+                                <div class="form-check me-3" style="padding-right: 1rem;">
+                                    <input type="checkbox" asp-for="Quantities[i].IsSelected" class="form-check-input" />
+                                    <input type="hidden" asp-for="Quantities[i].Id" />
+                                    <label class="form-check-label">@Model.Quantities[i].Size</label>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Food Type</label>
+                    @if(isEdit)
+                    {
+                        <div class="d-flex flex-wrap">
+                            @for (int i = 0; i < Model.FoodTypes.Count; i++)
+                            {
+                                if(@Model.MenuItems[0].FoodTypeId == @Model.FoodTypes[i].Id)
+                                {
+                                    <div class="form-check me-3" style="padding-right: 1rem;">
+                                        <input checked type="radio" asp-for="@Model.MenuItems[0].FoodTypeId" class="form-check-input radio-input" value="@Model.FoodTypes[i].Id" />
+                                        <input type="hidden" asp-for="@Model.MenuItems[0].FoodTypeId" />
+                                        <label class="form-check-label">@Model.FoodTypes[i].Name</label>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form-check me-3" style="padding-right: 1rem;">
+                                        <input type="radio" asp-for="@Model.MenuItems[0].FoodTypeId" class="form-check-input radio-input" value="@Model.FoodTypes[i].Id" />
+                                        <input type="hidden" asp-for="@Model.MenuItems[0].FoodTypeId" />
+                                        <label class="form-check-label">@Model.FoodTypes[i].Name</label>
+                                    </div>
+                                }
+                                
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="d-flex flex-wrap">
+                            @for (int i = 0; i < Model.FoodTypes.Count; i++)
+                            {
+                                <div class="form-check me-3" style="padding-right: 1rem;">
+                                    <input type="radio" asp-for="@Model.MenuItems[0].FoodTypeId" class="form-check-input radio-input" value="@Model.FoodTypes[i].Id" />
+                                    <input type="hidden" asp-for="@Model.MenuItems[0].FoodTypeId" />
+                                    <label class="form-check-label">@Model.FoodTypes[i].Name</label>
+                                </div>
+                            }
+                        </div>
+                    }
+                    <div>
+                        <span id="foodTypeError" style="display:none;" class="text-danger">Please select a food type.</span>
+                    </div>
+                    <input type="hidden" id="selectedFoodTypeId" name="selectedFoodTypeId" value="" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.MenuItems[0].ImageUrl">
+                        <i class="bi bi-geo-alt mr-1 text-danger"></i> Image Url
+                    </label>
+                    <input asp-for="@Model.MenuItems[0].ImageUrl" class="form-control" placeholder="Image Url (optional)"/>
+                    <span asp-validation-for="@Model.MenuItems[0].ImageUrl" class="text-danger"></span> 
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="card-footer text-right">
+                        @if(isEdit)
+                        {
+                            <input type="hidden" name="actionType" value="Update" />
+                            <button type="submit" class="btn btn-primary mr-2">
+                                <i class="bi bi-check-circle-fill mr-1"></i> Update Menu
+                            </button>
+                        }
+                        else
+                        {
+                            <input type="hidden" name="actionType" value="Add" />
+                            <button type="submit" class="btn btn-primary mr-2">
+                                <i class="bi bi-check-circle-fill mr-1"></i> Add Menu
+                            </button>
+                        }
+                        <a href="@Url.Action("ManageMenus", "RestaurantOwnerAccount")" class="btn btn-secondary">
+                            <i class="bi bi-x-circle-fill mr-1"></i> Cancel
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('#itemForm').submit(function (e) {
+            // Check if any checkbox is selected
+            if ($('.item-checkbox:checked').length === 0) {
+                $('#categoryError').show();
+                e.preventDefault(); // Prevent form submission
+            }
+            else{
+                $('#categoryError').hide();
+                var selectedIds="";
+                $('.item-checkbox:checked').each(function () {
+                    if(selectedIds == "")
+                    {
+                        selectedIds = $(this).val();
+                    }
+                    else
+                    {
+                        selectedIds += "," + $(this).val();
+                    }
+                });
+                $("#selectedCategoryIds").val(selectedIds);
+            }
+
+            if ($('.radio-input:checked').length === 0) {
+                $('#foodTypeError').show();
+                e.preventDefault(); // Prevent form submission
+            }
+            else{
+                $('#foodTypeError').hide();
+                var selectedId = $('.radio-input:checked').val();
+                $("#selectedFoodTypeId").val(selectedId);
+            }
+        });
+    </script>
+}

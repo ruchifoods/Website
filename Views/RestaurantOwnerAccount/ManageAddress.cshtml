@@ -1,0 +1,88 @@
+﻿@model FoodDeliveryApp.ViewModels.Common.EditAddressViewModel
+@{
+    ViewBag.Title = "Manage Address";
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+<div class="container mt-5">
+    <!--Page Header Card -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">
+                        <i class="bi bi-geo-alt-fill me-2"></i> Manage Your Address
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">
+                        Review or update your address details below to ensure that your delivery information is always current and accurate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Success Message Alert -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+    <!-- Address Card / Info Alert -->
+    ﻿<div class="row">
+        <div class="col-12">
+            @if (Model != null && Model.UserAddressId > 0)
+            {
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="bi bi-house-door-fill text-primary me-2"></i> Address Details
+                        </h5>
+                        <hr />
+                        <p class="card-text">
+                            <strong>Address Line 1:</strong> @Model.AddressLine1
+                        </p>
+                        @if (!string.IsNullOrEmpty(Model.AddressLine2))
+                        {
+                        }
+                        <p class="card-text">
+                            <strong>Address Line 2:</strong> @Model.AddressLine2
+                        </p>
+                        <p class="card-text">
+                            <i class="bi bi-geo-alt-fill text-danger me-2"></i> @Model.City, @Model.State - @Model.ZipCode
+                        </p>
+                    </div>
+                    <div class="card-footer text-right">
+                        <a href="@Url.Action("AddEditAddress", "RestaurantOwnerAccount")" class="btn btn-primary">
+                            Edit Address
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    <h5 class="alert-heading">
+                        <i class="bi bi-exclamation-circle-fill me-2"></i> No Address Found
+                    </h5>
+                    <p>
+                        It looks like you haven't added your address yet. Please add your address details to receive timely deliveries.
+                    </p>
+                    <hr />
+                    <div class="d-flex justify-content-end">
+                        <a href="@Url.Action("AddEditAddress", "RestaurantOwnerAccount")" class="btn btn-primary">
+                            Add Address
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

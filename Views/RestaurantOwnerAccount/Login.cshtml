@@ -1,0 +1,71 @@
+﻿@model FoodDeliveryApp.ViewModels.Common.LoginViewModel
+@{
+    ViewBag.Title = "Restaurant Owner Login";
+    Layout = "~/Views/Shared/_RestaurantOwnerUnverifiedLayout.cshtml";
+}
+<div class="container mt-2">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- Login Card -->
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-center text-white">
+                    <h4 class="mb-0">
+                        <i class="bi bi-person-circle text-warning mr-2" style="font-size: 1.5rem;"></i>Secure Login
+                    </h4>
+                    <p class="small">Access your dashboard to manage your restaurant with confidence.</p>
+                </div>
+
+                <div class="card-body">
+                    @* Display error message from ViewBag if available *@
+                    @if (ViewBag.Errormessage != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="bi bi-exclamation-triangle-fill mr-1"></i>@ViewBag.ErrorMessage
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    }
+                    <form asp-action="Login" method="post">
+                        <div class="form-group">
+                            <label asp-for="Email" class="font-weight-bold">
+                                <i class="bi bi-envelope-fill text-info mr-1"></i> Email Address
+                            </label>
+                            <div class="input-group">
+                                <input asp-for="Email" class="form-control" placeholder="Enter your email" />
+                            </div>
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password" class="font-weight-bold">
+                                <i class="bi bi-lock-fill text-warning mr-1"></i> Password
+                            </label>
+                            <div class="input-group">
+                                <input asp-for="Password" class="form-control" placeholder="Enter your password" />
+                            </div>
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input asp-for="RememberMe" class="form-check-input" />
+                            <label asp-for="RememberMe" class="form-check-label">Remember Me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Login
+                        </button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="@Url.Action("ForgotPassword", "RestaurantOwnerAccount")" class="text-primary">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

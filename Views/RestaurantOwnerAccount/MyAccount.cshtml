@@ -1,0 +1,160 @@
+﻿@model FoodDeliveryApp.ViewModels.RestaurantOwners.RestaurantOwnerAccountViewModel
+@{
+    ViewBag.Title = "My Account";
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+}
+
+<style>
+
+    /* Slimmer header (jumbotron) with reduced vertical padding */
+    .custom-jumbotron {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    /* Set a consistent height for the account cards */
+    .account-card {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* Ensure card-body takes remaining space */
+    account-card .card-body {
+        flex-grow: 1;
+    }
+</style>
+
+<div class="container-fluid">
+    <!-- Header Section with a Professional Welcome Message -->
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron jumbotron-fluid custom-jumbotron bg-info text-white">
+                <div class="container">
+                    <h1 class="display-4 text-center">Welcome to Your Account</h1>
+                    <p class="lead text-center">
+                        Manage your personal information, address, and business details securely.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message Alert -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Account Details Cards -->
+    <div class="row">
+        <!-- Basic Details Card -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm account-cars">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Basic Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <strong>Email</strong>
+                        <p class="mb-0">@Model.Email</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Name</strong>
+                        <p class="mb-0">@Model.FirstName @Model.LastName</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Phone</strong>
+                        <p class="mb-0">@Model.PhoneNumber</p>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <a asp-action="UpdateBasicDetails" class="btn btn-primary btn-sm mr-2">
+                        Edit Info
+                    </a>
+                    <a asp-action="ChangePassword" class="btn btn-primary btn-sm">
+                        Change Password
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Address Details Card -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm account-card">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Address Details</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.UserAddressId != null)
+                    {
+                        <ul class="list-unstyled">
+                            <li><strong>Address 1:</strong> @Model.AddressLine1</li>
+                            <li><strong>Address 2:</strong> @Model.AddressLine2</li>
+                            <li><strong>City:</strong> @Model.City</li>
+                            <li><strong>State:</strong> @Model.State</li>
+                            <li><strong>ZIP:</strong> @Model.ZipCode</li>
+                            <li><strong>Landmark:</strong> @Model.Landmark</li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <p class="text-muted">No address found. Please add your address details.</p>
+                    }
+                </div>
+                <div class="card-footer text-right">
+                    @if (Model.UserAddressId != null)
+                    {
+                        <a asp-action="AddEditAddress" class="btn btn-primary btn-sm">
+                            Edit Address
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-action="AddEditAddress" class="btn btn-primary btn-sm">
+                            Add Address
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Business Details Card -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm account-card">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Business Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <strong>Business License Number:</strong>
+                        <p class="mb-0">@Model.BusinessLicenseNumber</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>GSTIN:</strong>
+                        <p class="mb-0">@Model.GSTIN</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Business Registration Number:</strong>
+                        <p class="mb-0">@Model.BusinessRegistrationNumber</p>
+                    </div>
+                </div>
+
+                <div class="card-footer text-right">
+                    <a asp-action="EditBusinessDetails" class="btn btn-primary btn-sm mr-2">
+                        Edit Business Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

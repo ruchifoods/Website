@@ -1,0 +1,406 @@
+2025-06-12 09:11:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 09:11:19 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-12 09:12:30 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 09:13:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Schedule updated successfully: June 12
+2025-06-12 09:13:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-12 09:13:19 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 09:13:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-12 09:13:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 09:13:37 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Schedule updated successfully: June 13
+2025-06-12 09:13:37 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-12 09:13:40 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 09:14:03 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Schedule updated successfully: June 14
+2025-06-12 09:14:03 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-12 09:14:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 09:14:18 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-12 09:14:18 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:14:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Menu item updated successfully: Cookies
+2025-06-12 09:14:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 09:14:38 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 09:14:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Update order delivered for OrderId 1012
+2025-06-12 09:14:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 2 orders for user 9
+2025-06-12 09:14:53 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Update order delivered for OrderId 1013
+2025-06-12 09:14:53 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 09:14:54 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Update order delivered for OrderId 1018
+2025-06-12 09:14:54 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 0 orders for user 9
+2025-06-12 09:15:00 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:15:10 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:15:10 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:16:16 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:16:19 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-12 09:16:19 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:17:02 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:17:03 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:17:03 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:17:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:17:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:17:20 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 1 menu items for category 2
+2025-06-12 09:17:20 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:17:25 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:17:27 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:17:27 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:17:39 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 14
+2025-06-12 09:17:40 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:17:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu items for category 6
+2025-06-12 09:17:53 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:18:03 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:18:04 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:18:04 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:18:13 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 20
+2025-06-12 09:18:13 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:23:51 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:23:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:23:53 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:29:24 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:29:27 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:29:27 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:29:36 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:29:36 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:29:36 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at AspNetCoreGeneratedDocument.Views_CustomerAccount_Cart.<>c__DisplayClass14_0.<<ExecuteAsync>b__0>d.MoveNext() in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Views\CustomerAccount\Cart.cshtml:line 40
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_CustomerAccount_Cart.ExecuteAsync() in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Views\CustomerAccount\Cart.cshtml:line 7
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-12 09:29:49 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:29:49 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:29:51 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:29:51 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:37:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:37:55 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:37:55 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:38:00 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:38:00 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:38:01 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 1 menu items for category -1
+2025-06-12 09:38:01 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:38:44 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:38:47 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:38:47 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:39:08 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:39:13 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:39:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 1 menu items for category -1
+2025-06-12 09:39:17 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:39:38 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCoreGeneratedDocument.Views_CustomerAccount_FoodItems.ExecuteAsync() in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Views\CustomerAccount\FoodItems.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-12 09:39:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:39:56 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:39:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:40:24 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:40:26 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:40:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:40:43 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:40:48 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:41:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:43:28 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:43:31 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:43:31 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:43:38 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:43:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:46:56 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 09:46:58 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:46:58 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:47:06 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:47:16 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:47:21 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:47:21 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:47:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 09:47:46 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:48:18 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:48:18 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:48:29 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 14
+2025-06-12 09:48:43 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 09:48:50 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 09:48:50 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 09:49:01 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 20
+2025-06-12 09:49:04 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:19 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 10:04:21 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 10:04:21 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 10:04:24 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 10:04:25 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:26 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 10:04:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 10:04:29 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 14
+2025-06-12 10:04:29 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:33 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:34 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:35 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 10:04:37 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-12 10:04:37 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 10:04:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 10:04:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-12 10:04:42 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 10:04:50 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 8
+2025-06-12 10:04:50 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:51 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:52 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:04:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 10:04:54 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 10:04:54 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 10:05:00 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 14
+2025-06-12 10:05:00 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:05:01 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 10:05:01 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 10:05:05 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 10:05:05 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 10:05:13 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-12 10:05:17 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-12 10:05:20 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-12 10:05:20 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 10:05:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 10:05:38 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 10:47:13 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 10:47:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 10:47:17 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-06-12 10:47:17 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error updating order status for OrderId 1019
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.UpdateOrders(Int32 orderId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 614
+2025-06-12 10:47:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 10:47:19 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-06-12 10:47:19 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error updating order status for OrderId 1019
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.UpdateOrders(Int32 orderId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 614
+2025-06-12 10:47:19 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 10:47:22 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-06-12 10:47:22 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error updating order status for OrderId 1019
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.UpdateOrders(Int32 orderId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 614
+2025-06-12 10:47:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 10:48:40 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-06-12 10:49:47 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method351(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method351(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.LargeArrayBuilder`1.AddRange(IEnumerable`1 items)
+   at System.Collections.Generic.EnumerableHelpers.ToArray[T](IEnumerable`1 source)
+   at System.Linq.SystemCore_EnumerableDebugView`1.get_Items()
+2025-06-12 10:49:59 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method351(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method351(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.LargeArrayBuilder`1.AddRange(IEnumerable`1 items)
+   at System.Collections.Generic.EnumerableHelpers.ToArray[T](IEnumerable`1 source)
+   at System.Linq.SystemCore_EnumerableDebugView`1.get_Items()
+2025-06-12 10:52:06 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error updating order status for OrderId 1019
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.UpdateOrders(Int32 orderId)
+2025-06-12 11:00:08 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.UpdateOrders(Int32 orderId)
+2025-06-12 11:00:08 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error updating order status for OrderId 1019
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at lambda_method316(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.UpdateOrders(Int32 orderId)
+2025-06-12 11:23:13 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 11:23:16 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 11:23:16 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:23:22 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 14
+2025-06-12 11:23:22 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:23:23 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 11:23:23 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:23:27 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 11:23:27 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:24:34 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 11:24:37 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 11:24:37 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:24:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 11:24:41 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:24:42 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 11:24:42 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:24:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 14
+2025-06-12 11:24:45 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:41:06 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 11:41:08 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 11:41:08 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:41:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-06-12 11:41:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:41:12 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 5 menu items for category 7
+2025-06-12 11:41:12 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:41:15 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 14
+2025-06-12 11:41:15 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:45:48 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-12 11:45:48 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-12 11:45:48 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-12 11:45:48 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 11:46:30 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 11:46:32 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 11:48:37 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 11:48:55 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 1 orders for user 9
+2025-06-12 11:49:54 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 11:49:56 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-12 11:49:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:50:02 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 17
+2025-06-12 11:50:02 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:50:03 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 6 menu items for category 3
+2025-06-12 11:50:03 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:50:09 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 20
+2025-06-12 11:50:09 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:50:16 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-12 11:50:16 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-12 11:50:16 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-12 11:50:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 11:50:19 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 3 menu items for category 6
+2025-06-12 11:50:19 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 11:50:25 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 16
+2025-06-12 11:50:25 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-06-12 11:50:35 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-06-12 11:50:35 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-06-12 11:50:35 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-06-12 11:50:35 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 4 menu categories
+2025-06-12 11:50:48 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 11:50:53 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 11:52:19 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 11:52:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 11:53:00 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 11:53:01 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 12:06:21 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 12:06:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 12:06:55 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 12:07:04 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 12:08:32 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 12:08:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 12:19:02 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 12:19:04 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 12:20:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 12:20:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 orders for user 9
+2025-06-12 12:20:40 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 13:38:28 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-12 13:38:30 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 13:38:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-12 13:38:34 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-12 13:42:30 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-12 13:42:32 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.

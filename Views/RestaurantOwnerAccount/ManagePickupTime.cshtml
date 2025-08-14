@@ -1,0 +1,99 @@
+﻿@model List<FoodDeliveryApp.Models.PickUpTime>
+@{
+    ViewBag.Title = "Manage Pickup Time";
+    Layout = "~/Views/Shared/_RestaurantOwnerLayout.cshtml";
+    int counter = 3;
+}
+<style>
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+</style>
+<div class="container mt-5">
+    <div class="card shadow" style="width: 100%; padding: 2rem;">
+        <div class="card-header bg-primary text-white text-center">
+            <h3 class="mb-0">Manage Your Pickup Time</h3>
+            <small>Review or update your pickup time details below to ensure that your pickup time information is always current and accurate.</small>
+        </div>
+
+        <!-- Success Message Alert -->
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        @TempData["SuccessMessage"]
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        ﻿<div>
+            <div class="col-12">
+                @if ((Model != null) && (Model.Count > 0))
+                {
+                    <div class="">
+                        @for (int i = 0; i < Model.Count();)
+                        {
+                            <div class="row d-flex align-items-stretch" style="margin-bottom: 1rem;">
+                                @while ((counter != 0) && (i < Model.Count()))
+                                {
+                                    counter = counter - 1;
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm h-100">
+                                            <div class="card-body">
+                                                <h5 class="card-title">@Model[i].Time</h5>
+                                                @if (Model[i].IsActive)
+                                                {
+                                                    <p class="card-text">Available</p>
+                                                }
+                                                else
+                                                {
+                                                    <p class="card-text">Not Available</p>
+                                                }
+
+                                                <div class="text-right">
+                                                    <a href="@Url.Action("ShowPickupTime", "RestaurantOwnerAccount", new { pickupTimeId = Model[i].Id})" class="btn btn-primary">
+                                                        Edit Pickup Time
+                                                    </a>
+                                                </div>
+                                                <div class="text-right" style="padding-top: 1rem;">
+                                                    <a href="@Url.Action("DeletePickupTime", "RestaurantOwnerAccount", new { id = Model[i].Id})" class="btn btn-danger">
+                                                        Delete Pickup Time
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    i++;
+                                }
+                            </div>
+                            counter = 3;
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info">
+                        <h5 class="alert-heading">
+                            <i class="bi bi-exclamation-circle-fill me-2"></i> No Pickup Time Found
+                        </h5>
+                        <p>
+                            It looks like you haven't added any pickup time yet. Please add your pickup time details to receive orders.
+                        </p>
+                        <hr />
+                    </div>
+                }
+                <div class="d-flex justify-content-end">
+                    <a href="@Url.Action("ShowPickupTime", "RestaurantOwnerAccount", new { pickupTimeId = -1 })" class="btn btn-primary">
+                        Add Pickup Time
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿@model FoodDeliveryApp.Models.UserAddress
+@{
+    ViewData["Title"] = "Delete Address";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h3 class="mb-0">Confirm Address Deletion</h3>
+                </div>
+                <div class="card-body">
+                    <p class="mb-4">
+                        Are you sure you want to delete the following address? This action cannot be undone. 
+                    </p>
+                    <div class="mb-4">
+                        <h5 class="text-primary">@Model.Label</h5>
+                        <p class="mb-1">@Model.AddressLine1</p>
+                        @if (!string.IsNullOrEmpty(Model. AddressLine2))
+                        {
+                            <p class="mb-1">@Model.AddressLine2</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Landmark))
+                        {
+                            <p class="mb-1"><small>Landmark: @Model.Landmark</small></p>
+                        }
+                        <p>@Model. City, @Model. State @Model.ZipCode</p>
+                    </div>
+
+                    <form asp-action="DeleteAddress" method="post">
+                        <input type="hidden" name="id" value="@Model.UserAddressId" />
+                        <div class="d-flex justify-content-end">
+                            <a href="@Url.Action("ManageAddresses", "CustomerAccount")" class="btn btn-secondary mr-2"> 
+                                No, Cancel
+                            </a>
+                            <button type="submit" class="btn btn-danger">
+                                Yes, Delete
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

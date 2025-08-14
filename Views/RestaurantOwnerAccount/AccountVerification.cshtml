@@ -1,0 +1,57 @@
+﻿@model FoodDeliveryApp.ViewModels.RestaurantOwners.RestaurantOwnerAccountVerificationViewModel
+@{
+    ViewBag.Title = "Account Verification";
+    Layout = "~/Views/Shared/_RestaurantOwnerUnverifiedLayout.cshtml";
+}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h4 class="mb-0">
+                        <i class="bi bi-shield-check"></i> Account Verification Status
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <i class="bi bi-envelope-fill"></i>
+                        <strong>Email:</strong> @Model.Email
+                    </div>
+                    <div class="mb-3">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Status:</strong>
+                        @if (Model.IsVerified)
+                        {
+                            <span class="text-success">
+                                <i class="bi bi-check-circle"></i> Verified
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-warning">
+                                <i class="bi bi-x-circle"></i> Not Verified
+                            </span>
+                        }
+                    </div>
+                    <div class="mb-3">
+                        <i class="bi bi-clock"></i>
+                        @Model.EstimatedVerificationTimemessage
+                    </div>
+                    @if (!Model.IsVerified && !string.IsNullOrEmpty(Model.Message))
+                    {
+                        <div class="alert alert-danger mt-3">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                            <strong>Admin Remarks:</strong> @Model.Message
+                        </div>
+                    }
+                    @if (Model.IsVerified)
+                    {
+                        <div class="alert alert-success mt-3">
+                            <i class="bi bi-check-circle-fill"></i>Your account has been successfully verified.
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,247 @@
+﻿@model FoodDeliveryApp.ViewModels.Common.EditAddressViewModel
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewData["Title"] = "Edit Address";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+    // Read the Google Maps API key from appsettings.json
+    var googleMapsApiKey = Configuration["GoogleMaps:ApiKey"];
+}
+<div class="card shadow my-5">
+    <div class="card-header bg-success text-white text-center">
+        <h3>Edit Address</h3>
+        <p class="mb-0">Adjust the marker on the map to update your location. Your address fields will be updated automatically.</p>
+    </div>
+    <div class="card-body">
+        <!-- Google Map Container -->
+        <div id="map" style="width: 100%; height: 350px;"></div>
+        <div class="text-center my-3">
+            <button type="button" id="btnGetCurrentLocation" class="btn btn-info">
+                <i class="fa fa-map-marker-alt"></i> Use My Current Location
+            </button>
+        </div>
+        <hr />
+        <form asp-action="EditAddress" method="post" novalidate>
+
+            @* Display error message from ViewBag if available *@
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @ViewBag.ErrorMessage
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            }
+
+            <!-- Hidden field for the unique address id -->
+            <input type="hidden" asp-for="UserAddressId" />
+
+            <!-- Hidden fields for coordinates -->
+            <input type="hidden" asp-for="Latitude" id="Latitude" />
+            <input type="hidden" asp-for="Longitude" id="Longitude" />
+            <div class="mb-3">
+                <label asp-for="Label" class="form-label"></label>
+                <input asp-for="Label" class="form-control" placeholder="e.g., Home, Work" />
+                <span asp-validation-for="Label" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="AddressLine1" class="form-label"></label>
+                <input asp-for="AddressLine1" class="form-control" placeholder="Street Address" id="AddressLine1" />
+                <span asp-validation-for="AddressLine1" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="AddressLine2" class="form-label"></label>
+                <input asp-for="AddressLine2" class="form-control" placeholder="Apartment, Suite, etc. (Optional)" id="AddressLine2" />
+                <span asp-validation-for="AddressLine2" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label asp-for="City" class="form-label"></label>
+                    <input asp-for="City" class="form-control" placeholder="City" id="City" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="State" class="form-label"></label>
+                    <input asp-for="State" class="form-control" placeholder="State" id="State" />
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="ZipCode" class="form-label"></label>
+                    <input asp-for="ZipCode" class="form-control" placeholder="ZipCode" id="ZipCode" />
+                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="Landmark" class="form-label"></label>
+                    <input asp-for="Landmark" class="form-control" placeholder="Landmark (Optional)" id="Landmark" />
+                </div>
+            </div>
+            <!-- Hidden fields for coordinates -->
+            <input type="hidden" asp-for="Latitude" id="Latitude" />
+            <input type="hidden" asp-for="Longitude" id="Longitude" />
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary me-2">Save Address</button>
+                <a href="@Url.Action("ManageAddresses","CustomerAccount")" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+<!-- Load the Google Maps API asynchronously.
+The "async" and "defer" attributes ensure that the script loads without blocking the page rendering. The API key and callback function (initMap) are dynamically set. -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=@googleMapsApiKey&callback=initMap&libraries=places"></script>
+<script>
+    // Global variables used across the map functions:
+    // map: The Google Map instance.
+    // marker: The draggable marker on the map. The current position in the Google map.
+    // geocoder: Converts coordinates (latitude/longitude) to a human-readable address.
+    // infowindow: Displays information on the map.
+    let map, marker, geocoder, infowindow;
+    // initMap is the callback function invoked once the Google Maps API is loaded.
+    function initMap() {
+        // Initialize the geocoder for converting (latitude/longitude) to a human-readable address. geocoder = new google.maps.Geocoder();
+        // Initialize the info window used to display details on the map.
+        infowindow = new google.maps. InfoWindow();
+        // Define a default location (Bhubaneswar, Odisha, India) with latitude and longitude.
+        const defaultLocation = { lat: 20.2961, lng: 85.8245 };
+
+        // Create a new map centered at the default lacation with a zoom level of 15.
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: defaultLocation,
+            zoom: 15
+        });
+
+        // Place a draggable marker on the map at the default location.
+        marker = new google.maps.Marker({
+            position: defaultLocation,                      // Initial position of the marker.
+            map: map,                                       // Bind the marker to the created map.
+            draggable: true,                                // Allow the marker to be moved/dragged by the user.
+            title: "Drag to select your location"           // Displayed tooltip text when hovering over the marker.
+        });
+
+        // Add an event listener to the marker that triggers when the user stops dragging it.
+        marker.addListener('dragend', function() {
+            // Get the marker's new location after dragging.
+            const pos = marker.getPosition();
+
+            // Update hidden form fields with the new latitute and longitude.
+            updatePosition(pos);
+
+            // Function to fill the address input fields based on new location.
+            reverse.Geocode(pos);
+        });
+    }
+
+    // Function to update the hidden input fields with the current marker position.
+    function updatePosition(pos){
+        // Extract the latitute value from the position; handling cases where pos.lat might be a function.
+        let latVal = (typeod pos.lat === "function") ? pos.lat() : pos.lat;
+
+        // Extract the longitude value, handling cases where pos.lng might be a function.
+        let lngVal = (typeod pos.lng === "function") ? pos.lng() : pos.lng;
+
+        // Set the hidden Latitude field value formatted to six decimal places.
+        document.getElementById("Latitude").value = latVal.toFixed(6);
+
+        // Set the hidden Longitude field value formatted to six decimal places.
+        document.getElementById("Longitude").value = lngVal.toFixed(6);
+    }
+
+    // Converts a given geographic position into a readable address and fills in form fields based on the current marker position
+    function reverseGeocode (pos) {
+
+        // Use the geocoder to convert the latitude/longitude into address components.
+        geocoder.geocode({ location: pos }, function (results, status) {
+
+            // Proceed only if the request was successful and at least one result was returned.
+            if (status === "OK" && results[0]) {
+
+            // Extract address components (e.g., street number, route, city, etc.) from the first result.
+            let components = results[0].address_components;
+
+            // Initialize variables to store address parts
+            let streetNumber = "", route = "", city = "", state = "", postalCode = "";
+
+            // Iterate over each address component to identify and assign values.
+            components.forEach(function(component) {
+                if (component.types. includes ("street_number")) {
+                    streetNumber = component. long_name; // Street number (e.g., "123").
+                }
+                if (component.types.includes("route")) {
+                    route = component. long_name; // Street name (e.g., "Main St").
+                }
+                if (component.types.includes ("locality")) {
+                    city = component. long_name; // City name.
+                }
+                if (component.types.includes ("administrative_area_level_1")) {
+                    state = component. long_name; // State name.
+                }
+                if (component.types.includes ("postal_code")) {
+                    postalCode = component. long_name; // Postal/Zip Code.
+                }
+            });
+
+            // Construct AddressLine1 using street number and route if both are available.
+            const addressLine1 = (streetNumber && route) ? streetNumber + " " + route : results[0].formatted_address;
+
+            // Set the AddressLine1 input to the constructed address.
+            document.getElementById("AddressLine1").value = addressLine1;
+
+            // If the City field is empty, update it with the extracted city.
+            if (!document.getElementById("City").value) {
+                document.getElementById("City").value = city;
+            }
+            // If the State field is empty, update it with the extracted state.
+            if (!document.getElementById("State").value) {
+                document.getElementById("State").value = state;
+            }
+            // If the ZipCode field is empty, update it with the extracted postal code.
+            if (!document.getElementById("ZipCode").value) {
+                document.getElementById("ZipCode").value = postalCode;
+            }
+        } else {
+            // Log an error if reverse geocoding fails.
+            console.error("Reverse geocode failed: " + status);
+        }
+    });
+
+    // Attach a click event handler to the "Use My Current Location" button.
+    document.getElementById("btnGetCurrentLocation").addEventListener("click", function () {
+
+    // Verify that the browser supports the Geolocation API.
+    if (navigator.geolocation) {
+
+        // Get the current position of the user.
+        navigator.geolocation.getCurrentPosition(function (position){
+            // Construct a new position object with the current latitude and longitude.
+            const pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            // Recenter the map to the user's current location.
+            map.setCenter(pos);
+
+            // Move the marker to the  user's current location.
+            marker.setPosition(pos);
+
+            // Update hidden input fields with the new coordinates.
+            updatePosition(pos);
+
+            // Reverse geocode the new position to auto-fill address fields.
+            reverseGeocode(pos;
+
+        }, function(error){
+            // Alery the user if geolocation not supported by their browser.
+            alert("Geolocation is not supported by your browser");
+        }
+    });
+</script>
+}
+

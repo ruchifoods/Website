@@ -1,0 +1,186 @@
+2025-06-26 09:09:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 09:09:38 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:09:39 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:09:39 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:09:39 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:10:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:16:55 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:16:55 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:16:55 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:19:05 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 09:19:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:19:09 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:19:09 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:19:09 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:19:22 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Ice-Cream
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 849
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 794
+2025-06-26 09:19:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 7 menus.
+2025-06-26 09:19:25 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:19:25 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:19:25 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:19:29 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 7 menus.
+2025-06-26 09:19:48 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:19:51 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:19:51 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:19:51 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:22:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 09:22:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:22:28 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:22:28 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:22:28 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:22:41 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Ice-Cream
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 851
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 796
+2025-06-26 09:22:41 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:22:43 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:22:43 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:22:43 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:22:56 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Ice-Cream
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 851
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 796
+2025-06-26 09:22:57 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:23:00 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:23:00 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:23:00 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:23:01 [ERR] [Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: 'value' must not be null for <input> if 'type' is 'radio'.
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.GenerateRadio(ModelExplorer modelExplorer, IDictionary`2 htmlAttributes)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper.Process(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.RunAsync(TagHelperExecutionContext executionContext)
+   at AspNetCoreGeneratedDocument.Views_RestaurantOwnerAccount_AddEditMenu.<>c__DisplayClass28_0.<<ExecuteAsync>b__0>d.MoveNext() in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Views\RestaurantOwnerAccount\AddEditMenu.cshtml:line 207
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.GetChildContentAsync(Boolean useCachedResult, HtmlEncoder encoder)
+   at Microsoft.AspNetCore.Mvc.TagHelpers.RenderAtEndOfFormTagHelper.ProcessAsync(TagHelperContext context, TagHelperOutput output)
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperRunner.<RunAsync>g__Awaited|0_0(Task task, TagHelperExecutionContext executionContext, Int32 i, Int32 count)
+   at AspNetCoreGeneratedDocument.Views_RestaurantOwnerAccount_AddEditMenu.ExecuteAsync() in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Views\RestaurantOwnerAccount\AddEditMenu.cshtml:line 27
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-26 09:31:03 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 09:31:05 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 8 menus.
+2025-06-26 09:31:31 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:31:31 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:31:31 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:35:17 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: coffee
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 851
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\GDIT\source\repos\FoodDeliveryApp_22_May_2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 772
+2025-06-26 09:35:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 09:35:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:35:23 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:35:23 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:35:28 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 09:35:38 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 0 menu categories
+2025-06-26 09:35:50 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 category.
+2025-06-26 09:35:58 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 09:37:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 09:38:55 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 09:40:10 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 09:40:12 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 09:40:16 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 menu categories
+2025-06-26 09:40:16 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-06-26 09:40:16 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-06-26 09:40:29 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 category.
+2025-06-26 09:40:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:29:56 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 10:29:58 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 category.
+2025-06-26 10:30:01 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:30:53 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 10:30:55 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 4 category.
+2025-06-26 10:30:58 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:31:54 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Schedule added successfully: June 30
+2025-06-26 10:31:54 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-26 10:32:01 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 0 menu categories
+2025-06-26 10:33:55 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 0 menu categories
+2025-06-26 10:34:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:34:16 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-26 10:34:19 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:36:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Schedule updated successfully: June 30
+2025-06-26 10:36:41 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-26 10:36:42 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:38:51 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-06-26 10:38:53 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-26 10:38:56 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:38:58 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-26 10:39:01 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:39:11 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Schedule updated successfully: June 30
+2025-06-26 10:39:11 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 5 category.
+2025-06-26 10:39:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 9 menus.
+2025-06-26 10:40:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Schedule added successfully: July 31
+2025-06-26 10:40:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 6 category.
+2025-06-26 10:40:13 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-06-26 10:40:16 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 9 menu items for category 8
+2025-06-26 10:40:16 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
