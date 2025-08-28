@@ -52,12 +52,12 @@ namespace FoodDeliveryApp.Services
                 _context.Users.Add(customerUser);
                 await _context.SaveChangesAsync();
                 // Build a professional HTML email body.
-                string subject = "Registration Confirmation - Food Delivery App";
+                string subject = "Registration Confirmation - Ruchi Kitchen";
                 string body = $"<div style='font-family: Arial, sans-serif;'>" +
                 $"<h2 style='color: #2e6c80;'>Welcome, {customerUser.FirstName}!</h2>" +
-                $"<p>Thank you for registering with Food Delivery App. Your account has been successfully created.</p>" +
+                $"<p>Thank you for registering with Ruchi Kitchen. Your account has been successfully created.</p>" +
                 $"<p>Enjoy ordering from your favorite restaurants!</p>" +
-                $"<p>Best Regards, <br/>Food Delivery App Team</p></div>";
+                $"<p>Best Regards, <br/>Ruchi Kitchen Team</p></div>";
 
                 await _emailService.SendEmailAsync(customerUser.Email, subject, body, true);
 

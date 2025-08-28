@@ -20,7 +20,7 @@ namespace FoodDeliveryApp.Services
                 // Retrieve email settings from appsettings.json.
                 string smtpServer = _configuration.GetValue<string>("EmailSettings: SmtpServer") ?? "";
                 int smtpPort = int.Parse(_configuration.GetValue<string>("Email Settings: SmtpPort") ?? "587");
-                string senderName = _configuration.GetValue<string>("EmailSettings: SenderName") ?? "My Food Delivery App";
+                string senderName = _configuration.GetValue<string>("EmailSettings: SenderName") ?? "Ruchi Kitchen";
                 string senderEmail = _configuration.GetValue<string>("EmailSettings: SenderEmail") ?? "";
                 string password = _configuration.GetValue<string>("Email Settings: Password") ?? "";
 
