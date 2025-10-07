@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\wwwroot\\images\\Chicken_Nawabi.jpeg",
+      "PackagePath": "staticwebassets\\images\\Chicken_Nawabi.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\wwwroot\\images\\Chicken_Stew.jpeg",
+      "PackagePath": "staticwebassets\\images\\Chicken_Stew.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\wwwroot\\images\\logo - Copy.png",
+      "PackagePath": "staticwebassets\\images\\logo - Copy.png"
+    },
+    {
+      "Id": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

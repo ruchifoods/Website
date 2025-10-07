@@ -129,16 +129,16 @@ namespace FoodDeliveryApp.Services
                     <body>
                         <div class='email-container'>
                         <div class='header'>
-                        <h2>Food Delivery App</h2>
+                        <h2>Ruchi Kitchen</h2>
                         </div>
                         <div class='content'>
                             <p>Dear " + model.FirstName + @",</p>
-                            <p>Thank you for registering as a Restaurant Owner on Food Delivery App. Your account is currently under process.</p>
+                            <p>Thank you for registering as a Restaurant Owner on Ruchi Kitchen. Your account is currently under process.</p>
                             <p>You will receive a notification email once the verification process is complete.</p>
                             <p>If you have any questions, feel free to <a href='mailto:'>contact our support</p>
                         </div>
                             <div class='footer'>
-                                <p>&copy; " + DateTime.Now.Year + @" Food Delivery App. All rights reserved.</p>
+                                <p>&copy; " + DateTime.Now.Year + @" Ruchi Kitchen. All rights reserved.</p>
                             </div>
                         </div>
                     </body>";

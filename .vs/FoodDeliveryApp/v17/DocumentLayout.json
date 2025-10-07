@@ -1,58 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\",
+  "WorkspaceRootPath": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\services\\restaurantownerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:services\\restaurantownerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\controllers\\restaurantowneraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\controllers\\restaurantowneraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:controllers\\restaurantowneraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\models\\menucategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:models\\menucategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\restaurantowneraccount\\addeditmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\restaurantowneraccount\\addeditmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\addeditmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\restaurantowneraccount\\addeditcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\addeditcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\services\\restaurantownerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:services\\restaurantownerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\customeraccount\\infofororder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\customeraccount\\infofororder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\restaurantowneraccount\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\restaurantowneraccount\\managemenus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\managemenus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\restaurantowneraccount\\manageorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\manageorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\restaurantowneraccount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\restaurantowneraccount\\updatebasicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\updatebasicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\controllers\\customeraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\controllers\\customeraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:controllers\\customeraccountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\restaurantowneraccount\\managepickuptime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\managepickuptime.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\customeraccount\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\customeraccount\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\kapilk\\source\\repos\\working\\fooddeliveryapp_30june2025\\fooddeliveryapp\\views\\restaurantowneraccount\\managecategories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\managecategories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\customeraccount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\customeraccount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\restaurantowneraccount\\addeditcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\addeditcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\customeraccount\\infofororder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\customeraccount\\infofororder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\restaurantowneraccount\\managemenus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\managemenus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\restaurantowneraccount\\manageorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\manageorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|c:\\users\\nehag\\documents\\work\\code\\fooddeliveryapp_28_aug_2025\\fooddeliveryapp\\views\\restaurantowneraccount\\updatebasicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DE7F7B85-01CB-4826-9A3F-A4FF193081B6}|FoodDeliveryApp.csproj|solutionrelative:views\\restaurantowneraccount\\updatebasicdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,23 +82,47 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MenuCategory.cs",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Models\\MenuCategory.cs",
-              "RelativeDocumentMoniker": "Models\\MenuCategory.cs",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Models\\MenuCategory.cs",
-              "RelativeToolTip": "Models\\MenuCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-04T19:26:55.108Z"
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAACXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-01T22:19:55.153Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\CustomerAccount\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\CustomerAccount\\Login.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\CustomerAccount\\Login.cshtml",
+              "RelativeToolTip": "Views\\CustomerAccount\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-14T19:07:39.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\CustomerAccount\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CustomerAccount\\Index.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\CustomerAccount\\Index.cshtml",
+              "RelativeToolTip": "Views\\CustomerAccount\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-14T19:07:22.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "UpdateBasicDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\UpdateBasicDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\UpdateBasicDetails.cshtml",
               "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\UpdateBasicDetails.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\UpdateBasicDetails.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\UpdateBasicDetails.cshtml",
               "RelativeToolTip": "Views\\RestaurantOwnerAccount\\UpdateBasicDetails.cshtml",
               "ViewState": "AgIAACEAAAAAAAAAAAAowDEAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -90,61 +130,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ManageCategories.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageCategories.cshtml",
-              "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\ManageCategories.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageCategories.cshtml",
-              "RelativeToolTip": "Views\\RestaurantOwnerAccount\\ManageCategories.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-02T15:12:17.001Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ManagePickupTime.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManagePickupTime.cshtml",
-              "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\ManagePickupTime.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManagePickupTime.cshtml",
-              "RelativeToolTip": "Views\\RestaurantOwnerAccount\\ManagePickupTime.cshtml",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAEAAAABaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-02T13:07:49.432Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RestaurantOwnerService.cs",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Services\\RestaurantOwnerService.cs",
-              "RelativeDocumentMoniker": "Services\\RestaurantOwnerService.cs",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Services\\RestaurantOwnerService.cs",
-              "RelativeToolTip": "Services\\RestaurantOwnerService.cs",
-              "ViewState": "AgIAACoDAAAAAAAAAAAewDkDAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T19:07:38.302Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "RestaurantOwnerAccountController.cs",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Controllers\\RestaurantOwnerAccountController.cs",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Controllers\\RestaurantOwnerAccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\RestaurantOwnerAccountController.cs",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Controllers\\RestaurantOwnerAccountController.cs",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Controllers\\RestaurantOwnerAccountController.cs",
               "RelativeToolTip": "Controllers\\RestaurantOwnerAccountController.cs",
-              "ViewState": "AgIAAKwEAAAAAAAAAAAnwLwEAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAAwMwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T19:07:24.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-14T20:12:19.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\Index.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\Index.cshtml",
+              "RelativeToolTip": "Views\\RestaurantOwnerAccount\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-14T20:13:09.231Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Services\\EmailService.cs",
+              "RelativeToolTip": "Services\\EmailService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAlwBYAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T20:34:02.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\Login.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\Login.cshtml",
+              "RelativeToolTip": "Views\\RestaurantOwnerAccount\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-20T21:12:59.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RestaurantOwnerService.cs",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Services\\RestaurantOwnerService.cs",
+              "RelativeDocumentMoniker": "Services\\RestaurantOwnerService.cs",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Services\\RestaurantOwnerService.cs",
+              "RelativeToolTip": "Services\\RestaurantOwnerService.cs",
+              "ViewState": "AgIAACsDAAAAAAAAAAAuwDkDAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T14:14:19.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ManageMenus.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageMenus.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageMenus.cshtml",
               "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\ManageMenus.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageMenus.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageMenus.cshtml",
               "RelativeToolTip": "Views\\RestaurantOwnerAccount\\ManageMenus.cshtml",
               "ViewState": "AgIAAKIAAAAAAAAAAAAAwK4AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -152,11 +215,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "ManageOrders.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageOrders.cshtml",
               "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\ManageOrders.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageOrders.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\ManageOrders.cshtml",
               "RelativeToolTip": "Views\\RestaurantOwnerAccount\\ManageOrders.cshtml",
               "ViewState": "AgIAAEQAAAAAAAAAAAAowFQAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -164,35 +227,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "CustomerAccountController.cs",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Controllers\\CustomerAccountController.cs",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Controllers\\CustomerAccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomerAccountController.cs",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Controllers\\CustomerAccountController.cs",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Controllers\\CustomerAccountController.cs",
               "RelativeToolTip": "Controllers\\CustomerAccountController.cs",
-              "ViewState": "AgIAAOMCAAAAAAAAAAAuwP4CAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACIBAAAAAAAAAAAuwDIBAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T13:04:06.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Services\\CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "Services\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Services\\CustomerService.cs",
               "RelativeToolTip": "Services\\CustomerService.cs",
-              "ViewState": "AgIAAKMBAAAAAAAAAAAIwLMBAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAuwDsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T18:44:25.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "AddEditCategory.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditCategory.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditCategory.cshtml",
               "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\AddEditCategory.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditCategory.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditCategory.cshtml",
               "RelativeToolTip": "Views\\RestaurantOwnerAccount\\AddEditCategory.cshtml",
               "ViewState": "AgIAAI4AAAAAAAAAAAAAAHMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -200,23 +263,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AddEditMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditMenu.cshtml",
               "RelativeDocumentMoniker": "Views\\RestaurantOwnerAccount\\AddEditMenu.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditMenu.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\RestaurantOwnerAccount\\AddEditMenu.cshtml",
               "RelativeToolTip": "Views\\RestaurantOwnerAccount\\AddEditMenu.cshtml",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAAGMAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAANkAAAAAAAAAAAAAAOEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-23T15:55:05.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "InfoForOrder.cshtml",
-              "DocumentMoniker": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\CustomerAccount\\InfoForOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\CustomerAccount\\InfoForOrder.cshtml",
               "RelativeDocumentMoniker": "Views\\CustomerAccount\\InfoForOrder.cshtml",
-              "ToolTip": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\Views\\CustomerAccount\\InfoForOrder.cshtml",
+              "ToolTip": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\Views\\CustomerAccount\\InfoForOrder.cshtml",
               "RelativeToolTip": "Views\\CustomerAccount\\InfoForOrder.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

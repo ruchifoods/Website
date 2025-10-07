@@ -38,3 +38,29 @@ System.InvalidOperationException: A second operation was started on this context
 2025-08-14 10:37:03 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 10 menu items for category 1008
 2025-08-14 10:37:03 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
 2025-08-14 10:37:03 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 9 subQuantities
+2025-08-14 16:26:43 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-08-14 16:26:47 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-08-14 16:37:08 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-08-14 16:37:11 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 10 menu items for category 1008
+2025-08-14 16:37:11 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-14 16:37:11 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 9 subQuantities
+2025-08-14 16:37:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 3
+2025-08-14 16:37:17 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-08-14 16:37:32 [INF] [FoodDeliveryApp.Services.CustomerService] Created order successfully for user -1
+2025-08-14 16:37:32 [INF] [FoodDeliveryApp.Services.CustomerService] Added order item(s) successfully for user -1
+2025-08-14 16:37:32 [INF] [FoodDeliveryApp.Controllers.CustomerAccountController] Order created successfully.
+2025-08-14 16:37:32 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-08-14 16:37:38 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved customer orders for first name = Neha last name = Garg email address = neha11garg@gmail.com phone number = 9876543210
+2025-08-14 16:37:38 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 6 OrderStatusMasters
+2025-08-14 16:37:44 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-08-14 16:37:48 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-08-14 16:37:49 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 10 menu items for category 1008
+2025-08-14 16:37:49 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-14 16:37:49 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 9 subQuantities
+2025-08-14 16:37:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved menu items by id 16
+2025-08-14 16:37:53 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-08-14 16:37:56 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 10 menu items for category 1008
+2025-08-14 16:37:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-14 16:37:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 9 subQuantities
+2025-08-14 16:37:58 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved pickup times.
+2025-08-14 16:40:04 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com

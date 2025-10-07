@@ -8411,23 +8411,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KapilK\\.nuget\\packages\\": {},
+    "C:\\Users\\NehaG\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\FoodDeliveryApp.csproj",
+      "projectUniqueName": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\FoodDeliveryApp.csproj",
       "projectName": "FoodDeliveryApp",
-      "projectPath": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\FoodDeliveryApp.csproj",
-      "packagesPath": "C:\\Users\\KapilK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KapilK\\source\\repos\\Working\\FoodDeliveryApp_30June2025\\FoodDeliveryApp\\obj\\",
+      "projectPath": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\FoodDeliveryApp.csproj",
+      "packagesPath": "C:\\Users\\NehaG\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NehaG\\Documents\\work\\Code\\FoodDeliveryApp_28_Aug_2025\\FoodDeliveryApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\KapilK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NehaG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8454,7 +8454,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -8518,7 +8518,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -11,7 +11,10 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-        <a class="navbar-brand" href="@Url.Action("Index","RestaurantOwnerAccount")">Restaurant Owner Portal</a>
+        @* <a class="navbar-brand" href="@Url.Action("Index","RestaurantOwnerAccount")">Restaurant Owner Portal</a> *@
+        <a class="navbar-brand" href="@Url.Action("Index","RestaurantOwnerAccount")">
+            <img src="~/images/logo.png" width="70" height="70" asp-append-version="true" alt="Admin Portal" />
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggle-icon"></span>
@@ -26,9 +29,9 @@
                 }
                 else
                 {
-                    <li class="nav-item">
+                   @*  <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Login","RestaurantOwnerAccount")">Sign In</a>
-                    </li>
+                    </li> *@
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Register","RestaurantOwnerAccount")">Register</a>
                     </li>

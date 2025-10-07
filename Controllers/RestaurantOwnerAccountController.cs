@@ -36,6 +36,7 @@ namespace FoodDeliveryApp.Controllers
         private readonly IMemoryCache _cache;
         private readonly ILogger<RestaurantOwnerAccountController> _logger;
         private readonly ICommonService _commonService;
+        private readonly IWebHostEnvironment _env;
 
         public RestaurantOwnerAccountController(
             IConfiguration configuration,
@@ -43,7 +44,8 @@ namespace FoodDeliveryApp.Controllers
             IEmailService emailService,
             IMemoryCache cache,
             ILogger<RestaurantOwnerAccountController> logger,
-            ICommonService commonService)
+            ICommonService commonService,
+            IWebHostEnvironment env)
         {
             _configuration = configuration;
             _ownerService = ownerService;
@@ -51,6 +53,7 @@ namespace FoodDeliveryApp.Controllers
             _cache = cache;
             _logger = logger;
             _commonService = commonService;
+            _env = env;
         }
 
         // Displays the initial page for Restaurant Owner signup/signin.
@@ -81,7 +84,8 @@ namespace FoodDeliveryApp.Controllers
                 }
 
                 // If user is not authenticated, show the landing page
-                return View();
+                //return View();
+                return RedirectToAction("Login");
             }
             catch (Exception ex)
             {
@@ -172,9 +176,17 @@ namespace FoodDeliveryApp.Controllers
         [HttpGet]
         public IActionResult Login(string? returnUrl = null)
         {
-            // Return a blank LoginViewModel but preserve the returnUrl if present
-            var model = new LoginViewModel { ReturnUrl = returnUrl };
-            return View(model);
+            var userIdStr = User?.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdStr) || !int.TryParse(userIdStr, out int userId))
+            {
+                // Return a blank LoginViewModel but preserve the returnUrl if present
+                var model = new LoginViewModel { ReturnUrl = returnUrl };
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction("Dashboard");
+            }            
         }
 
         // POST: Processes the login form for Restaurant Owners.
@@ -333,7 +345,7 @@ namespace FoodDeliveryApp.Controllers
                         new { token, email = model.Email }, Request.Scheme) ?? string.Empty;
 
                     // Construct the email content
-                    string subject = "Reset Your Password - Food Delivery App";
+                    string subject = "Reset Your Password - Ruchi Kitchen";
                     string body = @"<!DOCTYPE html>
                     <html>
                     <head>
@@ -351,7 +363,7 @@ namespace FoodDeliveryApp.Controllers
                     <body>
                         <div class='email-container'>
                             <div class='header'>
-                                <h2>Food Delivery App/h2>
+                                <h2>Ruchi Kitchen</h2>
                             </div>
                             <div class='content'>
                                 <p>Dear User,</p>
@@ -360,7 +372,7 @@ namespace FoodDeliveryApp.Controllers
                                 <p>This link will expire in 15 minutes. If you did not request a password reset</p>
                             </div>
                             <div class='footer'>
-                                <p>&copy; " + DateTime.Now.Year + @" Food Delivery App. All rights reserved.</p>
+                                <p>&copy; " + DateTime.Now.Year + @" Ruchi Kitchen. All rights reserved.</p>
                             </div>
                         </div>
                     </body>
@@ -1193,7 +1205,7 @@ namespace FoodDeliveryApp.Controllers
         }
 
         [Authorize(Roles = "RestaurantOwner")]
-        public async Task<IActionResult> AddEditMenu(MenuCategoryItemsList model, string? actionType, string selectedCategoryIds, int selectedFoodTypeId)
+        public async Task<IActionResult> AddEditMenu(MenuCategoryItemsList model, string? actionType, string selectedCategoryIds, int selectedFoodTypeId, IFormFile ImageFile)
         {
             try
             {
@@ -1202,6 +1214,26 @@ namespace FoodDeliveryApp.Controllers
                 {
                     return RedirectToAction("Login");
                 }
+
+                if (ImageFile != null && ImageFile.Length > 0)
+                {
+                    var uploadsFolder = Path.Combine(_env.WebRootPath, "images");
+
+                    // Ensure the folder exists
+                    if (!Directory.Exists(uploadsFolder))
+                        Directory.CreateDirectory(uploadsFolder);
+
+                    var fileName = Path.GetFileName(ImageFile.FileName);
+                    var filePath = Path.Combine(uploadsFolder, fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(stream);
+                    }
+
+                    model.MenuItems[0].ImageUrl = "/images/" + fileName; 
+                }
+
                 var selectedQuantityIds = model.Quantities
                     .Where(c => c.IsSelected)
                     .Select(c => c.Id)
@@ -1251,13 +1283,13 @@ namespace FoodDeliveryApp.Controllers
             try
             {
                 await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
             catch(Exception ex)
             {
                 _logger.LogError(ex, "Exception during Logout.");
                 ViewBag.ErrorMessage = "An error occurred. Please try again later.";
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
         }
 

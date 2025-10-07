@@ -1,0 +1,1214 @@
+2025-08-22 10:14:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-08-22 10:37:50 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 10:37:56 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:37:56 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 10:37:56 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 10:37:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:37:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:38:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:38:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 10:38:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:38:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:38:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:38:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 10:38:35 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:38:35 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:38:43 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Non Veg Combo
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 10:38:43 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 10:46:15 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 10:46:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:46:15 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 10:46:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:46:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:46:27 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 10:46:27 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:46:27 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 10:46:27 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:46:27 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:46:29 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:46:29 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 10:46:29 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:46:29 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:46:30 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:46:30 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 10:46:30 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:46:30 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:46:34 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Non Veg Combo
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 10:46:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 10:46:39 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:46:39 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 10:46:39 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:46:39 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:48:23 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Chicken Nawabi
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 10:48:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 10:48:49 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 10:48:49 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:48:49 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 10:48:49 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:48:49 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:49:14 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:49:14 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 10:49:14 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:49:14 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:59:22 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 10:59:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:59:22 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 10:59:22 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:59:22 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 10:59:24 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 10:59:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 10:59:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 10:59:39 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 10:59:39 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 14:18:20 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-08-22 14:18:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 14:18:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 14:18:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 14:18:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 14:18:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:08:29 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Restaurant Owner logged in successfully: owner@gmail.com
+2025-08-22 16:08:31 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 16:08:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:08:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:08:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:08:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:09:13 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Chicken Nawabi
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:09:13 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 16:09:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:09:15 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:09:15 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:09:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:09:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:09:54 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:09:54 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:09:55 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:09:55 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:09:55 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:09:59 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:09:59 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:09:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:09:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:10:15 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Chicken Stew
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:10:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 16:11:17 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:11:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:11:17 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:11:17 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:11:17 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:11:38 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:11:38 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:11:38 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:11:38 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:13:07 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Egg Puffs
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:13:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 10 menus.
+2025-08-22 16:13:32 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:13:32 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:13:32 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:13:32 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:13:32 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:13:59 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:13:59 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:13:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:13:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:14:21 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Idli Sambar Chutney combo
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:14:21 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 11 menus.
+2025-08-22 16:14:26 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:14:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:14:26 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:14:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:14:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:14:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:14:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:14:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:14:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:15:11 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Kappa Kakka Irachi Mix
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:15:11 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 12 menus.
+2025-08-22 16:15:14 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:15:14 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:15:14 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:15:14 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:15:44 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Kozhukatta
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:15:44 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 13 menus.
+2025-08-22 16:15:52 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:15:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:15:52 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:15:52 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:15:52 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:15:56 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:15:56 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:15:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:15:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:15:59 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Idli Sambar Chutney combo
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:15:59 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 13 menus.
+2025-08-22 16:16:03 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:16:03 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:16:03 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:16:03 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:16:07 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Kappa Kakka Irachi Mix
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:16:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 13 menus.
+2025-08-22 16:16:12 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:16:12 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:16:12 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:16:12 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:16:41 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Meen Pollichathu
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:16:41 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 14 menus.
+2025-08-22 16:16:44 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:16:44 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:16:44 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:16:44 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:16:44 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:01 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:17:01 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:01 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:17:01 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:01 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:04 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:04 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:17:04 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:17:04 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:04 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:05 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:05 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:17:05 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:17:05 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:05 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:06 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:28 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Onam Sadhya
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:17:28 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 15 menus.
+2025-08-22 16:17:30 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:17:30 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:30 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:17:30 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:30 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:33 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:17:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:33 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:17:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:33 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:34 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:17:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:34 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:17:34 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:34 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:17:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:17:35 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:17:35 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:17:35 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:18:04 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Parippu vada
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:18:04 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 16 menus.
+2025-08-22 16:18:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:18:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:18:07 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:18:07 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:18:34 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Pazhampori
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:18:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 17 menus.
+2025-08-22 16:18:37 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:18:38 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:18:38 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:18:38 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:18:38 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:18:44 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:18:44 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:18:44 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:18:44 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:18:44 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:18:45 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:18:45 [ERR] [Microsoft.EntityFrameworkCore.Database.Command] Failed executing DbCommand (11ms) [Parameters=[@__today_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[MenuCategoryId], [m].[CategoryName], [m].[Description], [m].[DisplayOrder], [m].[EndDate], [m].[IsActive], [m].[IsDeleted], [m].[RestaurantId], [m].[StartDate]
+FROM [MenuCategories] AS [m]
+WHERE [m].[IsActive] = CAST(1 AS bit) AND [m].[EndDate] > @__today_0
+2025-08-22 16:18:45 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: BeginExecuteReader requires an open and available Connection. The connection's current state is closed.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: BeginExecuteReader requires an open and available Connection. The connection's current state is closed.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:18:45 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: BeginExecuteReader requires an open and available Connection. The connection's current state is closed.
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:18:45 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:18:45 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:18:46 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:18:46 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:18:46 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:18:46 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:19:05 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Pepper Chicken Roast
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:19:05 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 18 menus.
+2025-08-22 16:19:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:19:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:19:07 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:19:07 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:19:31 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Pothichooru Non Veg
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:19:31 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 19 menus.
+2025-08-22 16:19:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:19:34 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:19:34 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:19:34 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:20:11 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Pothichooru Veg
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:20:11 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 20 menus.
+2025-08-22 16:20:14 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:20:14 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:20:14 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:20:14 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:20:14 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:20:17 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:20:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:20:17 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:20:17 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:20:17 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:20:18 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:20:18 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:20:18 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:20:18 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:20:43 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Seafood Biriyani
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:20:43 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 21 menus.
+2025-08-22 16:20:46 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:20:46 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:20:46 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:20:46 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:21:07 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Shrimp Varutharachathu
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:21:08 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 22 menus.
+2025-08-22 16:21:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:21:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:21:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:21:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:21:40 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: chicken 65
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:21:40 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 23 menus.
+2025-08-22 16:21:44 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:21:44 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:21:44 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:21:44 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:22:20 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Parippu curry
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:22:20 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:22:29 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:22:29 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:22:29 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:22:29 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:22:36 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Chicken 65
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:22:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:22:50 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:22:50 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:22:50 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:22:50 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:23:07 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Meat cutlet
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:23:07 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:23:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:23:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:23:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:23:15 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:24:13 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Meat cutlet
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:24:13 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:24:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:24:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:24:22 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:24:22 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:24:25 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Meat cutlet
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:24:25 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:24:31 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:24:31 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:24:31 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:24:31 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:25:31 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Banana Fritters Pazham Pori
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:25:31 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:25:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:25:36 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:25:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:25:36 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:26:41 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Pazhampori
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:26:41 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:26:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:26:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:26:52 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:26:52 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:27:11 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Vada
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:27:11 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:27:27 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:27:27 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:27:27 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:27:27 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:28:15 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Masala Chai Tea
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:28:15 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 24 menus.
+2025-08-22 16:28:21 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:28:21 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:28:21 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:28:21 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:29:09 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Juice Mango Magic
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:29:09 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 25 menus.
+2025-08-22 16:29:17 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:29:17 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:29:17 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:29:17 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:29:17 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:29:33 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 25 menus.
+2025-08-22 16:29:40 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:29:40 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:29:40 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:29:40 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:29:40 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:35:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:35:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:35:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:35:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:35:46 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Mysore Pak
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:35:46 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 25 menus.
+2025-08-22 16:35:55 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:35:55 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:35:55 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:35:55 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:36:22 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Mini Kaja Box
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:36:22 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 26 menus.
+2025-08-22 16:36:24 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:36:24 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:36:25 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:36:25 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:36:52 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Burfi Milk Box
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:36:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 27 menus.
+2025-08-22 16:36:57 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:36:57 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:36:57 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:36:57 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:37:21 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Burfi Coconut Box
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:37:21 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 28 menus.
+2025-08-22 16:37:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:37:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:37:23 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:37:23 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:37:53 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Boondi Ladoo Box
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:37:53 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 29 menus.
+2025-08-22 16:37:56 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:37:56 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:37:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:37:56 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:38:23 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Badusha Box
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:38:23 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 30 menus.
+2025-08-22 16:38:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:38:26 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:38:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:38:26 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:39:43 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Ada pradaman
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 882
+2025-08-22 16:39:44 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 31 menus.
+2025-08-22 16:39:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:39:52 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:39:52 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:39:52 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:41:08 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Ice-Cream
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:41:08 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 31 menus.
+2025-08-22 16:42:59 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:42:59 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:42:59 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:42:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:42:59 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:43:08 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:43:08 [ERR] [Microsoft.EntityFrameworkCore.Query] An exception occurred while iterating over the results of a query for context type 'FoodDeliveryApp.Data.ApplicationDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-08-22 16:43:08 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error retrieving menu categories
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.GetAllMenuCategoryStored() in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 828
+2025-08-22 16:43:08 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:43:08 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:43:10 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:43:10 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:43:10 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:43:10 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:43:16 [ERR] [FoodDeliveryApp.Services.RestaurantOwnerService] Error adding/updating menu item: Ice Cream
+System.InvalidOperationException: The instance of entity type 'MenuItem' cannot be tracked because another instance with the same key value for {'MenuItemId'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.ThrowIdentityConflict(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.IdentityMap`1.Add(TKey key, InternalEntityEntry entry, Boolean updateDuplicate)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintAction(EntityEntryGraphNode`1 node)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraph[TState](EntityEntryGraphNode`1 node, Func`2 handleNode)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.AttachGraph(InternalEntityEntry rootEntry, EntityState targetState, EntityState storeGeneratedWithKeySetTargetState, Boolean forceStateWhenUnknownKey)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.SetEntityState(InternalEntityEntry entry, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Update(TEntity entity)
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddFoodTypeWithMenuItem(Int32 menuItemId, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 961
+   at FoodDeliveryApp.Services.RestaurantOwnerService.AddEditMenuItemAsync(MenuItem model, Nullable`1 menuItemID, List`1 selectedQuantityIds, List`1 selectedCategoryIds, Int32 selectedFoodTypeId) in C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\Services\RestaurantOwnerService.cs:line 906
+2025-08-22 16:43:16 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 31 menus.
+2025-08-22 16:43:42 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] InActive Menu Categories successfully
+2025-08-22 16:43:42 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 3 menu categories
+2025-08-22 16:43:42 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:43:42 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 4 foodTypes
+2025-08-22 16:45:05 [INF] [FoodDeliveryApp.Services.RestaurantOwnerService] Retrieved 31 menus.
+2025-08-22 16:45:46 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 2 menu categories
+2025-08-22 16:45:48 [INF] [FoodDeliveryApp.Services.CustomerService] Retrieved 30 menu items for category 1008
+2025-08-22 16:45:48 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 12 quantities
+2025-08-22 16:45:48 [INF] [FoodDeliveryApp.Services.CommonService] Retrieved 9 subQuantities

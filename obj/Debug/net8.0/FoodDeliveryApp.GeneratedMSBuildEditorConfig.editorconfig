@@ -17,245 +17,245 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FoodDeliveryApp
 build_property.RootNamespace = FoodDeliveryApp
-build_property.ProjectDir = C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp\
+build_property.ProjectDir = C:\Users\NehaG\Documents\work\Code\FoodDeliveryApp_28_Aug_2025\FoodDeliveryApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\KapilK\source\repos\Working\FoodDeliveryApp_30June2025\FoodDeliveryApp
+build_property.MSBuildProjectDirectory = C:\Users\NehaG\Documents\work\Code\FoodDeliveryApp_28_Aug_2025\FoodDeliveryApp
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/AccessDenied.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEFjY2Vzc0RlbmllZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/AddAddress.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/AddAddress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEFkZEFkZHJlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/Cart.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XENhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/ChangePassword.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/ChangePasswordConfirmation.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/ChangePasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XENoYW5nZVBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/DeleteAddress.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/DeleteAddress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XERlbGV0ZUFkZHJlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/EditAccount.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/EditAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEVkaXRBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/EditAddress.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/EditAddress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEVkaXRBZGRyZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/FoodItems.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/FoodItems.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEZvb2RJdGVtcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/FoodSearch.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/FoodSearch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEZvb2RTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/ForgotPassword.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/ForgotPasswordConfirmation.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEZvcmdvdFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/Index.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/InfoForOrder.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/InfoForOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XEluZm9Gb3JPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/Login.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/ManageAddresses.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/ManageAddresses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XE1hbmFnZUFkZHJlc3Nlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/MyAccount.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/MyAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XE15QWNjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/Orders.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XE9yZGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/Register.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/ResetPassword.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XFJlc2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/ResetPasswordConfirmation.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XFJlc2V0UGFzc3dvcmRDb25maXJtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/CustomerAccount/Welcome.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/CustomerAccount/Welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJBY2NvdW50XFdlbGNvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Home/Index.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Home/Privacy.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AccountVerification.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AccountVerification.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxBY2NvdW50VmVyaWZpY2F0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditAddress.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditAddress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxBZGRFZGl0QWRkcmVzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditCategory.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxBZGRFZGl0Q2F0ZWdvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditMenu.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxBZGRFZGl0TWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditPickupTime.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/AddEditPickupTime.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxBZGRFZGl0UGlja3VwVGltZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ChangePassword.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ChangePasswordConfirmation.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ChangePasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxDaGFuZ2VQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Dashboard.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ForgotPassword.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ForgotPasswordConfirmation.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Index.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Login.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageAddress.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageAddress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNYW5hZ2VBZGRyZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageBankDetails.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageBankDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNYW5hZ2VCYW5rRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageBusinessDetails.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageBusinessDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNYW5hZ2VCdXNpbmVzc0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageCategories.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageCategories.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNYW5hZ2VDYXRlZ29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageMenus.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageMenus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNYW5hZ2VNZW51cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageOrders.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManageOrders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNYW5hZ2VPcmRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManagePickupTime.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ManagePickupTime.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNYW5hZ2VQaWNrdXBUaW1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/MyAccount.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/MyAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxNeUFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Register.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ResetPassword.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ResetPasswordConfirmation.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/UpdateBankDetails.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/UpdateBankDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxVcGRhdGVCYW5rRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/UpdateBasicDetails.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/UpdateBasicDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxVcGRhdGVCYXNpY0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/UpdateBusinessDetails.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/RestaurantOwnerAccount/UpdateBusinessDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudE93bmVyQWNjb3VudFxVcGRhdGVCdXNpbmVzc0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Shared/Error.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Shared/_LayoutCustomer.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Shared/_LayoutCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Shared/_RestaurantOwnerLayout.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Shared/_RestaurantOwnerLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZXN0YXVyYW50T3duZXJMYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Shared/_RestaurantOwnerUnverifiedLayout.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Shared/_RestaurantOwnerUnverifiedLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZXN0YXVyYW50T3duZXJVbnZlcmlmaWVkTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/_ViewImports.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/_ViewStart.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/KapilK/source/repos/Working/FoodDeliveryApp_30June2025/FoodDeliveryApp/Views/Shared/_Layout.cshtml]
+[C:/Users/NehaG/Documents/work/Code/FoodDeliveryApp_28_Aug_2025/FoodDeliveryApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rlf79yp3zm

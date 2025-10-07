@@ -185,14 +185,14 @@ namespace FoodDeliveryApp.Controllers
                     // Build the reset link using safe URL generation.
                     string resetLink = Url.Action("ResetPassword", "CustomerAccount", new { token, email = model.Email }, protocol: Request.Scheme) ?? string.Empty;
 
-                    string subject = "Reset Your Password Food Delivery App";
+                    string subject = "Reset Your Password for Ruchi Kitchen";
                     string body = @"<div style='font-family: Arial, sans-serif;'>
                                     <h2 style='color: #2e6c80;'>Password Reset Request</h2>
                                     <p>Hello,</p>
                                     <p>We received a request to reset your password. Click the button below</p>
                                     <p><a href='" + resetLink + @" style='color: #ffffff;background-color:'</p>
                                     <p>If you did not request this, please ignore this email.</p>
-                                    <p>Thank you, <br/>Food Delivery App Team</p>
+                                    <p>Thank you, <br/>Ruchi Kitchen Team</p>
                                     </div>";
 
                     await _emailService.SendEmailAsync(model.Email, subject, body, true);
@@ -249,12 +249,12 @@ namespace FoodDeliveryApp.Controllers
                     // Remove token after successful reset.
                     _cache.Remove(model.Email);
 
-                    string subject = "Your Password Has Been Reset - Food Delivery App";
+                    string subject = "Your Password Has Been Reset - Ruchi Kitchen";
                     string body = @"<div style='font-family: Arial, sans-serif;'>
                                 <h2 style='color: # 2e6c80;'>Password Reset Confirmation</h2>
                                 <p>Hello,</p>
                                 <p>Your password has been successfully reset. If you did not initiate
-                                <p>Thank you, <br/>Food Delivery App Team</p>
+                                <p>Thank you, <br/>Ruchi Kitchen Team</p>
                                 </div>";
                     await _emailService.SendEmailAsync(model.Email, subject, body, true);
                     return View("ResetPasswordConfirmation");
@@ -299,12 +299,12 @@ namespace FoodDeliveryApp.Controllers
                 var result = await _customerService.ChangePasswordAsync(userId, model);
                 if (result)
                 {
-                    string subject = "Your Password Has Been Changed Food Delivery App";
+                    string subject = "Your Password Has Been Changed for Ruchi Kitchen";
                     string body = @"<div style='font-family: Arial, sans-serif;'>
                                         <h2 style='color: #2e6c80;'>Password Change Confirmation</h2>
                                         <p>Hello,</p>
                                         <p>Your password has been successfully changed. If you did not make this char
-                                        <p>Thank you,<br/>Food Delivery App Team</p>
+                                        <p>Thank you,<br/>Ruchi Kitchen Team</p>
                                         </div>";
 
                     // Retrieve user's email from the identity.
