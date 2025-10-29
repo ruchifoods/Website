@@ -9,48 +9,115 @@
     int foodTypeHeadingIndex = 0;
 }
 
-<style>
-    .container {
-        xdisplay: flex;
-        justify-content: space-evenly;
-    }
+@if (Model == null || Model.Count == 0)
+{
+    <div class="row">
+        <div style="width: 100%;" class="alert alert-success alert-dismissible fade show" role="alert">
+            No Items found. Please try again or contact administrator.
+        </div>
+    </div>
+}
+else
+{
 
-    .veg-badge-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid green;
-        height: 20px;
-        width: 20px;
-    }
+    <!-- HERO -->
+    <section class="max-w-6xl mx-auto px-4 py-10 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Delicious food delivered hot & fresh 🍕</h2>
+        <p class="text-slate-500 mb-8">Order from our chef-crafted menu and get it in minutes</p>
+        <input type="text" id="searchInput" placeholder="Search dishes..." class="w-full md:w-1/2 mx-auto border px-4 py-2 rounded-lg focus:ring-rose-500 focus:border-rose-500" />
+    </section>
 
-    .non-veg-badge-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid #e43b4f;
-        height: 20px;
-        width: 20px;
-    }
+    <!-- MENU SECTION -->
+    <main class="max-w-6xl mx-auto px-4 pb-20">
+        <div class="flex gap-4 overflow-x-auto pb-4 mb-6">
+            <button class="tab-btn px-4 py-2 bg-rose-600 text-white rounded-full text-sm" data-category="all">All</button>
+            @for (int f = 0; f < foodTypeList.Count; f++)
+            {
+                var foodType = foodTypeList[f];
 
-    .circle {
-        position: absolute;
-        background-color: green;
-        border-radius: 50%;
-        height: 15px;
-        width: 15px;
-    }
+                <button class="tab-btn px-4 py-2 bg-gray-100 rounded-full text-sm" data-category=@foodType>@foodType</button>
+            }
+        </div>
 
-    .triangle {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-radius: 2px;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 10px solid #e43b4f;
-    }
-</style>
+
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="menu">
+            <!-- CARD -->
+            @{
+                int i = 0;
+            }
+            @foreach (var item in Model)
+            {
+                i++;
+                <div class="menu-card menu-item bg-white rounded-2xl shadow hover:shadow-lg transition p-3"
+                     data-category=@item.FoodType.Name
+                     data-id=@i
+                     data-name="@item.ItemName"
+                     data-price=@item.Price>
+                    <img src=@item.ImageUrl
+                         alt=@item.ItemName
+                         loading="lazy"
+                         class="rounded-xl mb-3 h-24 w-24 object-cover mx-auto" />
+
+                    <div class="flex justify-between items-center">
+                        <!-- Left: Veg icon + name -->
+                        <div class="flex items-center space-x-2">
+                            @if (item.IsVeg)
+                            {
+                                <!-- Veg Icon -->
+                                <div class="w-3.5 h-3.5 border border-green-600 rounded-sm flex items-center justify-center">
+                                    <div class="w-2.5 h-2.5 bg-green-600 rounded-sm"></div>
+                                </div>
+                            }
+                            else
+                            {
+                                <!-- Non-Veg Icon -->
+                                <div class="w-3.5 h-3.5 border border-red-600 rounded-sm flex items-center justify-center">
+                                    <div class="w-2.5 h-2.5 bg-red-600 rounded-sm"></div>
+                                </div>
+                            }
+
+
+                            <!-- Text -->
+                            <div>
+                                <h3 class="font-semibold text-base leading-tight">@item.ItemName</h3>
+                                <p class="text-sm text-slate-500">@item.Description</p>
+                            </div>
+                        </div>
+
+                        <!-- Right: Price -->
+                        <span class="text-rose-600 font-semibold text-sm">$@item.Price</span>
+                    </div>
+                    <div class="btn-container">
+                        <button class="add-btn mt-3 w-full bg-rose-600 text-white rounded-lg py-2 text-sm font-medium hover:bg-rose-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </main>
+
+    <!-- CART DRAWER -->
+    <div id="cartDrawer" class="fixed top-0 right-0 w-80 bg-white h-full shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="p-4 border-b flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Your Cart</h3>
+            <button id="closeCart" class="text-slate-500 hover:text-rose-600">✕</button>
+        </div>
+        <div class="p-4 space-y-4 overflow-auto h-[calc(100%-150px)]" id="cart-list">
+        </div>
+        <div class="p-4 border-t">
+            <div class="flex justify-between mb-2 text-sm">
+                <span>Subtotal</span>
+                <span class="font-medium" id="cart-total">$70</span>
+            </div>
+            <button class="w-full bg-rose-600 text-white py-2 rounded-lg hover:bg-rose-700">Checkout</button>
+        </div>
+    </div>
+}
+
+@*
 <div>
     @if (Model == null || Model.Count == 0)
     {
@@ -142,17 +209,15 @@
                                                 <select class="item-subdropdown" id="subdropdown-@i">
                                                     @{
                                                         var subQuantities = ViewBag.SubQuantityList as List<SubQuantity>;
-                                                        @* <option value="">-- Select Sub Quantity --</option> *@
+
                                                         @foreach (var subQuantity in subQuantities)
-                                                        {           
+                                                        {
                                                             var number = subQuantity?.Number;
                                                             <option value="@number">@number</option>
                                                         }
                                                     }
                                                 </select>
-                                                @* <div>
-                                                    <span id="subdropDownError-@i" style="display:none;" class="text-danger">Please select an sub quantity.</span>
-                                                </div> *@
+
                                             </div>
                                             <input type="hidden" value="@Model[i].MenuItemId" id="menuItemId-@i" name="menuItemId" />
                                             <input type="hidden" value="" id="quantity-@i" name="quantity" />
@@ -182,92 +247,290 @@
         </div>
     }
 </div>
-
+ *@
 @section Scripts {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
 
-        function changeQuantity(button, delta) {
-            const input = button.parentElement.querySelector('input[name="quantity"]');
-            let current = parseInt(input.value) || 1;
-            current = Math.max(1, current + delta);
-            if(current > 10) {
-                current = 10;
-            }
-            input.value = current;
-        }
-
-        // function addToCart(productId) {
-        //     var quantity = $('#qty-' + productId).val();
-
-        //     $.ajax({
-        //         url: '@Url.Action("AddToCart", "CustomerAccount")',
-        //         method: 'POST',
-        //         data: {
-        //             id: productId,
-        //             quantity: quantity
-        //         },
-        //         success: function (response) {
-        //             if (response.success) {
-        //                 alert(response.message);
-        //             } else {
-        //                 alert("Failed to add item.");
-        //             }
-        //         },
-        //         error: function () {
-        //             alert("Error while adding item.");
-        //         }
-        //     });
+        // function changeQuantity(button, delta) {
+        //     const input = button.parentElement.querySelector('input[name="quantity"]');
+        //     let current = parseInt(input.value) || 1;
+        //     current = Math.max(1, current + delta);
+        //     if(current > 10) {
+        //         current = 10;
+        //     }
+        //     input.value = current;
         // }
 
-        //document.getElementById('mySelect').addEventListener('change', function() {
-        function selectQuantity(obj)
-        {
-          var selectedValue = obj.value;
-          if ((selectedValue == "Full") || (selectedValue == "Half") || (selectedValue == "Quarter"))
-          {
-              var quantityId = obj.id;
-              var subQuantityId = quantityId.replace('dropdown', 'subQuantity');
-              var subQuantityObj =document.getElementById(subQuantityId);
-              subQuantityObj.style.display = "";
+        // // function addToCart(productId) {
+        // //     var quantity = $('#qty-' + productId).val();
+
+        // //     $.ajax({
+        // //         url: '@Url.Action("AddToCart", "CustomerAccount")',
+        // //         method: 'POST',
+        // //         data: {
+        // //             id: productId,
+        // //             quantity: quantity
+        // //         },
+        // //         success: function (response) {
+        // //             if (response.success) {
+        // //                 alert(response.message);
+        // //             } else {
+        // //                 alert("Failed to add item.");
+        // //             }
+        // //         },
+        // //         error: function () {
+        // //             alert("Error while adding item.");
+        // //         }
+        // //     });
+        // // }
+
+        // //document.getElementById('mySelect').addEventListener('change', function() {
+        // function selectQuantity(obj)
+        // {
+        //   var selectedValue = obj.value;
+        //   if ((selectedValue == "Full") || (selectedValue == "Half") || (selectedValue == "Quarter"))
+        //   {
+        //       var quantityId = obj.id;
+        //       var subQuantityId = quantityId.replace('dropdown', 'subQuantity');
+        //       var subQuantityObj =document.getElementById(subQuantityId);
+        //       subQuantityObj.style.display = "";
+        //   }
+        // }
+
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const addButtons = document.querySelectorAll('.add-button');
+
+        //     addButtons.forEach(function (button) {
+        //         button.addEventListener('click', function (e) {
+        //             var buttonId = button.id;
+        //             var menuId = buttonId.replace('AddToCart-', '');
+        //             var selectedValue = document.getElementById('dropdown-' + menuId).value;
+
+        //             if (!selectedValue) {
+        //                 var errorSpan = document.getElementById('dropDownError-' + menuId);
+        //                 errorSpan.style.display = 'inline'; // Show error message
+        //                 e.preventDefault(); // Stop form submission or AJAX call
+        //                 return;
+        //             }
+        //             else
+        //             {
+        //                 const input = button.parentElement.querySelector('input[name="quantity"]');
+        //                 var quantity = document.getElementById('quantity-' + menuId);
+        //                 quantity.value = selectedValue;
+
+        //                 var subQuantityObj = document.getElementById('subQuantity-' + menuId);
+        //                 if(subQuantityObj.style.display == "")
+        //                 {
+        //                     var selectedSubQuantity = document.getElementById('subdropdown-' + menuId).value;
+        //                     var subQuantity = document.getElementById('subQuantityVal-' + menuId);
+        //                     subQuantity.value = selectedSubQuantity;
+        //                 }
+        //             }
+
+        //             // Proceed with add action (e.g., form submit, AJAX call)
+        //             console.log("Adding item with selected value:", selectedValue);
+        //             // You can also send this data to your controller here
+        //         });
+        //     });
+        // });
+
+         const cartBtn = document.getElementById('cartBtn');
+        const cartDrawer = document.getElementById('cartDrawer');
+        const closeCart = document.getElementById('closeCart');
+        cartBtn.onclick = () => cartDrawer.classList.remove('translate-x-full');
+        closeCart.onclick = () => cartDrawer.classList.add('translate-x-full');
+
+              $(function () {
+
+
+        // Tab filter
+        $(".tab-btn").on("click", function () {
+            debugger;
+          $(".tab-btn").removeClass("bg-rose-600 text-white").addClass("bg-gray-100 text-slate-700");
+          $(this).addClass("bg-rose-600 text-white");
+
+          const category = $(this).data("category");
+          if (category === "all") {
+            $(".menu-card").show();
+          } else {
+            $(".menu-card").hide();
+            $(`.menu-card[data-category="${category}"]`).show();
           }
+        });
+
+                              let cart = JSON.parse(localStorage.getItem("cart")) || {};
+                                      // Update Cart Count in Header
+                function updateCartCount() {
+          const count = Object.values(cart);
+          $("#cartCount").text(count.length);
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+        function updateCartUI() {
+          const cartList = $("#cart-list");
+          const cartTotal = $("#cart-total");
+          cartList.empty();
+          let total = 0;
+
+          Object.values(cart).forEach(item => {
+            total += item.price * item.qty;
+
+
+
+
+
+
+
+
+                    cartList.append(`
+              <div class="flex items-center justify-between bg-white p-3 sm:p-4 rounded-2xl shadow-md hover:shadow-lg border border-slate-100 transition-all duration-300 hover:scale-[1.02]">
+          <div class="flex items-center gap-3 sm:gap-4">
+          <button
+              class="remove-btn text-red-500 hover:text-red-700 transition-colors duration-200 text-lg sm:text-xl"
+              data-id="${item.id}"
+              title="Remove item"
+            >
+              ❌
+            </button>
+            <div>
+              <div class="font-medium text-sm sm:text-base text-slate-800">${item.name}</div>
+              <button class="decrease text-lg font-semibold text-gray-700 hover:text-rose-600" data-id="${item.id}">
+            −
+          </button>
+          <span class="qty-text text-sm font-medium text-gray-800">${item.qty}</span>
+          <button class="increase text-lg font-semibold text-gray-700 hover:text-rose-600" data-id="${item.id}">
+            +
+          </button>
+            </div>
+          </div>
+          <div class="font-semibold text-slate-800 text-sm sm:text-base">$${item.price * item.qty}</div>
+        </div>
+            `);
+          });
+
+          cartTotal.text("$"+total);
+          localStorage.setItem("cart", JSON.stringify(cart));
+          updateMenuButtons(); // ✅ Ensure the menu button reflects correct qty
         }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const addButtons = document.querySelectorAll('.add-button');
+        function updateMenuButtons() {
+          $(".menu-item").each(function () {
+            const id = $(this).data("id");
+            const btnContainer = $(this).find(".btn-container");
 
-            addButtons.forEach(function (button) {
-                button.addEventListener('click', function (e) {
-                    var buttonId = button.id;
-                    var menuId = buttonId.replace('AddToCart-', '');
-                    var selectedValue = document.getElementById('dropdown-' + menuId).value;
+            if (cart[id]) {
+              // If already added, show qty controls
+                      btnContainer.html(`
+                <div class="qty-controls flex items-center justify-center space-x-3 bg-slate-100 rounded-full px-3 py-1.5 mt-2">
+          <button class="decrease text-lg font-semibold text-gray-700 hover:text-rose-600" data-id="${id}">
+            −
+          </button>
+          <span class="qty-text text-sm font-medium text-gray-800">${cart[id].qty}</span>
+          <button class="increase text-lg font-semibold text-gray-700 hover:text-rose-600" data-id="${id}">
+            +
+          </button>
+        </div>
+              `);
+            } else {
+              // Reset to Add to Cart
+                 btnContainer.html(`<button class="add-btn mt-3 w-full bg-rose-600 text-white rounded-lg py-2 text-sm font-medium hover:bg-rose-700 transition">
+            Add to Cart
+        </button>`);
+            }
+          });
+        }
 
-                    if (!selectedValue) {
-                        var errorSpan = document.getElementById('dropDownError-' + menuId);
-                        errorSpan.style.display = 'inline'; // Show error message
-                        e.preventDefault(); // Stop form submission or AJAX call
-                        return;
-                    }
-                    else
-                    {
-                        const input = button.parentElement.querySelector('input[name="quantity"]');
-                        var quantity = document.getElementById('quantity-' + menuId);
-                        quantity.value = selectedValue;
+        // Add to cart
+        $(document).on("click", ".add-btn", function () {
+          const parent = $(this).closest(".menu-item");
+          const id = parent.data("id");
+          const name = parent.data("name");
+          const price = parseFloat(parent.data("price"));
 
-                        var subQuantityObj = document.getElementById('subQuantity-' + menuId);
-                        if(subQuantityObj.style.display == "")
-                        {
-                            var selectedSubQuantity = document.getElementById('subdropdown-' + menuId).value;
-                            var subQuantity = document.getElementById('subQuantityVal-' + menuId);
-                            subQuantity.value = selectedSubQuantity;
-                        }
-                    }
+          cart[id] = { id, name, price, qty: 1 };
+          updateCartUI();
+          updateCartCount();
+        });
 
-                    // Proceed with add action (e.g., form submit, AJAX call)
-                    console.log("Adding item with selected value:", selectedValue);
-                    // You can also send this data to your controller here
-                });
-            });
+        // Increase qty
+        $(document).on("click", ".increase", function () {
+          const id = $(this).data("id");
+          if (cart[id]) {
+            cart[id].qty++;
+            updateCartUI();
+          }
+        });
+
+        // Decrease qty
+        $(document).on("click", ".decrease", function () {
+          const id = $(this).data("id");
+          if (cart[id]) {
+            if (cart[id].qty > 1) {
+              cart[id].qty--;
+            } else {
+              delete cart[id];
+              updateCartCount();
+            }
+            updateCartUI();
+          }
+        });
+
+        // Remove from cart
+        $(document).on("click", ".remove-btn", function () {
+          const id = $(this).data("id");
+          delete cart[id];
+          updateCartUI();
+          updateCartCount();
+        });
+
+                // Search functionality
+        $("#searchInput").on("keyup", function () {
+          const searchValue = $(this).val().toLowerCase();
+          $(".menu-item").each(function () {
+            const name = $(this).data("name").toLowerCase();
+            $(this).toggle(name.includes(searchValue));
+          });
+        });
+
+
+              // ---------- CHECKOUT ----------
+        $("#checkoutBtn").on("click", function () {
+          const cartItems = Object.values(cart);
+          if (cartItems.length === 0) {
+            alert("Your cart is empty!");
+            return;
+          }
+
+          $.ajax({
+            url: apiBase + "/cart/checkout",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(cartItems),
+            success: function (res) {
+              alert("✅ Order placed! Order ID: " + res.orderId);
+              cart = {};
+              saveCart();
+              updateCartUI();
+              updateCartCount();
+              $("#cartDrawer").addClass("translate-x-full");
+            },
+            error: function () {
+              alert("⚠️ Checkout failed. Try again.");
+            }
+          });
+        });
+
+              // ---------- LOCAL STORAGE ----------
+        function saveCart() {
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+
+        // Init UI
+        $(document).ready(function () {
+          updateCartUI();
+          updateCartCount();
+        });
+
         });
 
     </script>
