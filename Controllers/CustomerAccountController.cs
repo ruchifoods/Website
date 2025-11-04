@@ -1,25 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using System.Security.Claims;
+﻿using FoodDeliveryApp.Extensions;
 using FoodDeliveryApp.Models;
 using FoodDeliveryApp.Services;
-using FoodDeliveryApp.ViewModels.Customers;
-using FoodDeliveryApp.ViewModels.Common;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.AspNetCore.Authorization;
-using System.Security.Principal;
-using Microsoft.SqlServer.Server;
-using System.Net;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using FoodDeliveryApp.Extensions;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using System.Net.Mail;
 using FoodDeliveryApp.ViewModels;
-using Microsoft.AspNetCore.Http;
+using FoodDeliveryApp.ViewModels.Common;
+using FoodDeliveryApp.ViewModels.Customers;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using System.Security.Claims;
 
 namespace FoodDeliveryApp.Controllers
 {
@@ -787,7 +777,7 @@ namespace FoodDeliveryApp.Controllers
                     decimal totalPrice;
                     int parshedValue;
                     bool isInt = int.TryParse(quantity, out parshedValue);
-                    if(isInt)
+                    if (isInt)
                     {
                         totalPrice = item.Price * parshedValue;
                     }
@@ -810,7 +800,7 @@ namespace FoodDeliveryApp.Controllers
 
                 HttpContext.Session.SetObject(SessionCartKey, cart);
 
-                if (cart.Items.Count>0)
+                if (cart.Items.Count > 0)
                 {
                     TempData["SuccessMessage"] = "Item(s) added successfully to the cart.";
                 }
@@ -847,6 +837,113 @@ namespace FoodDeliveryApp.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Exception during showing menu category.");
+                return View("Error");
+            }
+        }
+
+        public async Task<IActionResult> Checkout()
+        {
+            //return View();
+            try
+            {
+                //var userIdStr = User?.FindFirst("UserId")?.Value;
+                //if (string.IsNullOrEmpty(userIdStr) || !int.TryParse(userIdStr, out int userId))
+                //{
+                //    return RedirectToAction("Login");
+                //}
+
+                //var cart = HttpContext.Session.GetObject<List<OrderItem>>(SessionCartKey) ?? new List<OrderItem>();
+                var cart = HttpContext.Session.GetObject<OrderItemList>(SessionCartKey) ?? new OrderItemList();
+                var pickupTimes = await _customerService.GetPickupTimes();
+                cart.PickUpTimes = pickupTimes;
+                return View(cart);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Exception during showing menu category.");
+                return View("Error");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> cartListAsync([FromBody] List<CartItem> cartItem)
+        {
+            if (cartItem == null || !cartItem.Any())
+                return BadRequest("Cart is empty.");
+
+
+            try
+            {
+                var cart = HttpContext.Session.GetObject<OrderItemList>(SessionCartKey) ?? new OrderItemList();
+                foreach (var reqItem in cartItem)
+                {
+
+
+                    // Retrieve the current user ID.
+                    //var userIdStr = User?.FindFirst("UserId")?.Value;
+                    //if (string.IsNullOrEmpty(userIdStr) || !int.TryParse(userIdStr, out int userId))
+                    //{
+                    //    return RedirectToAction("Login");
+                    //}               
+
+                    // Retrieve the menu item by ID.
+                    var item = await _customerService.GetMenuItemById(reqItem.MenuItemId);
+                    if (item == null)
+                        return NotFound();
+
+                    // Add item to the order.
+                    //var cart = HttpContext.Session.GetObject<List<OrderItem>>(SessionCartKey) ?? new List<OrderItem>();
+
+
+                    // Check if the item already exists in the cart.
+                    if (cart.Items == null)
+                    {
+                        cart.Items = new List<OrderItem>();
+                    }
+                    var orderItem = cart.Items.FirstOrDefault(o => o.MenuItemId == reqItem.MenuItemId);
+                    if (orderItem != null)
+                    {
+                        orderItem.Quantity = reqItem.Qty.ToString();
+                        //orderItem.SubQuantity = reqItem.subQuantity;
+                    }
+                    else
+                    {
+                        decimal totalPrice;
+                        int parshedValue;
+                        bool isInt = int.TryParse(reqItem.Qty.ToString(), out parshedValue);
+                        if (isInt)
+                        {
+                            totalPrice = item.Price * parshedValue;
+                        }
+                        else
+                        {
+                            totalPrice = item.Price;
+                            //if (reqItem.Qty == "Half")
+                            //{
+                            //    totalPrice = (item.Price / 2) * reqItem.subQuantity;
+                            //}
+                            //if (reqItem.Qty == "Quarter")
+                            //{
+                            //    totalPrice = (item.Price / 4) * reqItem.subQuantity;
+                            //}
+                        }
+
+                        cart.Items.Add(new OrderItem { MenuItemId = reqItem.MenuItemId, MenuItem = item, Quantity = reqItem.Qty.ToString(), UnitPrice = item.Price, TotalPrice = totalPrice, SubQuantity = 0 });
+                    }
+                    cart.CategoryId = reqItem.SelectedCategoryId;
+
+
+                    HttpContext.Session.SetObject(SessionCartKey, cart);
+                }
+                return Ok(new
+                {
+                    redirectUrl = Url.Action("Checkout", "CustomerAccount")
+                });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Exception adding item to the cart for item ID: {cartItem}");
+                TempData["ErrorMessage"] = $"Exception adding item to the cart for item ID: {cartItem}";
                 return View("Error");
             }
         }

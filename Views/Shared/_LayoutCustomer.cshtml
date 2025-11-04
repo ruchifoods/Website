@@ -17,57 +17,29 @@
     <header class="sticky top-0 bg-white shadow-sm z-50">
         <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
             <a href="@Url.Action("FoodSearch", "CustomerAccount")" class="inline-flex items-center">
-                <img src="~/images/logo.png" width="70" height="70" alt="Ruchi Kitchen - Customer" class="h-8 object-contain" />
+                <img src="/images/logo.png"
+                     alt="Ruchi Kitchen - Customer"
+                     class="h-14 sm:h-16 object-contain" />
             </a>
             <div class="hidden md:flex gap-6 text-sm font-medium">
-                <a href="#" class="hover:text-rose-600">Home</a>
-                <a href="#" class="hover:text-rose-600">Menu</a>
-                <a href="#" class="hover:text-rose-600">About</a>
-                <a href="#" class="hover:text-rose-600">Contact</a>
+                <a href="#" class="hover:text-purple-600">Home</a>
+                <a href="#" class="hover:text-purple-600">Menu</a>
+                <a href="#" class="hover:text-purple-600">About</a>
+                <a href="#" class="hover:text-purple-600">Contact</a>
             </div>
-            <button id="cartBtn" class="relative p-2 rounded-full bg-rose-50 hover:bg-rose-100">
-                <svg class="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="cartBtn" class="relative p-2 rounded-full bg-purple-50 hover:bg-purple-100">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 7M7 13l-1.5 5H19M10 21a1 1 0 11-2 0 1 1 0 012 0zm8 0a1 1 0 11-2 0 1 1 0 012 0z" />
                 </svg>
-                <span id="cartCount" class="absolute -top-1 -right-1 bg-rose-600 text-white text-xs rounded-full px-1.5"></span>
+                <span id="cartCount" class="absolute -top-1 -right-1 bg-purple-600 text-white text-xs rounded-full px-1.5"></span>
             </button>
         </div>
     </header>
 
     @RenderBody()
 
-    
+
     @RenderSection("Scripts", required: false)
 
 </body>
-
-
-
-@* <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="@Url.Action("FoodSearch", "CustomerAccount")">
-            <img src="~/images/logo.png" width="70" height="70" asp-append-version="true" alt="Ruchi Kitchen - Customer" />
-        </a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="myAccountDropdown" role="button" data-toggle="dropdown" aria-labelledby="">
-                        Info
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="myAccountDropdown">
-                        <a class="dropdown-item" href="@Url.Action("Cart", "CustomerAccount")">Cart</a>
-                        <a class="dropdown-item" href="@Url.Action("OrdersDetails", "CustomerAccount")">Orders</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container mt-4">
-        @RenderBody()
-    </div>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @RenderSection("Scripts", required: false)
-</body> *@
 </html>
